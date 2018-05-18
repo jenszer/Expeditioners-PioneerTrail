@@ -5,17 +5,26 @@
  */
 package pioneertrail;
 
+
+
 /**
  *
- * @author Jacob Enszer
+ * @author Jacob Enszer, Hector Mendoza, Ariel George
  */
 public class PioneerTrail {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
     
+    public static void main(String[] args) {
+       Player playerOne = new Player();
+    
+        playerOne.setName("Brigham Young");
+        playerOne.setHealth(100);
+
+        String playerOneName = playerOne.getName();
+        int playerOneHealth = playerOne.getHealth();
+
+        System.out.println("Name = " + playerOneName +
+                       ", Health = " + playerOneHealth);
+    
+    }
 }
