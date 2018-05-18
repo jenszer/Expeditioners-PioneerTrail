@@ -6,6 +6,7 @@
 package pioneertrail;
 
 import java.awt.Point;
+        
 /**
  *
  * @author Mauricio
