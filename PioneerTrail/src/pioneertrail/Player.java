@@ -5,8 +5,9 @@
  */
 package pioneertrail;
 
+import java.io.Serializable;
 import java.util.Objects;
-import java.util.ArrayList
+import java.util.ArrayList;
 
 /**
  *
