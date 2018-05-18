@@ -9,7 +9,7 @@ package pioneertrail;
 
 /**
  *
- * @author Jacob Enszer
+ * @author Jacob Enszer, Hector Mendoza, Ariel George
  */
 public class PioneerTrail {
 
@@ -17,14 +17,14 @@ public class PioneerTrail {
     public static void main(String[] args) {
        Player playerOne = new Player();
     
-        playerOne.setName("Fred Flinstone");
+        playerOne.setName("Brigham Young");
         playerOne.setHealth(100);
 
         String playerOneName = playerOne.getName();
         int playerOneHealth = playerOne.getHealth();
 
         System.out.println("Name = " + playerOneName +
-                       ", health = " + playerOneHealth);
+                       ", Health = " + playerOneHealth);
     
     }
 }
