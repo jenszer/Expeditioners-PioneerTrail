@@ -5,8 +5,7 @@
  */
 package pioneertrail;
 
-import java.util.ArrayList;
-import java.util.Objects;
+
 
 /**
  *
@@ -14,19 +13,18 @@ import java.util.Objects;
  */
 public class PioneerTrail {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void JacobEnszerTest(){ 
-    }
-    public static void TeamTest(){
-    }
-}
     
     public static void main(String[] args) {
-       Player PlayerOne = new Player();
-    TeamTest();
-    JacobEnszerTest();
+       Player playerOne = new Player();
+    
+    playerOne.setName("Fred Flinstone");
+    playerOne.setHealth(100);
+
+    String playerOneName = playerOne.getName();
+    int playerOneHealth = playerOne.getHealth();
+
+    System.out.println("Name = " + playerOneName +
+                       ", health = " + playerOneHealth);
     
     }
-    }
+}
