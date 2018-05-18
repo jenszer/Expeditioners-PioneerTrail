@@ -12,10 +12,10 @@ import java.awt.Point;
  * @author Mauricio
  */
 public enum Actor {
-Father(),
-Mother(),
-Son(),
-Daughter();
+Father("Micheal", "Description of character.", new Point(1,1)),
+Mother("Karen", "Description of character.", new Point(2,3)),
+Son("John", "Description of character.", new Point(3,4)),
+Daughter("Mary", "Description of character.", new Point(3,5));
 
 private String name;
 private String description;
