@@ -23,6 +23,7 @@ public class Player implements Serializable{
             private int thirst;
             private int hunger;
             private ArrayList<Game> games = new ArrayList<Game>();
+            private ArrayList<Actor> actors = new ArrayList<Actor>();
 
     public Player() {
     }
@@ -34,8 +35,16 @@ public class Player implements Serializable{
     public void setGames(ArrayList<Game> games) {
         this.games = games;
     }
-          
-            
+    
+
+    public ArrayList<Actor> getActors() {
+        return actors;
+    }
+
+    public void setActors(ArrayList<Actor> actors) {
+        this.actors = actors;
+    }      
+    
 
     public String getName() {
         return name;

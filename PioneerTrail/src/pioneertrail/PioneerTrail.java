@@ -17,13 +17,13 @@ public class PioneerTrail {
     public static void main(String[] args) {
        Player playerOne = new Player();
     
-    playerOne.setName("Fred Flinstone");
-    playerOne.setHealth(100);
+        playerOne.setName("Fred Flinstone");
+        playerOne.setHealth(100);
 
-    String playerOneName = playerOne.getName();
-    int playerOneHealth = playerOne.getHealth();
+        String playerOneName = playerOne.getName();
+        int playerOneHealth = playerOne.getHealth();
 
-    System.out.println("Name = " + playerOneName +
+        System.out.println("Name = " + playerOneName +
                        ", health = " + playerOneHealth);
     
     }

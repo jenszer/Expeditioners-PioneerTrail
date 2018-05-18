@@ -23,6 +23,8 @@ private String type;
 private String gender;
 private Point coordinates;
 
+private Player Player;
+
 Actor(String name, String description, Point coordinates) {
     this.name = name;
     this.description = description;
@@ -47,6 +49,10 @@ Actor(String name, String description, Point coordinates) {
 
     public Point getCoordinates() {
         return coordinates;
+    }
+
+    public Player getPlayer() {
+        return Player;
     }
 
     @Override
