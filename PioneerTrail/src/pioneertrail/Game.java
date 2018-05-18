@@ -5,6 +5,8 @@
  */
 package pioneertrail;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Jacob Enszer
