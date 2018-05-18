@@ -23,8 +23,13 @@ public class PioneerTrail {
         String playerOneName = playerOne.getName();
         int playerOneHealth = playerOne.getHealth();
 
+        String actorFatherName = Actor.Father.getName();
+        String actorFatherDescription = Actor.Father.getDescription();
+        
         System.out.println("Name = " + playerOneName +
                        ", Health = " + playerOneHealth);
-    
+        
+        System.out.println(actorFatherName + ", " + actorFatherDescription);
+       
     }
 }
