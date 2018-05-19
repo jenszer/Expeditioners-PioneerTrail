@@ -17,6 +17,7 @@ public class PioneerTrail {
     public static void main(String[] args) {
        Player playerOne = new Player();
        Inventory inventoryItem = new Inventory();
+       Resource resource = new Resource();
     
         playerOne.setName("Brigham Young");
         playerOne.setHealth(100);
@@ -32,13 +33,22 @@ public class PioneerTrail {
         
         System.out.println(actorFatherName + ", " + actorFatherDescription);
     
-        inventoryItem.setName("Food");
-        inventoryItem.setWeight(15);
+        inventoryItem.setName("Axe");
+        inventoryItem.setWeight(5);
         
         String inventoryItemName = inventoryItem.getName();
         int inventoryWeight = inventoryItem.getWeight();
         
         System.out.println("Inventory: " + inventoryItemName + "; Weight: " +
                         inventoryWeight);
+        
+        resource.setName("Water");
+        resource.setAmount(15);
+        
+        String resourceName = resource.getName();
+        int resourceAmount = resource.getAmount();
+        
+        System.out.println("Resource: " + resourceName + "; Amount: " +
+                        resourceAmount);
     }
 }
