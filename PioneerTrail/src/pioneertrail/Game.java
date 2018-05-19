@@ -15,6 +15,7 @@ public class Game implements Serializable{
             
         private int numPlayers;
         private int highScore;
+        private Map Map;
         private Player Player;
 
     public Game() {
@@ -26,6 +27,14 @@ public class Game implements Serializable{
 
     public void setPlayer(Player Player) {
         this.Player = Player;
+    }
+
+    public Map getMap() {
+        return Map;
+    }
+
+    public void setMap(Map Map) {
+        this.Map = Map;
     }
             
         
