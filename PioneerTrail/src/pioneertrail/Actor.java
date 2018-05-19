@@ -17,11 +17,11 @@ Mother("Karen", "Greatest Mom in the World.", new Point(2,3)),
 Son("John", "Rebellious Teen, but still a good kid.", new Point(3,4)),
 Daughter("Mary", "Energetic 9yr old, going on 16.", new Point(3,5));
 
-private String name;
-private String description;
+private final String name;
+private final String description;
 private String type;
 private String gender;
-private Point coordinates;
+private final Point coordinates;
 
 private Player Player;
 
@@ -43,8 +43,16 @@ Actor(String name, String description, Point coordinates) {
         return type;
     }
 
+    public void setType(String type) {
+        this.type = type;
+    }
+
     public String getGender() {
         return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public Point getCoordinates() {
@@ -53,6 +61,10 @@ Actor(String name, String description, Point coordinates) {
 
     public Player getPlayer() {
         return Player;
+    }
+
+    public void setPlayer(Player Player) {
+        this.Player = Player;
     }
 
     @Override
