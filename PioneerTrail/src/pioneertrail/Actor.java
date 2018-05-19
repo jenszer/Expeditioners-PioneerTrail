@@ -9,7 +9,7 @@ import java.awt.Point;
         
 /**
  *
- * @author Mauricio
+ * @author Hector Mendoza
  */
 public enum Actor {
 Father("Micheal", "Greatest Dad in the World.", new Point(1,1)),
