@@ -19,6 +19,7 @@ public class Inventory implements Serializable {
             private int amount;
             private int weight;
             private String description;
+            private Game Game;
 
         public Inventory() {
         }
