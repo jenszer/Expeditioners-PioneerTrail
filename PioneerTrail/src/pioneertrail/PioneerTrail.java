@@ -5,13 +5,52 @@
  */
 package pioneertrail;
 
-
-
 /**
  *
  * @author Jacob Enszer, Hector Mendoza, Ariel George
  */
 public class PioneerTrail {
+    
+    static void HectorMendozaTest(){
+        
+        // testing the Scene Class
+        Scene myScene = new Scene();
+        
+        myScene.setName("Missouri River");
+        myScene.setDescription("Longest river in North America");
+        myScene.setObstacleType("River");
+        myScene.setSceneSymbol("MO");
+        
+        String sceneOneName = myScene.getName();
+        String sceneOneDescription = myScene.getDescription();
+        String sceneOneObstacleType = myScene.getObstacleType();
+        String sceneOneSymbol = myScene.getSceneSymbol();
+        
+        System.out.println("Scene Name: " + sceneOneName +
+                           ", Description: " + sceneOneDescription +
+                           "Obstacle Type: " + sceneOneObstacleType +
+                           ", Symbol: " + sceneOneSymbol);
+        
+        
+        //testing the Question Class
+        Question myQuestion = new Question();
+        
+        myQuestion.setQuestionText("Would you like to look around?");
+        myQuestion.setAnswerOne("Yes");
+        myQuestion.setAnswerTwo("No");
+        myQuestion.setCorrectAnswer(1);
+        
+        String question = myQuestion.getQuestionText();
+        String answerOne = myQuestion.getAnswerOne();
+        String answerTwo = myQuestion.getAnswerTwo();
+        int correctAnswer = myQuestion.getCorrectAnswer();
+        
+        System.out.println("Question: " + question +
+                           ", 1) " + answerOne +
+                           ", 2) " + answerTwo +
+                           ", Correct int answer: " + correctAnswer);
+        
+    }
 
     
     public static void main(String[] args) {
@@ -50,5 +89,8 @@ public class PioneerTrail {
         
         System.out.println("Resource: " + resourceName + "; Amount: " +
                         resourceAmount);
+        
+        // testing Scene and Question Class for the invididual assignment
+        HectorMendozaTest();
     }
 }
