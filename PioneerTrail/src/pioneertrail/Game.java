@@ -6,6 +6,7 @@
 package pioneertrail;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  *
@@ -16,8 +17,17 @@ public class Game implements Serializable{
         private int numPlayers;
         private int highScore;
         private Player Player;
+        private ArrayList<Inventory> items = new ArrayList<>();
 
     public Game() {
+    }
+
+    public ArrayList<Inventory> getItems() {
+        return items;
+    }
+
+    public void setItems(ArrayList<Inventory> items) {
+        this.items = items;
     }
 
     public Player getPlayer() {
@@ -27,8 +37,6 @@ public class Game implements Serializable{
     public void setPlayer(Player Player) {
         this.Player = Player;
     }
-            
-        
 
     public int getNumPlayers() {
         return numPlayers;
@@ -84,4 +92,4 @@ public class Game implements Serializable{
             
             
             
-        }
+}

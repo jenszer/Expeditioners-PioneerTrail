@@ -18,8 +18,17 @@ public class Resource implements Serializable {
     private int amount;
     private int weight;
     private String description;
+    private Inventory Inventory;
 
     public Resource() {
+    }
+
+    public Inventory getInventory() {
+        return Inventory;
+    }
+
+    public void setInventory(Inventory Inventory) {
+        this.Inventory = Inventory;
     }
 
     public String getName() {

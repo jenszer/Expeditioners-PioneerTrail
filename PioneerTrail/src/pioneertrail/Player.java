@@ -22,8 +22,8 @@ public class Player implements Serializable{
             private int health;
             private int thirst;
             private int hunger;
-            private ArrayList<Game> games = new ArrayList<Game>();
-            private ArrayList<Actor> actors = new ArrayList<Actor>();
+            private ArrayList<Game> games = new ArrayList<>();
+            private ArrayList<Actor> actors = new ArrayList<>();
 
     public Player() {
     }

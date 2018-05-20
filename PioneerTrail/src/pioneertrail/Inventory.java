@@ -6,6 +6,7 @@
 package pioneertrail;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -19,9 +20,27 @@ public class Inventory implements Serializable {
             private int amount;
             private int weight;
             private String description;
+            private Game Game;
+            private ArrayList<Resource> resources = new ArrayList<>();
 
         public Inventory() {
         }
+
+    public Game getGame() {
+        return Game;
+    }
+
+    public void setGame(Game Game) {
+        this.Game = Game;
+    }
+
+    public ArrayList<Resource> getResources() {
+        return resources;
+    }
+
+    public void setResources(ArrayList<Resource> resources) {
+        this.resources = resources;
+    }
             
 
         public String getName() {
