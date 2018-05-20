@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author Jacob Enszer
+ * @author Jacob Enszer, Ariel George, Hector Mendoza
  */
 public class Game implements Serializable{
             

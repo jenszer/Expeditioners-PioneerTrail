@@ -9,7 +9,7 @@ import java.awt.Point;
         
 /**
  *
- * @author Mauricio
+ * @author Ariel George, Hector Mendoza, Jacob Enzer
  */
 public enum Actor {
 Father("Micheal", "Description of character.", new Point(1,1)),

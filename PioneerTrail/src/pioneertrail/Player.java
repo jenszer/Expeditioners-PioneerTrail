@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Jacob Enszer
+ * @author Jacob Enszer & Ariel George & Hector Mendoza
  */
 public class Player implements Serializable{
             
