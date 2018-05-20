@@ -55,8 +55,6 @@ public class PioneerTrail {
     
     public static void main(String[] args) {
        Player playerOne = new Player();
-       Inventory inventoryItem = new Inventory();
-       Resource resource = new Resource();
     
         playerOne.setName("Brigham Young");
         playerOne.setHealth(100);
@@ -71,6 +69,9 @@ public class PioneerTrail {
         String actorFatherDescription = Actor.Father.getDescription(); 
         
         System.out.println(actorFatherName + ", " + actorFatherDescription);
+                
+        Inventory inventoryItem = new Inventory();
+        Resource resource = new Resource();
     
         inventoryItem.setName("Axe");
         inventoryItem.setWeight(5);
