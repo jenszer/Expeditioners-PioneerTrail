@@ -18,6 +18,8 @@ public class Game implements Serializable{
         private int highScore;
         private Player Player;
         private ArrayList<Inventory> items = new ArrayList<>();
+        
+        private Map map;
 
     public Game() {
     }
