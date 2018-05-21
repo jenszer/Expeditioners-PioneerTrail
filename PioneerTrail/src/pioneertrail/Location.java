@@ -17,10 +17,15 @@ public class Location implements Serializable {
     private int column;
     private int milesRemaining;
     private boolean visited;
+    
+    private Map map;
 
     public Location() {
+    }    
+
+    public Map getMap() {
+        return map;
     }
-    
 
     public int getRow() {
         return row;

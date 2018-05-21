@@ -6,6 +6,7 @@
 package pioneertrail;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  *
@@ -17,19 +18,19 @@ public class Map implements Serializable {
     private int columnCount;
     private int currentRow;
     private int currentColumn;
-    private Location location;
+    
+    private ArrayList<Location> locations = new ArrayList<>();
 
     public Map() {
     }
 
-    public Location getLocation() {
-        return location;
+    public ArrayList<Location> getLocations() {
+        return locations;
     }
 
-    public void setLocation(Location location) {
-        this.location = location;
+    public void setLocations(ArrayList<Location> locations) {
+        this.locations = locations;
     }
-    
 
     public int getRowCount() {
         return rowCount;
@@ -92,7 +93,5 @@ public class Map implements Serializable {
         }
         return true;
     }
-    
-    
         
 }

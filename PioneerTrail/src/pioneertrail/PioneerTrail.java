@@ -99,7 +99,32 @@ public class PioneerTrail {
     
     static void ArielGeorgeTest() {
         
+        Map map = new Map();
         
+        map.setColumnCount(50);
+        map.setRowCount(50);
+        
+        int columnCount = map.getColumnCount();
+        int rowCount = map.getRowCount();
+        
+        System.out.println("Column Count: " + columnCount +
+                           ", Row count: " + rowCount);
+        
+        Location location = new Location();
+        
+        location.setMilesRemaining(2000);
+        location.setVisited(false);
+        
+        int milesRemaining = location.getMilesRemaining();
+        boolean isVisited = location.isVisited();
+        
+        System.out.println("Miles Remaining: " + milesRemaining);
+        
+        if (isVisited)
+           System.out.println("isVisited: " + isVisited);
+        else
+            System.out.println("isVisited: " + isVisited);
+
     }
 
     

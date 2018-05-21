@@ -18,6 +18,7 @@ public class Resource implements Serializable {
     private int amount;
     private int weight;
     private String description;
+    
     private Inventory Inventory;
 
     public Resource() {
