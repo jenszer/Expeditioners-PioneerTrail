@@ -11,6 +11,26 @@ package pioneertrail;
  */
 public class PioneerTrail {
     
+    static void TeamTest(){
+        
+        Player playerOne = new Player();
+    
+        playerOne.setName("Brigham Young");
+        playerOne.setHealth(100);
+
+        String playerOneName = playerOne.getName();
+        int playerOneHealth = playerOne.getHealth();   
+          
+        System.out.println("Name = " + playerOneName +
+                       ", Health = " + playerOneHealth);
+               
+        String actorFatherName = Actor.Father.getName();
+        String actorFatherDescription = Actor.Father.getDescription();
+        
+        System.out.println(actorFatherName + ", " + actorFatherDescription);
+        
+    }
+    
     static void HectorMendozaTest(){
         
         // testing the Scene Class
@@ -84,29 +104,17 @@ public class PioneerTrail {
 
     
     public static void main(String[] args) {
-       Player playerOne = new Player();
-    
-        playerOne.setName("Brigham Young");
-        playerOne.setHealth(100);
-
-        String playerOneName = playerOne.getName();
-        int playerOneHealth = playerOne.getHealth();   
-          
-        System.out.println("Name = " + playerOneName +
-                       ", Health = " + playerOneHealth);
-               
-        String actorFatherName = Actor.Father.getName();
-        String actorFatherDescription = Actor.Father.getDescription(); 
         
-        System.out.println(actorFatherName + ", " + actorFatherDescription);
+        // testing Actor and Player Classes as a group
+        TeamTest();
         
-        // testing Scene and Question Class for the individual assignment
+        // testing Scene and Question Classes for the individual assignment
         HectorMendozaTest();
         
-        // testing Inventory and Resource Class for the individual assignment
+        // testing Inventory and Resource Classes for the individual assignment
         JacobEnszerTest();
         
-        // testing 
+        // testing Map and Location Classes for the individual assignment
         ArielGeorgeTest();
     }
 }
