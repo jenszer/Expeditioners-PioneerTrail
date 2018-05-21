@@ -51,6 +51,36 @@ public class PioneerTrail {
                            ", Correct int answer: " + correctAnswer);
         
     }
+    
+    static void JacobEnszerTest() {
+        
+        Inventory inventoryItem = new Inventory();
+        Resource resource = new Resource();
+    
+        inventoryItem.setName("Axe");
+        inventoryItem.setWeight(5);
+        
+        String inventoryItemName = inventoryItem.getName();
+        int inventoryWeight = inventoryItem.getWeight();
+        
+        System.out.println("Inventory: " + inventoryItemName + "; Weight: " +
+                           inventoryWeight);
+        
+        resource.setName("Water");
+        resource.setAmount(15);
+        
+        String resourceName = resource.getName();
+        int resourceAmount = resource.getAmount();
+        
+        System.out.println("Resource: " + resourceName + "; Amount: " +
+                           resourceAmount);
+        
+    }
+    
+    static void ArielGeorgeTest() {
+        
+        
+    }
 
     
     public static void main(String[] args) {
@@ -69,29 +99,14 @@ public class PioneerTrail {
         String actorFatherDescription = Actor.Father.getDescription(); 
         
         System.out.println(actorFatherName + ", " + actorFatherDescription);
-                
-        Inventory inventoryItem = new Inventory();
-        Resource resource = new Resource();
-    
-        inventoryItem.setName("Axe");
-        inventoryItem.setWeight(5);
         
-        String inventoryItemName = inventoryItem.getName();
-        int inventoryWeight = inventoryItem.getWeight();
-        
-        System.out.println("Inventory: " + inventoryItemName + "; Weight: " +
-                        inventoryWeight);
-        
-        resource.setName("Water");
-        resource.setAmount(15);
-        
-        String resourceName = resource.getName();
-        int resourceAmount = resource.getAmount();
-        
-        System.out.println("Resource: " + resourceName + "; Amount: " +
-                        resourceAmount);
-        
-        // testing Scene and Question Class for the invididual assignment
+        // testing Scene and Question Class for the individual assignment
         HectorMendozaTest();
+        
+        // testing Inventory and Resource Class for the individual assignment
+        JacobEnszerTest();
+        
+        // testing 
+        ArielGeorgeTest();
     }
 }
