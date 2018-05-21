@@ -21,6 +21,10 @@ public class Question implements Serializable {
     public Question() {
     }
 
+    public Scene getScene() {
+        return scene;
+    }   
+
     public String getQuestionText() {
         return questionText;
     }
