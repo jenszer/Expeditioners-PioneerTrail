@@ -5,6 +5,15 @@
  */
 package pioneertrail;
 
+import PioneerTrailModel.Resource;
+import PioneerTrailModel.Question;
+import PioneerTrailModel.Scene;
+import PioneerTrailModel.Player;
+import PioneerTrailModel.Map;
+import PioneerTrailModel.Actor;
+import PioneerTrailModel.Inventory;
+import PioneerTrailModel.Location;
+
 /**
  *
  * @author Jacob Enszer, Hector Mendoza, Ariel George
