@@ -92,8 +92,7 @@ public class PioneerTrail {
         String inventoryItemName = inventoryItem.getName();
         int inventoryWeight = inventoryItem.getWeight();
         
-        System.out.println("Inventory: " + inventoryItemName + "; Weight: " +
-                           inventoryWeight);
+        System.out.println(inventoryItem.toString());
         
         resource.setName("Water");
         resource.setAmount(15);
@@ -101,9 +100,8 @@ public class PioneerTrail {
         String resourceName = resource.getName();
         int resourceAmount = resource.getAmount();
         
-        System.out.println("Resource: " + resourceName + "; Amount: " +
-                           resourceAmount);
-        
+        System.out.println(resource.toString());
+     
     }
     
     static void ArielGeorgeTest() {
