@@ -5,12 +5,13 @@
  */
 package pioneertrail.model;
 
+import pioneertrail.model.Player;
 import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  *
- * @author Jacob Enszer
+ * @author Jacob Enszer, Ariel George, Hector Mendoza
  */
 public class Game implements Serializable{
             
@@ -18,6 +19,8 @@ public class Game implements Serializable{
         private int highScore;
         private Player Player;
         private ArrayList<Inventory> items = new ArrayList<>();
+        
+        private Map map;
 
     public Game() {
     }
@@ -92,4 +95,4 @@ public class Game implements Serializable{
             
             
             
-        }
+}

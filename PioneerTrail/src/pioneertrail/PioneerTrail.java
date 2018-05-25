@@ -5,6 +5,15 @@
  */
 package pioneertrail;
 
+import pioneertrail.model.Location;
+import pioneertrail.model.Map;
+import pioneertrail.model.Inventory;
+import pioneertrail.model.Actor;
+import pioneertrail.model.Scene;
+import pioneertrail.model.Resource;
+import pioneertrail.model.Question;
+import pioneertrail.model.Player;
+
 /**
  *
  * @author Jacob Enszer, Hector Mendoza, Ariel George

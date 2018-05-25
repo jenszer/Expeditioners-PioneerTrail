@@ -5,6 +5,7 @@
  */
 package pioneertrail.model;
 
+import pioneertrail.model.Resource;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;

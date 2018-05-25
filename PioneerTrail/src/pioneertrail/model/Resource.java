@@ -5,7 +5,6 @@
  */
 package pioneertrail.model;
 
-import pioneertrail.model.Inventory;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -19,6 +18,7 @@ public class Resource implements Serializable {
     private int amount;
     private int weight;
     private String description;
+    
     private Inventory Inventory;
 
     public Resource() {

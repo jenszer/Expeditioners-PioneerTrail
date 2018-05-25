@@ -5,15 +5,13 @@
  */
 package pioneertrail.model;
 
-import pioneertrail.model.Actor;
-import pioneertrail.model.Game;
 import java.io.Serializable;
 import java.util.Objects;
 import java.util.ArrayList;
 
 /**
  *
- * @author Jacob Enszer
+ * @author Jacob Enszer & Ariel George & Hector Mendoza
  */
 public class Player implements Serializable{
             

@@ -5,17 +5,19 @@
  */
 package pioneertrail.model;
 
+import pioneertrail.model.Player;
 import java.awt.Point;
         
 /**
  *
- * @author Hector Mendoza
+<<<<<<< HEAD
+ * @author Ariel George, Hector Mendoza, Jacob Enzer
  */
 public enum Actor {
 Father("Micheal", "Greatest Dad in the World.", new Point(1,1)),
 Mother("Karen", "Greatest Mom in the World.", new Point(2,3)),
 Son("John", "Rebellious Teen, but still a good kid.", new Point(3,4)),
-Daughter("Mary", "Energetic 9yr old, going on 16.", new Point(3,5));
+Daughter("Mary", "Energetic 9yr old, going on 10.", new Point(3,5));
 
 private final String name;
 private final String description;
