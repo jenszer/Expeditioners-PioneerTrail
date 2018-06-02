@@ -5,16 +5,13 @@
  */
 package pioneertrail.control;
 
-/**
- *
- * @author Jacob Enszer
- */
 public class ObstacleControl {
-    
+      
     public static int calcMortality(int mortalityRate, int noFood, int noWater, int noRest){
         int resourceUse;
-        int deathRate;
-                
+        float deathRate;
+        int death;
+               
         if (noWater < 1){ 
         return -1;
         }      
@@ -25,15 +22,16 @@ public class ObstacleControl {
         return -3;
         }
        
-        
         resourceUse = noRest + noFood + noWater;
-        deathRate = mortalityRate / resourceUse;
+        deathRate =  mortalityRate / resourceUse;
         
-        if(deathRate < .5){
-        return 0;
+        if(deathRate >=.5){
+            return 1;
         }
         else{
-        return 1;
-      }
+            return 0;
+        }
+    }
+        
     }
 }
