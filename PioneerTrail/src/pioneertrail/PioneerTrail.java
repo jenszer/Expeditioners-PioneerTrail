@@ -5,18 +5,19 @@
  */
 package pioneertrail;
 
-import PioneerTrailModel.Resource;
-import PioneerTrailModel.Question;
-import PioneerTrailModel.Scene;
-import PioneerTrailModel.Player;
-import PioneerTrailModel.Map;
-import PioneerTrailModel.Actor;
-import PioneerTrailModel.Inventory;
-import PioneerTrailModel.Location;
+import pioneertrail.model.Resource;
+import pioneertrail.model.Question;
+import pioneertrail.model.Scene;
+import pioneertrail.model.Player;
+import pioneertrail.model.Map;
+import pioneertrail.model.Actor;
+import pioneertrail.model.Inventory;
+import pioneertrail.model.Location;
+import pioneertrail.model.Wagon;
 
 /**
  *
- * @author Jacob Enszer, Hector Mendoza, Ariel George
+ * @author Jacob Enszer, Ariel George, Hector Mendoza
  */
 public class PioneerTrail {
     
@@ -92,8 +93,7 @@ public class PioneerTrail {
         String inventoryItemName = inventoryItem.getName();
         int inventoryWeight = inventoryItem.getWeight();
         
-        System.out.println("Inventory: " + inventoryItemName + "; Weight: " +
-                           inventoryWeight);
+        System.out.println(inventoryItem.toString());
         
         resource.setName("Water");
         resource.setAmount(15);
@@ -101,9 +101,8 @@ public class PioneerTrail {
         String resourceName = resource.getName();
         int resourceAmount = resource.getAmount();
         
-        System.out.println("Resource: " + resourceName + "; Amount: " +
-                           resourceAmount);
-        
+        System.out.println(resource.toString());
+     
     }
     
     static void ArielGeorgeTest() {

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package PioneerTrailModel;
+package pioneertrail.model;
 
 import java.io.Serializable;
 
@@ -95,7 +95,10 @@ public class Location implements Serializable {
         if (this.milesRemaining != other.milesRemaining) {
             return false;
         }
-        return this.visited == other.visited;
+        if (this.visited != other.visited) {
+            return false;
+        }
+        return true;
     }
     
     

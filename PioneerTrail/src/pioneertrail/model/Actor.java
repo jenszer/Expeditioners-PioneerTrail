@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pioneertrail;
+package pioneertrail.model;
 
+import pioneertrail.model.Player;
 import java.awt.Point;
         
 /**

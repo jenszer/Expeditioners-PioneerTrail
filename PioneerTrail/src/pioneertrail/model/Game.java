@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package PioneerTrailModel;
+package pioneertrail.model;
 
+import pioneertrail.model.Player;
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -24,10 +25,6 @@ public class Game implements Serializable{
     public Game() {
     }
 
-    /**
-     *
-     * @return
-     */
     public ArrayList<Inventory> getItems() {
         return items;
     }
@@ -90,7 +87,10 @@ public class Game implements Serializable{
         if (this.numPlayers != other.numPlayers) {
             return false;
         }
-        return this.highScore == other.highScore;
+        if (this.highScore != other.highScore) {
+            return false;
+        }
+        return true;
     }
             
             
