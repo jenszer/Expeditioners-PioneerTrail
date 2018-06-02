@@ -58,8 +58,8 @@ public class WagonWeightTest {
       inventoryItem.setWeight(5);
       wagon.setCurrentWeight(20);
       wagon.setMaxWeight(500);
-      int expResult = (-3);
-      int result = WagonControl.calcRemainingWeight(wagon, inventoryItem);
+      expResult = (-3);
+      result = WagonControl.calcRemainingWeight(wagon, inventoryItem);
       System.out.println("\tresult = "+ result);
       assertEquals(expResult, result);  
 
@@ -69,8 +69,8 @@ public class WagonWeightTest {
       inventoryItem.setWeight(0);
       wagon.setCurrentWeight(20);
       wagon.setMaxWeight(500);
-      int expResult = (-4);
-      int result = WagonControl.calcRemainingWeight(wagon, inventoryItem);
+      expResult = (-4);
+      result = WagonControl.calcRemainingWeight(wagon, inventoryItem);
       System.out.println("\tresult = "+ result);
       assertEquals(expResult, result);  
       
@@ -80,8 +80,8 @@ public class WagonWeightTest {
       inventoryItem.setWeight(5);
       wagon.setCurrentWeight(-4);
       wagon.setMaxWeight(500);
-      int expResult = (-5);
-      int result = WagonControl.calcRemainingWeight(wagon, inventoryItem);
+      expResult = (-5);
+      result = WagonControl.calcRemainingWeight(wagon, inventoryItem);
       System.out.println("\tresult = "+ result);
       assertEquals(expResult, result);  
 
@@ -91,8 +91,8 @@ public class WagonWeightTest {
       inventoryItem.setWeight(5);
       wagon.setCurrentWeight(20);
       wagon.setMaxWeight(500);
-      int expResult = (25);
-      int result = WagonControl.calcRemainingWeight(wagon, inventoryItem);
+      expResult = (25);
+      result = WagonControl.calcRemainingWeight(wagon, inventoryItem);
       System.out.println("\tresult = "+ result);
       assertEquals(expResult, result);  
     
@@ -102,8 +102,8 @@ public class WagonWeightTest {
       inventoryItem.setWeight(1);
       wagon.setCurrentWeight(20);
       wagon.setMaxWeight(500);
-      int expResult = (23);
-      int result = WagonControl.calcRemainingWeight(wagon, inventoryItem);
+      expResult = (23);
+      result = WagonControl.calcRemainingWeight(wagon, inventoryItem);
       System.out.println("\tresult = "+ result);
       assertEquals(expResult, result);  
       
@@ -113,8 +113,8 @@ public class WagonWeightTest {
       inventoryItem.setWeight(5);
       wagon.setCurrentWeight(0);
       wagon.setMaxWeight(500);
-      int expResult = (15);
-      int result = WagonControl.calcRemainingWeight(wagon, inventoryItem);
+      expResult = (15);
+      result = WagonControl.calcRemainingWeight(wagon, inventoryItem);
       System.out.println("\tresult = "+ result);
       assertEquals(expResult, result);  
 
