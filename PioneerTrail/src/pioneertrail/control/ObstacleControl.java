@@ -23,9 +23,9 @@ public class ObstacleControl {
         }
        
         resourceUse = noRest + noFood + noWater;
-        deathRate =  mortalityRate / resourceUse;
+        deathRate =  (float) mortalityRate / resourceUse;
         
-        if(deathRate >=.5){
+        if(deathRate >= .5){
             return 1;
         }
         else{
@@ -34,4 +34,3 @@ public class ObstacleControl {
     }
         
     }
-}
