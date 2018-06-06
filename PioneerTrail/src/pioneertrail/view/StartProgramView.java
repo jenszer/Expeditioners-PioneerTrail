@@ -19,7 +19,7 @@ public class StartProgramView {
      */
     public boolean displayStartProgramView(){    
         boolean endOfView = false;
-        String success = "";
+        
          do {
             String[] inputs = this.getInputs();
             String input = toUpperCase(inputs);
