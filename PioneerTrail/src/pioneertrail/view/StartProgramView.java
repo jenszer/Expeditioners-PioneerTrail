@@ -1,9 +1,10 @@
+package pioneertrail.view;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pioneertrail.view;
 
 import static jdk.nashorn.internal.objects.NativeString.toUpperCase;
 
@@ -16,27 +17,26 @@ public class StartProgramView {
     /**
      *
      */
-    public StartProgramView() {
-    boolean endOfView = false;
-    
-    do {
-        String[] inputs = this.getInputs();
+    public boolean displayStartProgramView(){    
+        boolean endOfView = false;
+        String success = "";
+         do {
+            String[] inputs = this.getInputs();
+            String input = toUpperCase(inputs);
+            boolean equal = input.equals("Q");
         
-        toUpperCase(inputs);
-        
-        if(inputs.length < 1) {
-        System.out.println("try again");
-        continue;
-        }
+         if((inputs.length < 1) || (equal == true)) {
+         System.out.println("Invalid Entry; Try Again");
+         continue;
+            }
           
         if (endOfView = doAction(inputs)){
+            return endOfView;
         }
-        }
-    
-    while (endOfView != true);
-    
     }
-
+    while (endOfView != true);
+    return false;
+    }
     private String[] getInputs() {
         System.out.println("***getInputs() called***");
         
@@ -52,6 +52,6 @@ public class StartProgramView {
         
         return true;
 
-    }
     
-}
+        }
+    }

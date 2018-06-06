@@ -24,8 +24,8 @@ public class PioneerTrail {
     
     public static void main(String[] args) {
         
-        StartProgramView startProgramView = new StartProgramView();
-        StartProgramView.StartProgramView();
+    StartProgramView startProgramView = new StartProgramView();
+    StartProgramView.displayStartProgramView();
         
     }
     
