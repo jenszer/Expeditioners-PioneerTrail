@@ -14,6 +14,7 @@ import pioneertrail.model.Actor;
 import pioneertrail.model.Inventory;
 import pioneertrail.model.Location;
 import pioneertrail.model.Wagon;
+import pioneertrail.view.StartProgramView;
 
 /**
  *
@@ -21,7 +22,17 @@ import pioneertrail.model.Wagon;
  */
 public class PioneerTrail {
     
-    static void TeamTest(){
+    public static void main(String[] args) {
+        
+        StartProgramView startProgramView = new StartProgramView();
+        StartProgramView.StartProgramView();
+        
+    }
+    
+    
+    
+    
+   /* static void TeamTest(){
         
         Player playerOne = new Player();
     
@@ -149,5 +160,5 @@ public class PioneerTrail {
         
         // testing Map and Location Classes for the individual assignment
         ArielGeorgeTest();
-    }
+    } */
 }
