@@ -35,7 +35,7 @@ public class StartProgramView {
     return false;
     }
 
-    private String[] getInputs() {
+    public String[] getInputs() {
         String[] inputs = new String [1];
         System.out.println("USER INPUT PROMPT");
         
@@ -55,11 +55,8 @@ public class StartProgramView {
         return inputs;
     }
 
-    private boolean doAction(String[] inputs) {
-        System.out.println("***doAction() called***");
-        System.out.println("\tinputs = " + inputs[0]);
+    public boolean doAction(String[] inputs) {
         
-        return true;
 
     
         }
