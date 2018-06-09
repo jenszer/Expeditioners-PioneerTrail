@@ -38,7 +38,7 @@ public class StartProgramView {
     return false;
     }
     private String[] getInputs() {
-        String inputs =  
+        //String inputs =  
         
         System.out.println("***getInputs() called***");
         
