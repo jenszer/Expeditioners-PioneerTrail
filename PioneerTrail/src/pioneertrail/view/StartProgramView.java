@@ -17,22 +17,22 @@ public class StartProgramView {
     /**
      *
      */
-    public boolean displayStartProgramView(){
+    public String[] displayStartProgramView(){
         boolean endOfView = false;
         
-         do {
+        do {
             String[] inputs = this.getInputs();
         
          if((inputs.length < 1) || inputs[0].equalsIgnoreCase("Q")) {
          break;
          }
-          
+         else{
+          return inputs;
+         }
+         
         endOfView = doAction(inputs);
-        return endOfView;
         }
-        while (endOfView != true);
-           
-    return false;
+       while (endOfView != true);
     }
 
     public String[] getInputs() {
