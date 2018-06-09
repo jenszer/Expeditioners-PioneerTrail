@@ -40,20 +40,19 @@ public class StartProgramView {
         System.out.println("Display a description of the view");
         
         String[] inputs = new String [1];
-        
+        String input = "";
         
         boolean valid = false;
         while (!valid){
            Scanner userInput = new Scanner(System.in);
            System.out.println("Please enter a value: ");
-           String input = userInput.next();
-           input = input.trim();
-                                 
+           input = userInput.next();
+                                            
            if(input.length() < 1){
            System.out.println("You must enter a non-blank value");
-           continue;
-           }
-           
+           }           
+                  
+           input = input.trim();
            inputs[0] = input;
            
            valid = true;
