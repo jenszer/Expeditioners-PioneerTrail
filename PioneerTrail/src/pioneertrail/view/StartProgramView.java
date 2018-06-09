@@ -7,7 +7,6 @@ package pioneertrail.view;
  */
 
 import java.util.Scanner;
-import static jdk.nashorn.internal.objects.NativeString.toUpperCase;
 
 /**
  *
@@ -28,27 +27,26 @@ public class StartProgramView {
          break;
          }
           
-        if (endOfView = doAction(inputs)){
-            return endOfView;
+        endOfView = doAction(inputs);
+        return endOfView;
         }
-    }
-    while (endOfView != true);
+        while (endOfView != true);
+           
     return false;
     }
+
     private String[] getInputs() {
-              
+        String[] inputs = new String [1];
         System.out.println("USER INPUT PROMPT");
         
-        String[] inputs = new String [1];
-        
         boolean valid = false;
-        while (!valid){
+        while (valid == false){
            System.out.println("Please enter a value: ");
            Scanner userInput = new Scanner(System.in);
            String input = userInput.next();
            input = input.trim();
                                             
-           if("".equals(input)){
+           if(input.length() < 1){
            System.out.println("You must enter a non-blank value");
            continue;
            }           
