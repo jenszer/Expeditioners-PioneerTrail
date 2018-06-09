@@ -57,9 +57,36 @@ public class StartProgramView {
     }
 
     public boolean doAction(String[] inputs) {
-        System.out.println("doAction called");
-        System.out.println("\tinputs = " +inputs[0]);
+        //System.out.println("doAction called");
+        //System.out.println("\tinputs = " + inputs[0]);
 
-        return true;
+        playersName = this.getinputs[0];
+        player = savePlayer(playersName)
+        String value = inputs[0].toUpperCase();
+        
+        switch (value){
+            case "N": //for new game
+                //this.newGame();
+                System.out.println("Start a new Game");
+                break;
+            case "L":
+                //this.loadGame();
+                System.out.println("Load Game");
+                break;
+            case "H":
+                //this.helpMenu();
+                System.out.println("Help Menu");
+                break;
+            case "S":
+                //this.saveGame();
+                System.out.println("Save Game");
+                break;
+            default:
+                System.out.println("\n***Try again***");
+                break;
+                
+        }
+        
+        //return true;
         }
     }
