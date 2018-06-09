@@ -9,6 +9,7 @@ package pioneertrail.view;
 import java.util.Scanner;
 import pioneertrail.control.GameControl;
 
+
 /**
  *
  * @author arielgeorge
@@ -64,7 +65,8 @@ public class StartProgramView {
         System.out.println("Please enter your name:");
         Scanner userInput = new Scanner(System.in);
         playersName[0]= userInput.nextLine();
-        Player player = GameControl.savePlayer(playersName);
+        
+        Player instance player = GameControl.savePlayer(playersName[0]);
         
         if(player ==null){
             System.out.println("Could not create the player. " + 
