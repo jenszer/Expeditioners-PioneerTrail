@@ -25,7 +25,7 @@ public class StartProgramView {
             String input = toUpperCase(inputs);
             boolean equal = input.equals("Q");
         
-         if((inputs.length < 1) || (equal == true)) {
+         if((inputs.length < 1) || inputs[0].equalsIgnoreCase("Q")) {
          System.out.println("Invalid Entry; Try Again");
          continue;
             }
@@ -38,6 +38,8 @@ public class StartProgramView {
     return false;
     }
     private String[] getInputs() {
+        String inputs =  
+        
         System.out.println("***getInputs() called***");
         
         String[] inputs = new String [1];
