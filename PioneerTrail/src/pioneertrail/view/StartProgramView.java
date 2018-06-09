@@ -19,20 +19,21 @@ public class StartProgramView {
      */
     public String[] displayStartProgramView(){
         boolean endOfView = false;
+        String [] inputs;
         
         do {
-            String[] inputs = this.getInputs();
+            inputs = this.getInputs();
         
-         if((inputs.length < 1) || inputs[0].equalsIgnoreCase("Q")) {
-         break;
-         }
-         else{
-          return inputs;
-         }
-         
+        if((inputs.length < 1) || inputs[0].equalsIgnoreCase("Q")) {
+        break;
+        }
+        else{
+                  
         endOfView = doAction(inputs);
         }
+        }
        while (endOfView != true);
+       return inputs;
     }
 
     public String[] getInputs() {
@@ -56,8 +57,9 @@ public class StartProgramView {
     }
 
     public boolean doAction(String[] inputs) {
-        
+        System.out.println("doAction called");
+        System.out.println("\tinputs = " +inputs[0]);
 
-    
+        return true;
         }
     }
