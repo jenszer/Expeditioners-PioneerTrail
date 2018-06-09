@@ -6,6 +6,7 @@ package pioneertrail.view;
  * and open the template in the editor.
  */
 
+import java.util.Scanner;
 import static jdk.nashorn.internal.objects.NativeString.toUpperCase;
 
 /**
@@ -17,18 +18,15 @@ public class StartProgramView {
     /**
      *
      */
-    public boolean displayStartProgramView(){    
+    public boolean displayStartProgramView(){
         boolean endOfView = false;
         
          do {
             String[] inputs = this.getInputs();
-            String input = toUpperCase(inputs);
-            boolean equal = input.equals("Q");
         
          if((inputs.length < 1) || inputs[0].equalsIgnoreCase("Q")) {
-         System.out.println("Invalid Entry; Try Again");
-         continue;
-            }
+         break;
+         }
           
         if (endOfView = doAction(inputs)){
             return endOfView;
@@ -38,13 +36,26 @@ public class StartProgramView {
     return false;
     }
     private String[] getInputs() {
-        String inputs =  
         
-        System.out.println("***getInputs() called***");
+        System.out.println("Display a description of the view");
         
         String[] inputs = new String [1];
-        inputs[0] = "testInput";
+        Scanner userInput = new Scanner(System.in);
         
+        boolean valid = false;
+        while (!valid){
+           System.out.println("Please enter a value: ");
+           inputs[0] = userInput.next();
+           inputs[0] = inputs[0].trim();
+           
+           //if((inputs.length) < 1){
+           if(inputs[0] == ""){
+           System.out.println("You must enter a non-blank value");
+           continue;
+           }
+           
+           valid = true;
+        }
         return inputs;
     }
 
