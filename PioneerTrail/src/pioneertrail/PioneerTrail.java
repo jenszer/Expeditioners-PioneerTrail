@@ -11,6 +11,7 @@ import pioneertrail.model.Scene;
 import pioneertrail.model.Player;
 import pioneertrail.model.Map;
 import pioneertrail.model.Actor;
+import pioneertrail.model.Game;
 import pioneertrail.model.Inventory;
 import pioneertrail.model.Location;
 import pioneertrail.model.Wagon;
@@ -21,11 +22,30 @@ import pioneertrail.view.StartProgramView;
  * @author Jacob Enszer, Ariel George, Hector Mendoza
  */
 public class PioneerTrail {
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player player) {
+        PioneerTrail.player = player;
+    }
+
+    public static Game getGame() {
+        return game;
+    }
+
+    public static void setGame(Game game) {
+        PioneerTrail.game = game;
+    }
     
     /**
      *
      * @param args
      */
+    private static Player player;
+    private static Game game;
+    
     public static void main(String[] args) {
         
     StartProgramView startProgramView = new StartProgramView();
@@ -37,7 +57,7 @@ public class PioneerTrail {
     
     
     
-   /* static void TeamTest(){
+  /*static void Player(){
         
         Player playerOne = new Player();
     

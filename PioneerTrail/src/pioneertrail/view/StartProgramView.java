@@ -8,6 +8,7 @@ package pioneertrail.view;
 
 import java.util.Scanner;
 import pioneertrail.control.GameControl;
+import pioneertrail.model.Player;
 
 
 /**
@@ -66,7 +67,8 @@ public class StartProgramView {
         Scanner userInput = new Scanner(System.in);
         playersName[0]= userInput.nextLine();
         
-        Player instance player = GameControl.savePlayer(playersName[0]);
+        
+        Player player = GameControl.savePlayer(playersName[0]);
         
         if(player ==null){
             System.out.println("Could not create the player. " + 
@@ -77,31 +79,10 @@ public class StartProgramView {
                     + "Welcome to the game " + player
                     + "We hope you have a lot of fun!"
                     + "==========================================");
+         mainMenuView mainMenu = new mainMenuView();
+         mainMenu.display();
         
-        String value = inputs[0].toUpperCase();
-        
-        switch (value){
-            case "N": //for new game
-                //this.newGame();
-                System.out.println("Start a new Game");
-                break;
-            case "L":
-                //this.loadGame();
-                System.out.println("Load Game");
-                break;
-            case "H":
-                //this.helpMenu();
-                System.out.println("Help Menu");
-                break;
-            case "S":
-                //this.saveGame();
-                System.out.println("Save Game");
-                break;
-            default:
-                System.out.println("\n***Try again***");
-                break;
-                
-        }
+       }
         
         //return true;
         }

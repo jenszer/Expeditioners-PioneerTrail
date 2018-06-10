@@ -5,10 +5,20 @@
  */
 package pioneertrail.control;
 
+import pioneertrail.PioneerTrail;
+import pioneertrail.model.Player;
+
 /**
  *
  * @author Jacob Enszer
  */
 public class GameControl {
     
+    public static Player savePlayer(String playerName) {
+        System.out.println("***savePlayer() called ***");
+        Player player = new Player();
+        player.setName(playerName);
+        PioneerTrail.setPlayer(player);
+        return new Player();
+    }   
 }
