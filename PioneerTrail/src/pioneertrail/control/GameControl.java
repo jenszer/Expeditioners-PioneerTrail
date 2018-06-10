@@ -21,4 +21,6 @@ public class GameControl {
         PioneerTrail.setPlayer(player);
         return new Player();
     }   
+    
+   // public static Player createNewGame(String )
 }

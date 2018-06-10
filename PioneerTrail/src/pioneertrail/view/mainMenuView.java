@@ -36,11 +36,11 @@ class mainMenuView {
    
     public String[] getInputs() {
         String[] inputs = new String [1];
-        System.out.println("USER INPUT PROMPT");
+        System.out.println("MAIN MENU");
         
         boolean valid = false;
         while (valid == false){
-           System.out.println("Please enter a value: ");
+           System.out.println("Make your selection: ");
            Scanner userInput = new Scanner(System.in);
            inputs[0] = userInput.nextLine();
                                                        
@@ -79,5 +79,8 @@ class mainMenuView {
         }
        return false;
     }
+    
+  //  public static void createNewGame(Player player);
+    //    gameMenuView = ;
 
 }

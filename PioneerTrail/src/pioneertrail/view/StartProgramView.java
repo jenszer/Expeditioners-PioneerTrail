@@ -24,6 +24,19 @@ public class StartProgramView {
         boolean endOfView = false;
         String [] inputs;
         
+        System.out.println(
+                  "\n***********************************"
+                + "\n* Welcome to the Pioneer Trail    *"
+                + "\n* In this game you will journey   *"
+                + "\n* with your family from Missouri  *"
+                + "\n* to Utah. You will encounter     *"
+                + "\n* various obstacles along the     *"
+                + "\n* way. Try to make it with as     *"
+                + "\n* many family members as possible *"
+                + "\n***********************************"
+                + "\n"
+                + "\n Enter any letter but Q to start  *");
+        
         do {
             inputs = this.getInputs();
         
@@ -41,7 +54,7 @@ public class StartProgramView {
 
     public String[] getInputs() {
         String[] inputs = new String [1];
-        System.out.println("USER INPUT PROMPT");
+        System.out.println("Player 1");
         
         boolean valid = false;
         while (valid == false){
@@ -52,8 +65,7 @@ public class StartProgramView {
            if(inputs[0].trim().equals("") == true){
            System.out.println("You must enter a non-blank value");
            continue;
-           }           
-                      
+           }         
            valid = true;
         }
         return inputs;
@@ -75,15 +87,22 @@ public class StartProgramView {
                         "Enter a different name.");
             return false;
             }
-            System.out.println("======================================"
-                    + "Welcome to the game " + player
-                    + "We hope you have a lot of fun!"
-                    + "==========================================");
+            System.out.println("\n======================================"
+                    + "\nWelcome to the game " + playersName[0]
+                    + "\nWe hope you have a lot of fun!"
+                    + "\n======================================"
+                    + "\n"
+                    + "\n N - Create New Game"
+                    + "\n R - Restart Game"
+                    + "\n H - Get Help"
+                    + "\n E - Test Program"
+                    + "\n Q - Quit");
+            
          mainMenuView mainMenu = new mainMenuView();
          mainMenu.display();
          
        return true;
        }
-       
+           
     }
 
