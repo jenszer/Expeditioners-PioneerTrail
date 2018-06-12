@@ -9,9 +9,9 @@ import pioneertrail.control.GameControl;
  *
  * @author Jacob Enszer
  */
-class MainMenuView1 {
+class MainMenuView {
 
-    public MainMenuView1() {
+    public MainMenuView() {
     }
     
    public void display(){
@@ -19,12 +19,12 @@ class MainMenuView1 {
         String inputs[];
                            
         do {
-        inputs = this.getInputs();
         System.out.println("\n N - Create New Game"
                     + "\n R - Restart Game"
                     + "\n H - Get Help"
                     + "\n E - Test Program"
                     + "\n Q - Quit");
+        inputs = this.getInputs();
         
         if((inputs.length < 1) || inputs[0].equalsIgnoreCase("Q")) {
         break;

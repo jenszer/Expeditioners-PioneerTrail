@@ -92,16 +92,10 @@ public class StartProgramView {
                 System.out.println("\n======================================"
                     + "\nWelcome to the game " + playerOne
                     + "\nWe hope you have a lot of fun!"
-                    + "\n======================================"
-                    + "\n"
-                    + "\n N - Create New Game"
-                    + "\n R - Restart Game"
-                    + "\n H - Get Help"
-                    + "\n E - Test Program"
-                    + "\n Q - Quit");
-                }
+                    + "\n======================================");
+        }
                 
-         MainMenuView1 mainMenu = new MainMenuView1();
+         MainMenuView mainMenu = new MainMenuView();
          mainMenu.display();
          
        return true;
