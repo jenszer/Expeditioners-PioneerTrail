@@ -7,6 +7,7 @@ package pioneertrail.view;
  */
 
 import java.util.Scanner;
+import pioneertrail.PioneerTrail;
 import pioneertrail.control.GameControl;
 import pioneertrail.model.Player;
 
@@ -74,21 +75,22 @@ public class StartProgramView {
     public boolean doAction(String[] inputs) {
         //System.out.println("doAction called");
         //System.out.println("\tinputs = " + inputs[0]);
-        String[] playersName = new String [1];
+        String[] playerName = new String [1];
         System.out.println("Please enter your name:");
         Scanner userInput = new Scanner(System.in);
-        playersName[0]= userInput.nextLine();
-        String player = playersName[0];
-       
+        playerName[0]= userInput.nextLine();
+           
+        Player player = GameControl.savePlayer(playerName[0]);
+        Player playerOne = PioneerTrail.getPlayer();
                 
-        if(player == ""){
+        if(playerOne == null){
             System.out.println("Could not create the player. " + 
                         "Enter a different name.");
             return false;
         }
         else {    
                 System.out.println("\n======================================"
-                    + "\nWelcome to the game " + playersName[0]
+                    + "\nWelcome to the game " + playerName[0]
                     + "\nWe hope you have a lot of fun!"
                     + "\n======================================"
                     + "\n"
