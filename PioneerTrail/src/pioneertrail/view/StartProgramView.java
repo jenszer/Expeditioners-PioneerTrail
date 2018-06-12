@@ -95,7 +95,7 @@ public class StartProgramView {
                     + "\n======================================");
         }
                 
-         MainMenuView mainMenu = new MainMenuView();
+         NewMainMenuView mainMenu = new NewMainMenuView();
          mainMenu.display();
          
        return true;
