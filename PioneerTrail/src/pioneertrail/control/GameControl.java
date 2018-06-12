@@ -15,7 +15,6 @@ import pioneertrail.model.Player;
 public class GameControl {
     
     public static Player savePlayer(String playerName) {
-        System.out.println("***savePlayer() called ***");
         Player player = new Player();
         player.setName(playerName);
         PioneerTrail.setPlayer(player);

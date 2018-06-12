@@ -78,16 +78,16 @@ public class StartProgramView {
         System.out.println("Please enter your name:");
         Scanner userInput = new Scanner(System.in);
         playersName[0]= userInput.nextLine();
-        
-        
-        Player player = GameControl.savePlayer(playersName[0]);
-        
-        if(player ==null){
+        String player = playersName[0];
+       
+                
+        if(player == ""){
             System.out.println("Could not create the player. " + 
                         "Enter a different name.");
             return false;
-            }
-            System.out.println("\n======================================"
+        }
+        else {    
+                System.out.println("\n======================================"
                     + "\nWelcome to the game " + playersName[0]
                     + "\nWe hope you have a lot of fun!"
                     + "\n======================================"
@@ -97,8 +97,9 @@ public class StartProgramView {
                     + "\n H - Get Help"
                     + "\n E - Test Program"
                     + "\n Q - Quit");
-            
-         mainMenuView mainMenu = new mainMenuView();
+                }
+                
+         MainMenuView mainMenu = new MainMenuView();
          mainMenu.display();
          
        return true;
