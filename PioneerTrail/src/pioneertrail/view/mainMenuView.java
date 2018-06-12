@@ -1,27 +1,30 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pioneertrail.view;
 
 import java.util.Scanner;
+import pioneertrail.PioneerTrail;
+import pioneertrail.control.GameControl;
+
 
 /**
  *
  * @author Jacob Enszer
  */
-class mainMenuView {
+class MainMenuView {
 
-    public mainMenuView() {
+    public MainMenuView() {
     }
     
    public void display(){
         boolean endOfView = false;
-        String [] inputs;
-        
+        String inputs[];
+                           
         do {
         inputs = this.getInputs();
+        System.out.println("\n N - Create New Game"
+                    + "\n R - Restart Game"
+                    + "\n H - Get Help"
+                    + "\n E - Test Program"
+                    + "\n Q - Quit");
         
         if((inputs.length < 1) || inputs[0].equalsIgnoreCase("Q")) {
         break;
@@ -59,19 +62,16 @@ class mainMenuView {
         
        switch (menuItem){
             case "N": //for new game
-                //this.startNewGame();
-                System.out.println("N called");
+                this.startNewGame();
                 break;
             case "R":
-                //this.restartGame();
-                System.out.println("R called");
+                this.restartGame();
                 break;
             case "H":
-                //this.getHelp();
-                System.out.println("H called");
+                this.getHelp();
                 break;
             case "E":
-                System.out.println("E called");
+                this.test();
                 break;   
             default:
             System.out.println("\nInvalid Menu Item.");
@@ -80,7 +80,22 @@ class mainMenuView {
        return false;
     }
     
-  //  public static void createNewGame(Player player);
-    //    gameMenuView = ;
-
+    public void startNewGame(){
+        //Create a New Game
+        GameControl.createNewGame(PioneerTrail.getPlayer());
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display(); 
+        }
+    
+    public void restartGame(){
+        StartExistingGameView startExistingGame = new StartExistingGameView();
+        startExistingGame.display();
+       }
+    public void getHelp(){
+        HelpMenuView helpMenuView = new HelpMenuView();
+        helpMenuView.display();
+        }
+    public void test(){
+        System.out.println("Test Stub");
+    }
 }
