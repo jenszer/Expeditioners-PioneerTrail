@@ -20,6 +20,9 @@ public class GameControl {
         PioneerTrail.setPlayer(player);
         return new Player();
     }   
+    public static void createNewGame(Player player){
+            System.out.println("Stub");
+            }
     
    // public static Player createNewGame(String )
 }
