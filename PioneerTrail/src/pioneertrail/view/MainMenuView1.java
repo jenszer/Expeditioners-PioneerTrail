@@ -9,9 +9,9 @@ import pioneertrail.control.GameControl;
  *
  * @author Jacob Enszer
  */
-class MainMenuView {
+class MainMenuView1 {
 
-    public MainMenuView() {
+    public MainMenuView1() {
     }
     
    public void display(){

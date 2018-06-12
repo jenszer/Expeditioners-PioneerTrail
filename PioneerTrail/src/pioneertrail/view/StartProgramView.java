@@ -101,7 +101,7 @@ public class StartProgramView {
                     + "\n Q - Quit");
                 }
                 
-         MainMenuView mainMenu = new MainMenuView();
+         MainMenuView1 mainMenu = new MainMenuView1();
          mainMenu.display();
          
        return true;
