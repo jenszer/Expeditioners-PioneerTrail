@@ -90,7 +90,7 @@ public class StartProgramView {
         }
         else {    
                 System.out.println("\n======================================"
-                    + "\nWelcome to the game " + playerName[0]
+                    + "\nWelcome to the game " + playerOne
                     + "\nWe hope you have a lot of fun!"
                     + "\n======================================"
                     + "\n"
