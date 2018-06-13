@@ -26,7 +26,7 @@ public class HelpMenuView {
                     + "\n C - Game Controls"
                     + "\n O - Object of the game"
                     + "\n I - Items"
-                    + "\n Q - Exit to Main Menu");
+                    + "\n Q - Exit to Previous Menu");
         inputs = this.getInputs();
         
         if((inputs.length < 1) || inputs[0].equalsIgnoreCase("Q")) {

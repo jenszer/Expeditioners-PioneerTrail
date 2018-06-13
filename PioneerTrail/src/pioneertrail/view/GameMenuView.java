@@ -30,7 +30,7 @@ public class GameMenuView {
                     + "\n H - Hunt for Resources"               
                     + "\n S - Save Game"
                     + "\n Z - Help"                 
-                    + "\n Q - Exit to Main Menu");
+                    + "\n Q - Exit to Previous Menu");
         inputs = this.getInputs();
         
         if((inputs.length < 1) || inputs[0].equalsIgnoreCase("Q")) {
@@ -90,7 +90,7 @@ public class GameMenuView {
                 this.saveGame();
                 break;                 
             case "Z":
-                this.help();
+                this.getHelp();
                 break; 
             default:
             System.out.println("\nInvalid Menu Item.");
@@ -120,7 +120,8 @@ public class GameMenuView {
     public void saveGame(){
         System.out.println("Save Game Stub");
     }
-    public void help(){
-        System.out.println("Help Stub");
-    }
+    public void getHelp(){
+        HelpMenuView helpMenuView = new HelpMenuView();
+        helpMenuView.display();
+        }
 }

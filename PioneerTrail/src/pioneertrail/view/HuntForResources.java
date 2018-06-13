@@ -11,31 +11,39 @@ import java.util.Scanner;
  *
  * @author Jacob Enszer
  */
-public class InventoryMenuView {
+public class HuntForResources {
 
-    public InventoryMenuView() {
+    public HuntForResources() {
     }
     
     public void display(){
         boolean endOfView = false;
-        String inputs[];
-                           
+           
+        }
         do {
+                        
+        int resources = (int) (Math.random() * 4);
+        System.out.println("There are " + resources + "at this location.");           
         
-        System.out.println("\n A - About Game"
-                    + "\n C - Game Controls"
-                    + "\n O - Object of the game"
-                    + "\n I - Items"
-                    + "\n Q - Exit to Main Menu");
-        inputs = this.getInputs();
-        
-        if((inputs.length < 1) || inputs[0].equalsIgnoreCase("Q")) {
+        if(resources == 0){
         break;
+        }         
+        else {
+            System.out.println("\n H - Hunt"
+                    + "\n V - View Inventory"
+                    + "\n O - Exit to Previous Menu");
+                    
+            String[] inputs = this.getInputs();
+        
+        
+            if((inputs.length < 1) || inputs[0].equalsIgnoreCase("Q")) {
+            break;
+            }
+            else{     
+            endOfView = doAction(inputs);
+            }
         }
-        else{     
-        endOfView = doAction(inputs);
-        }
-        }
+        
         while (endOfView != true);
         return;
         }
@@ -95,6 +103,4 @@ public class InventoryMenuView {
     public void items(){
         System.out.println("Items Stub");
     }
-
-    
 }

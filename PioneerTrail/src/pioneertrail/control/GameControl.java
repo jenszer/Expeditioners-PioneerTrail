@@ -21,7 +21,7 @@ public class GameControl {
         return new Player();
     }   
     public static void createNewGame(Player player){
-            System.out.println("Stub");
+            System.out.println("Create New Game Called");
             }
     
    // public static Player createNewGame(String )
