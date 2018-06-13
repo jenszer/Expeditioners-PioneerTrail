@@ -1,30 +1,33 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package pioneertrail.view;
 
 import java.util.Scanner;
-import pioneertrail.PioneerTrail;
-import pioneertrail.control.GameControl;
-
 
 /**
  *
  * @author Jacob Enszer
  */
-class MainMenuView {
+public class InventoryMenuView {
 
-    public MainMenuView() {
+    public InventoryMenuView() {
     }
     
-   public void display(){
+    public void display(){
         boolean endOfView = false;
         String inputs[];
                            
         do {
+        
+        System.out.println("\n A - About Game"
+                    + "\n C - Game Controls"
+                    + "\n O - Object of the game"
+                    + "\n I - Items"
+                    + "\n Q - Exit to Main Menu");
         inputs = this.getInputs();
-        System.out.println("\n N - Create New Game"
-                    + "\n R - Restart Game"
-                    + "\n H - Get Help"
-                    + "\n E - Test Program"
-                    + "\n Q - Quit");
         
         if((inputs.length < 1) || inputs[0].equalsIgnoreCase("Q")) {
         break;
@@ -39,7 +42,7 @@ class MainMenuView {
    
     public String[] getInputs() {
         String[] inputs = new String [1];
-        System.out.println("MAIN MENU");
+        System.out.println("HELP MENU");
         
         boolean valid = false;
         while (valid == false){
@@ -61,18 +64,18 @@ class MainMenuView {
         menuItem = inputs[0].toUpperCase();
         
        switch (menuItem){
-            case "N": //for new game
-                this.startNewGame();
+            case "A": 
+                this.aboutGame();
                 break;
-            case "R":
-                this.restartGame();
+            case "C":
+                this.gameControls();
                 break;
-            case "H":
-                this.getHelp();
+            case "O":
+                this.objectOfGame();
                 break;
-            case "E":
-                this.test();
-                break;   
+            case "I":
+                this.items();
+                break;  
             default:
             System.out.println("\nInvalid Menu Item.");
                 break;
@@ -80,22 +83,18 @@ class MainMenuView {
        return false;
     }
     
-    public void startNewGame(){
-        //Create a New Game
-        GameControl.createNewGame(PioneerTrail.getPlayer());
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.display(); 
-        }
-    
-    public void restartGame(){
-        StartExistingGameView startExistingGame = new StartExistingGameView();
-        startExistingGame.display();
-       }
-    public void getHelp(){
-        HelpMenuView helpMenuView = new HelpMenuView();
-        helpMenuView.display();
-        }
-    public void test(){
-        System.out.println("Test Stub");
+    public void aboutGame(){
+        System.out.println("About Stub");
+            }
+    public void gameControls(){
+        System.out.println("Game Control Stub");
     }
+    public void objectOfGame(){
+        System.out.println("Object of Game Stub");
+    }
+    public void items(){
+        System.out.println("Items Stub");
+    }
+
+    
 }
