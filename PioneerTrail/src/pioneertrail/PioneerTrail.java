@@ -46,6 +46,16 @@ public class PioneerTrail {
     public static void setResource(Resource resource) {
         PioneerTrail.resource = resource;
     }
+
+    public static Inventory getInventory() {
+        return inventory;
+    }
+
+    public static void setInventory(Inventory inventory) {
+        PioneerTrail.inventory = inventory;
+    }
+    
+    
     
     /**
      *
@@ -54,6 +64,7 @@ public class PioneerTrail {
     private static Player player;
     private static Game game;
     private static Resource resource;
+    private static Inventory inventory;
    
     public static void main(String[] args) {
         
@@ -126,8 +137,8 @@ public class PioneerTrail {
                            ", Correct int answer: " + correctAnswer);
         
     }
-    
-    static void JacobEnszerTest() {
+   
+    static void InventoryStock() {
         
         Inventory inventoryItem = new Inventory();
         Resource resource = new Resource();
@@ -149,7 +160,7 @@ public class PioneerTrail {
         System.out.println(resource.toString());
      
     }
-    
+   /* 
     static void ArielGeorgeTest() {
         
         Map map = new Map();
