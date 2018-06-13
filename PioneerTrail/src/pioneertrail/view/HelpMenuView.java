@@ -21,12 +21,13 @@ public class HelpMenuView {
         String inputs[];
                            
         do {
-        inputs = this.getInputs();
+        
         System.out.println("\n A - About Game"
                     + "\n C - Game Controls"
                     + "\n O - Object of the game"
                     + "\n I - Items"
-                    + "\n E - Exit to Main Menu");
+                    + "\n Q - Exit to Main Menu");
+        inputs = this.getInputs();
         
         if((inputs.length < 1) || inputs[0].equalsIgnoreCase("Q")) {
         break;
@@ -75,9 +76,6 @@ public class HelpMenuView {
             case "I":
                 this.items();
                 break;  
-            case "E":
-                this.exit();
-                break; 
             default:
             System.out.println("\nInvalid Menu Item.");
                 break;
@@ -97,8 +95,6 @@ public class HelpMenuView {
     public void items(){
         System.out.println("Items Stub");
     }
-    public void exit(){
-        System.out.println("Exit Stub");
-    }
+
     
 }

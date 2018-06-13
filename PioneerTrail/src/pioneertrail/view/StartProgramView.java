@@ -82,8 +82,8 @@ public class StartProgramView {
            
         Player player = GameControl.savePlayer(playerName[0]);
         Player playerOne = PioneerTrail.getPlayer();
-        
-        if(playerOne == null){
+               
+        if(playerName[0].equals("")){
             System.out.println("Could not create the player. " + 
                         "Enter a different name.");
             return false;

@@ -14,7 +14,7 @@ class NewMainMenuView {
     public NewMainMenuView() {
     }
     
-   public void display(){
+    public void display(){
         boolean endOfView = false;
         String inputs[];
                            
