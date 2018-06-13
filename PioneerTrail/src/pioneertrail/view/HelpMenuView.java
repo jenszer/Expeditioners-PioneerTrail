@@ -84,16 +84,36 @@ public class HelpMenuView {
     }
     
     public void aboutGame(){
-        System.out.println("About Stub");
+        System.out.println("The Pioneer Trail game is a text based role playing"
+                + " game. In this game, you will be a pioneer family who leads "
+                + " a wagon train preparing to go west. You have suffered "
+                + "constant religious persecution and wish to find freedom and"
+                + " a new life in a better place. You have heard of a place"
+                + " called Zion in the mountains that offers such freedom and"
+                + " are eager to start your journey.");
             }
     public void gameControls(){
-        System.out.println("Game Control Stub");
+        System.out.println("Problems may arise during the trip, such as illness"
+                + " or death of family members, snake bites, broken wagons, "
+                + "adverse weather conditions, etc. You will have the "
+                + "opportunity to hunt if you have weapons and ammunition when "
+                + "you spot a bison, or an elk. If you have the needed supplies"
+                + " you could repair your damaged wagon, and fish when arriving"
+                + " at a lake or river. You will also have to stop to rest from"
+                + " time to time, due to weak animals or to obtain food.");
     }
     public void objectOfGame(){
-        System.out.println("Object of Game Stub");
+        System.out.println("The goal of the game is to reach Zion and survive"
+                + " with as many family members as you can. The game will be"
+                + " over when at least two family members have reached Zion.");
     }
     public void items(){
-        System.out.println("Items Stub");
+        System.out.println("Your family is composed of both parents and three "
+                + "children. Before starting the long journey of 1,500 miles, "
+                + "you must buy a series of items necessary for the trip, such "
+                + "as: food, water, tools, spare parts for the wagon, weapons, "
+                + "ammunition, etc. You must plan carefully so that you will "
+                + "have the items you need before you begin your journey.");
     }
 
     
