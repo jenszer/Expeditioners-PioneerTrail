@@ -6,24 +6,26 @@
 package pioneertrail.view;
 
 import java.util.Scanner;
+import pioneertrail.PioneerTrail;
+import pioneertrail.control.HarvestHuntControl;
 
 /**
  *
  * @author Jacob Enszer
  */
-public class HuntForResources {
+public class HuntForResourcesView {
 
-    public HuntForResources() {
+    private int resources = (int) (Math.random() * 8);
+
+    public HuntForResourcesView(){
     }
     
     public void display(){
+        System.out.println("There is/are " + resources + " resources at this location."); 
+           
         boolean endOfView = false;
            
-        }
-        do {
-                        
-        int resources = (int) (Math.random() * 4);
-        System.out.println("There are " + resources + "at this location.");           
+        do{    
         
         if(resources == 0){
         break;
@@ -31,7 +33,7 @@ public class HuntForResources {
         else {
             System.out.println("\n H - Hunt"
                     + "\n V - View Inventory"
-                    + "\n O - Exit to Previous Menu");
+                    + "\n Q - Exit to Previous Menu");
                     
             String[] inputs = this.getInputs();
         
@@ -43,14 +45,14 @@ public class HuntForResources {
             endOfView = doAction(inputs);
             }
         }
-        
+        }
         while (endOfView != true);
         return;
         }
    
     public String[] getInputs() {
         String[] inputs = new String [1];
-        System.out.println("HELP MENU");
+        System.out.println("HUNT RESOURCES MENU");
         
         boolean valid = false;
         while (valid == false){
@@ -72,18 +74,12 @@ public class HuntForResources {
         menuItem = inputs[0].toUpperCase();
         
        switch (menuItem){
-            case "A": 
-                this.aboutGame();
+            case "H": 
+                this.huntResources();
                 break;
-            case "C":
-                this.gameControls();
+            case "V":
+                this.viewInventory();
                 break;
-            case "O":
-                this.objectOfGame();
-                break;
-            case "I":
-                this.items();
-                break;  
             default:
             System.out.println("\nInvalid Menu Item.");
                 break;
@@ -91,16 +87,18 @@ public class HuntForResources {
        return false;
     }
     
-    public void aboutGame(){
-        System.out.println("About Stub");
-            }
-    public void gameControls(){
-        System.out.println("Game Control Stub");
+    public int huntResources(){
+            System.out.println("\nHow Many Bullets Would You"
+                            + "Like to Use?\n");
+            String[] inputs = this.getInputs();
+            int noBullets = Integer.parseInt(inputs[0]);
+            int weight = HarvestHuntControl.calcHuntForResources(resources, noBullets);
+            System.out.println("You gathered " + weight + "lbs of resources");
+            return weight;
+            
+        }
+    public void viewInventory(){
+        System.out.println("View Inventory Stub");
     }
-    public void objectOfGame(){
-        System.out.println("Object of Game Stub");
-    }
-    public void items(){
-        System.out.println("Items Stub");
-    }
+ 
 }

@@ -115,7 +115,8 @@ public class GameMenuView {
         System.out.println("Repair Wagon Stub");
     }
     public void huntForResources(){
-        System.out.println("Hunt for Resources Stub");
+        HuntForResourcesView huntResources = new HuntForResourcesView();
+        huntResources.display();
     }
     public void saveGame(){
         System.out.println("Save Game Stub");

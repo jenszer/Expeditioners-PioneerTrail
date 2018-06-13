@@ -39,13 +39,22 @@ public class PioneerTrail {
         PioneerTrail.game = game;
     }
     
+    public static Resource getResource() {
+        return resource;
+    }
+
+    public static void setResource(Resource resource) {
+        PioneerTrail.resource = resource;
+    }
+    
     /**
      *
      * @param args
      */
     private static Player player;
     private static Game game;
-    
+    private static Resource resource;
+   
     public static void main(String[] args) {
         
     StartProgramView startProgramView = new StartProgramView();

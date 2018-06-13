@@ -5,6 +5,8 @@
  */
 package pioneertrail.control;
 
+import pioneertrail.model.Resource;
+
 /**
  *
  * @author Jacob Enszer
@@ -26,5 +28,12 @@ public class HarvestHuntControl {
         int weight = (noElk - (noElk - noBullets)) * 50; 
         return weight;
         }
+        
+ public static void Resource saveInvLevel{int amount){
+        
+    }
+        
+    }   
+        
     }
 }
