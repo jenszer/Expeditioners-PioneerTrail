@@ -6,6 +6,8 @@
 package pioneertrail.view;
 
 import java.util.Scanner;
+import pioneertrail.model.Inventory;
+import pioneertrail.model.Resource;
 
 /**
  *
@@ -103,7 +105,9 @@ public class GameMenuView {
         System.out.println("View Map Stub");
             }
     public void viewInventory(){
-        System.out.println("View Inventory Stub");
+       Inventory inventory = new Inventory();          
+       System.out.println(inventory.toString());
+          
     }
     public void purchaseSupplies(){
         System.out.println("Purchase Supplies Stub");

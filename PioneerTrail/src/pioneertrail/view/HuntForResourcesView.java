@@ -8,6 +8,7 @@ package pioneertrail.view;
 import java.util.Scanner;
 import pioneertrail.PioneerTrail;
 import pioneertrail.control.HarvestHuntControl;
+import pioneertrail.model.Inventory;
 
 /**
  *
@@ -98,7 +99,8 @@ public class HuntForResourcesView {
             
         }
     public void viewInventory(){
-        System.out.println("View Inventory Stub");
+       Inventory inventory = new Inventory();          
+       System.out.println(inventory.toString());
     }
  
 }
