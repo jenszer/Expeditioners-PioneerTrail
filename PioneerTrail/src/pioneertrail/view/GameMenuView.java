@@ -110,7 +110,8 @@ public class GameMenuView {
           
     }
     public void purchaseSupplies(){
-        System.out.println("Purchase Supplies Stub");
+        PurchaseSuppliesView purchaseSupplies = new PurchaseSuppliesView();
+        purchaseSupplies.display();                
     }
     public void move(){
         System.out.println("Move Stub");

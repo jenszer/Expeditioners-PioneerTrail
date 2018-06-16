@@ -29,7 +29,7 @@ class NewMainMenuView {
         if((inputs.length < 1) || inputs[0].equalsIgnoreCase("Q")) {
         break;
         }
-        else{     
+        else{
         endOfView = doAction(inputs);
         }
         }
@@ -50,7 +50,7 @@ class NewMainMenuView {
            if(inputs[0].trim().equals("") == true){
            System.out.println("You must enter a non-blank value");
            continue;
-           }           
+           }  
                       
            valid = true;
         }
@@ -72,7 +72,7 @@ class NewMainMenuView {
                 break;
             case "E":
                 this.test();
-                break;   
+                break;
             default:
             System.out.println("\nInvalid Menu Item.");
                 break;
@@ -84,7 +84,7 @@ class NewMainMenuView {
         //Create a New Game
         GameControl.createNewGame(PioneerTrail.getPlayer());
         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.display(); 
+        gameMenu.display();
         }
     
     public void restartGame(){

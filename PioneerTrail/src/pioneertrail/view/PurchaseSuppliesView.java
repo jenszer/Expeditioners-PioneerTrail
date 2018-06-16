@@ -6,35 +6,32 @@
 package pioneertrail.view;
 
 import java.util.Scanner;
-import pioneertrail.PioneerTrail;
 import pioneertrail.control.HarvestHuntControl;
 import pioneertrail.model.Inventory;
 
 /**
  *
- * @author Jacob Enszer
+ * @author Hector Mendoza
  */
-public class HuntForResourcesView {
-
-    private int resources = (int) (Math.random() * 8);
-
-    public HuntForResourcesView(){
+public class PurchaseSuppliesView {
+   
+    public PurchaseSuppliesView(){
     }
     
     public void display(){
-        System.out.println("There is/are " + resources + " resources at this location.");
+        System.out.println("Please select an option to purchase supplies:");
            
         boolean endOfView = false;
            
-        do{    
-        
-        if(resources == 0){
-        break;
-        }         
-        else {
-            System.out.println("\n H - Hunt"
-                    + "\n V - View Inventory"
-                    + "\n Q - Exit to Previous Menu");
+        do{
+            System.out.println("\n F - Food"
+                    + "\n A - Axe"
+                    + "\n H - Hammer"
+                    + "\n S - Spare Wheels"
+                    + "\n B - Bullets"
+                    + "\n W - Wood"
+                    + "\n D - Drinking Water"
+                    + "\n Q - Quit");
                     
             String[] inputs = this.getInputs();
         
@@ -44,7 +41,6 @@ public class HuntForResourcesView {
             }
             else{     
             endOfView = doAction(inputs);
-            }
         }
         }
         while (endOfView != true);
@@ -53,7 +49,7 @@ public class HuntForResourcesView {
    
     public String[] getInputs() {
         String[] inputs = new String [1];
-        System.out.println("HUNT RESOURCES MENU");
+        System.out.println("PURCHASE SUPPLIES MENU");
         
         boolean valid = false;
         while (valid == false){
@@ -75,11 +71,26 @@ public class HuntForResourcesView {
         menuItem = inputs[0].toUpperCase();
         
        switch (menuItem){
-            case "H": 
-                this.huntResources();
+            case "F":
+                this.purchaseFood();
                 break;
-            case "V":
-                this.viewInventory();
+            case "A":
+                this.purchaseAxe();
+                break;
+            case "H":
+                this.purchaseHammer();
+                break;
+            case "S":
+                this.purchaseSpareWheels();
+                break;
+            case "B":
+                this.purchaseBullets();
+                break;
+            case "W":
+                this.purchaseWood();
+                break;
+            case "D":
+                this.purchaseDrinkingWater();
                 break;
             default:
             System.out.println("\nInvalid Menu Item.");
@@ -88,19 +99,57 @@ public class HuntForResourcesView {
        return false;
     }
     
+    public int purchaseFood(){
+        
+        return 0;
+    }
+    
+    public int purchaseAxe(){
+        
+        return 0;
+    }
+    
+    public int purchaseHammer(){
+        
+        return 0;
+    }
+    
+    public int purchaseSpareWheels(){
+        
+        return 0;
+    }
+    
+    public int purchaseBullets(){
+        
+        return 0;
+    }
+    
+    public int purchaseWood(){
+        
+        return 0;
+    }
+    
+    public int purchaseDrinkingWater(){
+        
+        return 0;
+    }
+    
     public int huntResources(){
             System.out.println("\nHow Many Bullets Would You"
                             + "Like to Use?\n");
             String[] inputs = this.getInputs();
             int noBullets = Integer.parseInt(inputs[0]);
-            int weight = HarvestHuntControl.calcHuntForResources(resources, noBullets);
-            System.out.println("You gathered " + weight + "lbs of resources");
-            return weight;
-            
+            //int weight = HarvestHuntControl.calcHuntForResources(resources, noBullets);
+            //System.out.println("You gathered " + weight + "lbs of resources");
+            //return weight;
+            return 0;
         }
+    
     public void viewInventory(){
        Inventory inventory = new Inventory();
        System.out.println(inventory.toString());
     }
- 
+    
 }
+
+
