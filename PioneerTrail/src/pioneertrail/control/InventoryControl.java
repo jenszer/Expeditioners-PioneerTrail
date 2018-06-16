@@ -5,10 +5,17 @@
  */
 package pioneertrail.control;
 
+import java.util.ArrayList;
+import pioneertrail.model.Game;
+import pioneertrail.model.Inventory;
+
 /**
  *
  * @author Jacob Enszer
  */
 public class InventoryControl {
     
+        private ArrayList<Inventory> inventory = new ArrayList<>();
+       
+        
 }

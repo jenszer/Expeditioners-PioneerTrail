@@ -102,7 +102,7 @@ public class ListInventoryView {
             
         }
     public void viewInventory(){
-       Inventory inventory = new Inventory();   
+       Inventory inventory = new Inventory();
        System.out.println(inventory.toString());
     }
 

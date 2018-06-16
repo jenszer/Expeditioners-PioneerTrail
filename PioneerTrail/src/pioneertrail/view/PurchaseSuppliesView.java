@@ -5,8 +5,12 @@
  */
 package pioneertrail.view;
 
+
+import pioneertrail.PioneerTrail;
+import java.util.ArrayList;
 import java.util.Scanner;
 import pioneertrail.control.HarvestHuntControl;
+import pioneertrail.model.Game;
 import pioneertrail.model.Inventory;
 
 /**
@@ -18,6 +22,11 @@ public class PurchaseSuppliesView {
     public PurchaseSuppliesView(){
     }
     
+        Game game = new Game();
+        
+        private ArrayList<Inventory> inventory = game.getItems();
+
+            
     public void display(){
         System.out.println("Please select an option to purchase supplies:");
            
@@ -25,11 +34,9 @@ public class PurchaseSuppliesView {
            
         do{
             System.out.println("\n F - Food"
-                    + "\n A - Axe"
                     + "\n H - Hammer"
                     + "\n S - Spare Wheels"
                     + "\n B - Bullets"
-                    + "\n W - Wood"
                     + "\n D - Drinking Water"
                     + "\n Q - Quit");
                     
@@ -74,9 +81,6 @@ public class PurchaseSuppliesView {
             case "F":
                 this.purchaseFood();
                 break;
-            case "A":
-                this.purchaseAxe();
-                break;
             case "H":
                 this.purchaseHammer();
                 break;
@@ -85,9 +89,6 @@ public class PurchaseSuppliesView {
                 break;
             case "B":
                 this.purchaseBullets();
-                break;
-            case "W":
-                this.purchaseWood();
                 break;
             case "D":
                 this.purchaseDrinkingWater();
@@ -100,6 +101,8 @@ public class PurchaseSuppliesView {
     }
     
     public int purchaseFood(){
+        
+        
         
         return 0;
     }
@@ -151,5 +154,3 @@ public class PurchaseSuppliesView {
     }
     
 }
-
-

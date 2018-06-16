@@ -105,13 +105,13 @@ public class GameMenuView {
         System.out.println("View Map Stub");
             }
     public void viewInventory(){
-       Inventory inventory = new Inventory();          
+       Inventory inventory = new Inventory();
        System.out.println(inventory.toString());
           
     }
     public void purchaseSupplies(){
         PurchaseSuppliesView purchaseSupplies = new PurchaseSuppliesView();
-        purchaseSupplies.display();                
+        purchaseSupplies.display();             
     }
     public void move(){
         System.out.println("Move Stub");
