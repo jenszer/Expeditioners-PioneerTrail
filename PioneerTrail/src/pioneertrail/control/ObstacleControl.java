@@ -26,10 +26,12 @@ public class ObstacleControl {
         deathRate =  (float) mortalityRate / resourceUse;
         
         if(deathRate >= .5){
-            return 1;
+            death = 1;
+            return death;
         }
         else{
-            return 0;
+            death = 0;
+            return death;
         }
     }
         
