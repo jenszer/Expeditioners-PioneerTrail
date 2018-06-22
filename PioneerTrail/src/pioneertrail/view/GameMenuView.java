@@ -25,8 +25,8 @@ public class GameMenuView extends View {
         }
    
     public String getUserInput(){
-        String input = this.getInput();
-        return input;
+        String[] input = this.getInputs();
+        return input[0];
     }
 
 

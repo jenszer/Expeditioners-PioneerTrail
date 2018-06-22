@@ -16,7 +16,7 @@ import pioneertrail.model.Player;
  *
  * @author arielgeorge
  */
-public class StartProgramView {
+public class StartProgramView extends View {
     
     /**
      *
@@ -51,25 +51,6 @@ public class StartProgramView {
         }
        while (endOfView != true);
        return inputs;
-    }
-
-    public String[] getInputs() {
-        String[] inputs = new String [1];
-        System.out.println("Player 1");
-        
-        boolean valid = false;
-        while (valid == false){
-           System.out.println("Please enter a value: ");
-           Scanner userInput = new Scanner(System.in);
-           inputs[0] = userInput.nextLine();
-                                                       
-           if(inputs[0].trim().equals("") == true){
-           System.out.println("You must enter a non-blank value");
-           continue;
-           }         
-           valid = true;
-        }
-        return inputs;
     }
 
     public boolean doAction(String[] inputs) {

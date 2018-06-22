@@ -32,13 +32,13 @@ public class View implements ViewInterface{
                     + "\n S - Save Game"
                     + "\n Z - Help"                 
                     + "\n Q - Exit to Previous Menu");
-        String input = this.getInput();
+        inputs = this.getInputs();
                 
         if((inputs.length < 1) || inputs[0].equalsIgnoreCase("Q")) {
         break;
         }
         else{     
-        endOfView = doAction(inputs);
+        endOfView = this.doAction(inputs);
         }
         }
         while (endOfView != true);
@@ -46,7 +46,7 @@ public class View implements ViewInterface{
         }
     
     @Override
-   public String getInput(){
+   public String[] getInputs(){
 
         String[] inputs = new String [1];
         System.out.println("GAME MENU");
@@ -64,7 +64,13 @@ public class View implements ViewInterface{
                       
            valid = true;
         }
-        return inputs[0]; 
+        return inputs; 
+    }
+
+
+    @Override
+    public boolean doAction(String[] inputs) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
