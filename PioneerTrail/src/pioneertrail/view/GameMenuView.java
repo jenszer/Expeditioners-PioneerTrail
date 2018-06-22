@@ -9,62 +9,27 @@ import java.util.Scanner;
 import pioneertrail.model.Inventory;
 import pioneertrail.model.Resource;
 
-/**
+/**a
  *
  * @author Jacob Enszer
  */
-public class GameMenuView {
+
+public class GameMenuView extends View {
 
     public GameMenuView() {
     }
-    
-    public void display(){
-        boolean endOfView = false;
-        String inputs[];
-                           
-        do {
-        
-        System.out.println("\n V - View Map"
-                    + "\n I - View Inventory"
-                    + "\n P - Purchase Supplies"
-                    + "\n M - Move to New Location"
-                    + "\n R - Repair Wagons"
-                    + "\n H - Hunt for Resources"               
-                    + "\n S - Save Game"
-                    + "\n Z - Help"                 
-                    + "\n Q - Exit to Previous Menu");
-        inputs = this.getInputs();
-        
-        if((inputs.length < 1) || inputs[0].equalsIgnoreCase("Q")) {
-        break;
-        }
-        else{     
-        endOfView = doAction(inputs);
-        }
-        }
-        while (endOfView != true);
-        return;
+       
+    public String getMenu(){
+        this.display();
+        return null;
         }
    
-    public String[] getInputs() {
-        String[] inputs = new String [1];
-        System.out.println("GAME MENU");
-        
-        boolean valid = false;
-        while (valid == false){
-           System.out.println("Make your selection: ");
-           Scanner userInput = new Scanner(System.in);
-           inputs[0] = userInput.nextLine();
-                                                       
-           if(inputs[0].trim().equals("") == true){
-           System.out.println("You must enter a non-blank value");
-           continue;
-           }           
-                      
-           valid = true;
-        }
-        return inputs;
+    public String getUserInput(){
+        String input = this.getInput();
+        return input;
     }
+
+
     public boolean doAction(String[] inputs) {
         String menuItem = inputs[0];
         menuItem = inputs[0].toUpperCase();

@@ -9,9 +9,9 @@ import pioneertrail.control.GameControl;
  *
  * @author Jacob Enszer
  */
-class NewMainMenuView {
+class NewMainMenuView extends View{
 
-    public NewMainMenuView() {
+    public NewMainMenuView () {
     }
     
     public void display(){
@@ -84,7 +84,7 @@ class NewMainMenuView {
         //Create a New Game
         GameControl.createNewGame(PioneerTrail.getPlayer());
         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.display();
+        this.display();
         }
     
     public void restartGame(){
