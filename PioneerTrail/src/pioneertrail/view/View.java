@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Jacob Enszer
  */
-public class View implements ViewInterface{
+public abstract class View implements ViewInterface{
 
     public View() {
     }
@@ -68,9 +68,6 @@ public class View implements ViewInterface{
     }
 
 
-    @Override
-    public boolean doAction(String[] inputs) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
+  
+    public abstract boolean doAction(String[] inputs);   
 }
