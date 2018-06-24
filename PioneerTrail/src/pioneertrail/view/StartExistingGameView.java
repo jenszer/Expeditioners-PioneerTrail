@@ -13,6 +13,7 @@ public class StartExistingGameView extends View{
 
     public StartExistingGameView() {
     }
+    @Override
     public void display(){
         boolean endOfView = false;
         String [] inputs;

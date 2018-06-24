@@ -5,8 +5,6 @@
  */
 package pioneertrail.view;
 
-import java.util.Scanner;
-import pioneertrail.PioneerTrail;
 import pioneertrail.control.HarvestHuntControl;
 import pioneertrail.model.Inventory;
 
@@ -16,11 +14,12 @@ import pioneertrail.model.Inventory;
  */
 public class HuntForResourcesView extends View{
 
-    private int resources = (int) (Math.random() * 8);
+    private final int resources = (int) (Math.random() * 8);
 
     public HuntForResourcesView(){
     }
     
+    @Override
     public void display(){
         System.out.println("There is/are " + resources + " resources at this location.");
            
@@ -51,6 +50,7 @@ public class HuntForResourcesView extends View{
         return;
         }
    
+    @Override
     public boolean doAction(String[] inputs) {
         String menuItem = inputs[0];
         menuItem = inputs[0].toUpperCase();

@@ -53,6 +53,7 @@ public class StartProgramView extends View {
        return inputs;
     }
 
+    @Override
     public boolean doAction(String[] inputs) {
         //System.out.println("doAction called");
         //System.out.println("\tinputs = " + inputs[0]);

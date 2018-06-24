@@ -42,7 +42,6 @@ public abstract class View implements ViewInterface{
         }
         }
         while (endOfView != true);
-        return;
         }
     
     @Override
@@ -69,5 +68,6 @@ public abstract class View implements ViewInterface{
 
 
   
+    @Override
     public abstract boolean doAction(String[] inputs);   
 }

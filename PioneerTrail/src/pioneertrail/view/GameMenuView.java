@@ -5,9 +5,7 @@
  */
 package pioneertrail.view;
 
-import java.util.Scanner;
 import pioneertrail.model.Inventory;
-import pioneertrail.model.Resource;
 
 /**a
  *
@@ -30,6 +28,7 @@ public class GameMenuView extends View {
     }
 
 
+    @Override
     public boolean doAction(String[] inputs) {
         String menuItem = inputs[0];
         menuItem = inputs[0].toUpperCase();

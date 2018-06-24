@@ -6,10 +6,8 @@
 package pioneertrail.view;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 import pioneertrail.control.HarvestHuntControl;
 import pioneertrail.model.Inventory;
-import pioneertrail.model.Resource;
 
 /**
  *
@@ -17,13 +15,14 @@ import pioneertrail.model.Resource;
  */
 public class ListInventoryView extends View{
     
-    private ArrayList<Inventory> inventories = new ArrayList<>();
+    private final ArrayList<Inventory> inventories = new ArrayList<>();
     
-    private int resources = (int) (Math.random() * 8);
+    private final int resources = (int) (Math.random() * 8);
 
     public ListInventoryView(){
     }
     
+    @Override
     public void display(){
         System.out.println("There is/are " + resources + " resources at this location.");
            
@@ -54,6 +53,7 @@ public class ListInventoryView extends View{
         return;
         }
    
+    @Override
     public boolean doAction(String[] inputs) {
         String menuItem = inputs[0];
         menuItem = inputs[0].toUpperCase();

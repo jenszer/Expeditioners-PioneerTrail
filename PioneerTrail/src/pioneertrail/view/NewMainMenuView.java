@@ -14,6 +14,7 @@ class NewMainMenuView extends View {
     public NewMainMenuView () {
     }
     
+    @Override
     public void display(){
         boolean endOfView = false;
         String inputs[];
@@ -37,6 +38,7 @@ class NewMainMenuView extends View {
         return;
         }
    
+    @Override
     public boolean doAction(String[] inputs) {
         String menuItem = inputs[0];
         menuItem = inputs[0].toUpperCase();

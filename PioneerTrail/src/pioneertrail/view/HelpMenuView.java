@@ -5,8 +5,6 @@
  */
 package pioneertrail.view;
 
-import java.util.Scanner;
-
 /**
  *
  * @author Jacob Enszer

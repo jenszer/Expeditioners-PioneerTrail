@@ -6,10 +6,7 @@
 package pioneertrail.view;
 
 
-import pioneertrail.PioneerTrail;
 import java.util.ArrayList;
-import java.util.Scanner;
-import pioneertrail.control.HarvestHuntControl;
 import pioneertrail.model.Game;
 import pioneertrail.model.Inventory;
 
@@ -24,9 +21,10 @@ public class PurchaseSuppliesView extends View {
     
         Game game = new Game();
         
-        private ArrayList<Inventory> inventory = game.getItems();
+        private final ArrayList<Inventory> inventory = game.getItems();
 
             
+    @Override
     public void display(){
         System.out.println("Please select an option to purchase supplies:");
            
@@ -54,6 +52,7 @@ public class PurchaseSuppliesView extends View {
         return;
         }
    
+    @Override
     public boolean doAction(String[] inputs) {
         String menuItem = inputs[0];
         menuItem = inputs[0].toUpperCase();
