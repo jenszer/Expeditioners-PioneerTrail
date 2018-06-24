@@ -5,10 +5,6 @@
  */
 package pioneertrail.view;
 
-import pioneertrail.PioneerTrail;
-import pioneertrail.control.GameControl;
-import pioneertrail.control.ObstacleControl;
-
 /**
  *
  * @author Jacob Enszer

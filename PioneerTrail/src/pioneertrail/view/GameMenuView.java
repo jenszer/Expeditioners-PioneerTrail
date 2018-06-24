@@ -46,8 +46,8 @@ public class GameMenuView extends View {
             case "M":
                 this.move();
                 break; 
-            case "R":
-                this.repairWagon();
+            case "O":
+                this.obstacleResolution();
                 break;                 
             case "H":
                 this.huntForResources();
@@ -80,8 +80,9 @@ public class GameMenuView extends View {
     public void move(){
         System.out.println("Move Stub");
     }
-    public void repairWagon(){
-        System.out.println("Repair Wagon Stub");
+    public void obstacleResolution(){
+        ObstacleView obstacle = new ObstacleView();
+        obstacle.display();
     }
     public void huntForResources(){
         HuntForResourcesView huntResources = new HuntForResourcesView();
