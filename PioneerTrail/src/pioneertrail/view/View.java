@@ -25,7 +25,7 @@ public abstract class View implements ViewInterface {
     @Override
     public void display() {
         boolean endOfView = false;
-        String inputs = null;
+        String inputs = "";
 
         do {
             inputs = this.getInputs();
@@ -49,7 +49,7 @@ public abstract class View implements ViewInterface {
 
         boolean valid = false;
         while (valid == false) {
-            System.out.println("Enter your choice");
+            System.out.println("Input:");
             Scanner userInput = new Scanner(System.in);
             inputs = userInput.nextLine();
 

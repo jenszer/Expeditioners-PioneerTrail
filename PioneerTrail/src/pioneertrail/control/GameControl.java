@@ -18,11 +18,9 @@ public class GameControl {
         Player player = new Player();
         player.setName(playerName);
         PioneerTrail.setPlayer(player);
-        return new Player();
+        return player;
     }   
     public static void createNewGame(Player player){
             System.out.println("Create New Game Called");
             }
-    
-   // public static Player createNewGame(String )
 }
