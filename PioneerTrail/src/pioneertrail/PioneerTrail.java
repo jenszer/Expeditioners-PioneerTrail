@@ -38,7 +38,7 @@ public class PioneerTrail {
     public static void setGame(Game game) {
         PioneerTrail.game = game;
     }
-    
+
     public static Resource getResource() {
         return resource;
     }
@@ -54,9 +54,7 @@ public class PioneerTrail {
     public static void setInventory(Inventory inventory) {
         PioneerTrail.inventory = inventory;
     }
-    
-    
-    
+
     /**
      *
      * @param args
@@ -65,19 +63,15 @@ public class PioneerTrail {
     private static Game game;
     private static Resource resource;
     private static Inventory inventory;
-   
+
     public static void main(String[] args) {
-        
-    StartProgramView startProgramView = new StartProgramView();
-    startProgramView.displayStartProgramView();
-        
+
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.display();
+
     }
-    
-    
-    
-    
-    
-  /*static void Player(){
+
+    /*static void Player(){
         
         Player playerOne = new Player();
     

@@ -4,46 +4,26 @@ import java.util.Scanner;
 import pioneertrail.PioneerTrail;
 import pioneertrail.control.GameControl;
 
-
 /**
  *
  * @author Jacob Enszer
  */
 class NewMainMenuView extends View {
 
-    public NewMainMenuView () {
+    public NewMainMenuView() {
+        super("\n N - Create New Game"
+                + "\n R - Restart Game"
+                + "\n H - Get Help"
+                + "\n E - Test Program"
+                + "\n Q - Quit");
     }
-    
+
     @Override
-    public void display(){
-        boolean endOfView = false;
-        String inputs[];
-                           
-        do {
-        System.out.println("\n N - Create New Game"
-                    + "\n R - Restart Game"
-                    + "\n H - Get Help"
-                    + "\n E - Test Program"
-                    + "\n Q - Quit");
-        inputs = this.getInputs();
-        
-        if((inputs.length < 1) || inputs[0].equalsIgnoreCase("Q")) {
-        break;
-        }
-        else{
-        endOfView = doAction(inputs);
-        }
-        }
-        while (endOfView != true);
-        return;
-        }
-   
-    @Override
-    public boolean doAction(String[] inputs) {
-        String menuItem = inputs[0];
-        menuItem = inputs[0].toUpperCase();
-        
-       switch (menuItem){
+    public boolean doAction(String inputs) {
+        String menuItem = inputs;
+        menuItem = inputs.toUpperCase();
+
+        switch (menuItem) {
             case "N": //for new game
                 this.startNewGame();
                 break;
@@ -57,28 +37,30 @@ class NewMainMenuView extends View {
                 this.test();
                 break;
             default:
-            System.out.println("\nInvalid Menu Item.");
+                System.out.println("\nInvalid Menu Item.");
                 break;
         }
-       return false;
+        return false;
     }
-    
-    public void startNewGame(){
+
+    public void startNewGame() {
         //Create a New Game
         GameControl.createNewGame(PioneerTrail.getPlayer());
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.display();
-        }
-    
-    public void restartGame(){
+    }
+
+    public void restartGame() {
         StartExistingGameView startExistingGame = new StartExistingGameView();
         startExistingGame.display();
-       }
-    public void getHelp(){
+    }
+
+    public void getHelp() {
         HelpMenuView helpMenuView = new HelpMenuView();
         helpMenuView.display();
-        }
-    public void test(){
+    }
+
+    public void test() {
         System.out.println("Test Stub");
     }
 }

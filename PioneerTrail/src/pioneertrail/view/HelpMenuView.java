@@ -12,35 +12,16 @@ package pioneertrail.view;
 public class HelpMenuView extends View{
     
    public HelpMenuView() {
-        }
-    
-   public void display(){
-        boolean endOfView = false;
-        String inputs[];
-                           
-        do {
-        
-        System.out.println("\n A - About Game"
+       super("\n A - About Game"
                     + "\n C - Game Controls"
                     + "\n O - Object of the game"
                     + "\n I - Items"
                     + "\n Q - Exit to Previous Menu");
-        inputs = this.getInputs();
-        
-        if((inputs.length < 1) || inputs[0].equalsIgnoreCase("Q")) {
-        break;
-        }
-        else{     
-        endOfView = doAction(inputs);
-        }
-        }
-        while (endOfView != true);
-        return;
         }
    
-    public boolean doAction(String[] inputs) {
-        String menuItem = inputs[0];
-        menuItem = inputs[0].toUpperCase();
+    public boolean doAction(String inputs) {
+        String menuItem = inputs;
+        menuItem = inputs.toUpperCase();
         
        switch (menuItem){
             case "A": 

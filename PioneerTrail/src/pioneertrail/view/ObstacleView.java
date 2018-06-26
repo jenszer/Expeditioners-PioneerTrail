@@ -12,34 +12,16 @@ package pioneertrail.view;
 public class ObstacleView extends View{
     
     public ObstacleView() {
-    }
-    @Override
- public void display(){
-        boolean endOfView = false;
-        String inputs[];
-                           
-        do {
-        System.out.println("\n F - Fix Wagon"
+        super("\n F - Fix Wagon"
                     + "\n D - Deal w/ Sickness or Injury"
                     + "\n H - Get Help"
                     + "\n Q - Return to Previous Menu");
-        inputs = this.getInputs();
-        
-        if((inputs.length < 1) || inputs[0].equalsIgnoreCase("Q")) {
-        break;
-        }
-        else{
-        endOfView = doAction(inputs);
-        }
-        }
-        while (endOfView != true);
-        return;
-        }
-   
+    }
+
     @Override
-    public boolean doAction(String[] inputs) {
-        String menuItem = inputs[0];
-        menuItem = inputs[0].toUpperCase();
+    public boolean doAction(String inputs) {
+        String menuItem = inputs;
+        menuItem = inputs.toUpperCase();
         
        switch (menuItem){
             case "F": 

@@ -10,8 +10,13 @@ package pioneertrail.view;
  * @author Jacob Enszer
  */
 public interface ViewInterface {
+
     public void display();
-    public String[] getInputs();
-    public boolean doAction(String[] inputs);
-    
+
+    public String getInputs();
+
+    public String getInput(String menuPrompt);
+
+    public boolean doAction(String inputs);
+
 }

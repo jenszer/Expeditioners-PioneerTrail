@@ -7,34 +7,33 @@ package pioneertrail.view;
 
 import pioneertrail.model.Inventory;
 
-/**a
+/**
+ * a
  *
  * @author Jacob Enszer
  */
-
 public class GameMenuView extends View {
 
     public GameMenuView() {
     }
-       
-    public String getMenu(){
+
+    public String getMenu() {
         this.display();
         return null;
-        }
-   
-    public String getUserInput(){
-        String[] input = this.getInputs();
-        return input[0];
     }
 
+    public String getUserInput() {
+        String input = this.getInputs();
+        return input;
+    }
 
     @Override
-    public boolean doAction(String[] inputs) {
-        String menuItem = inputs[0];
-        menuItem = inputs[0].toUpperCase();
-        
-       switch (menuItem){
-            case "V": 
+    public boolean doAction(String inputs) {
+        String menuItem = inputs;
+        menuItem = inputs.toUpperCase();
+
+        switch (menuItem) {
+            case "V":
                 this.viewMap();
                 break;
             case "I":
@@ -45,54 +44,61 @@ public class GameMenuView extends View {
                 break;
             case "M":
                 this.move();
-                break; 
+                break;
             case "O":
                 this.obstacleResolution();
-                break;                 
+                break;
             case "H":
                 this.huntForResources();
-                break;                 
+                break;
             case "S":
                 this.saveGame();
-                break;                 
+                break;
             case "Z":
                 this.getHelp();
-                break; 
+                break;
             default:
-            System.out.println("\nInvalid Menu Item.");
+                System.out.println("\nInvalid Menu Item.");
                 break;
         }
-       return false;
+        return false;
     }
-    
-    public void viewMap(){
+
+    public void viewMap() {
         System.out.println("View Map Stub");
-            }
-    public void viewInventory(){
-       Inventory inventory = new Inventory();
-       System.out.println(inventory.toString());
-          
     }
-    public void purchaseSupplies(){
+
+    public void viewInventory() {
+        Inventory inventory = new Inventory();
+        System.out.println(inventory.toString());
+
+    }
+
+    public void purchaseSupplies() {
         PurchaseSuppliesView purchaseSupplies = new PurchaseSuppliesView();
-        purchaseSupplies.display();             
+        purchaseSupplies.display();
     }
-    public void move(){
+
+    public void move() {
         System.out.println("Move Stub");
     }
-    public void obstacleResolution(){
+
+    public void obstacleResolution() {
         ObstacleView obstacle = new ObstacleView();
         obstacle.display();
     }
-    public void huntForResources(){
+
+    public void huntForResources() {
         HuntForResourcesView huntResources = new HuntForResourcesView();
         huntResources.display();
     }
-    public void saveGame(){
+
+    public void saveGame() {
         System.out.println("Save Game Stub");
     }
-    public void getHelp(){
+
+    public void getHelp() {
         HelpMenuView helpMenuView = new HelpMenuView();
         helpMenuView.display();
-        }
+    }
 }
