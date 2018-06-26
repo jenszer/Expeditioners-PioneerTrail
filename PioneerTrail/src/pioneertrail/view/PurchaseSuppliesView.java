@@ -91,13 +91,6 @@ public class PurchaseSuppliesView extends View {
         return 0;
     }
 
-    public int huntResources() {
-        String inputs = this.getInput("\nHow Many Bullets Would You"
-                + "Like to Use?\n");
-        int noBullets = Integer.parseInt(inputs);
-        return 0;
-    }
-
     public void viewInventory() {
         Inventory inventory = new Inventory();
         System.out.println(inventory.toString());
