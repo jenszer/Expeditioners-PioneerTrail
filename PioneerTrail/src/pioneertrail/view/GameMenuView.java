@@ -15,9 +15,9 @@ import pioneertrail.model.Inventory;
 public class GameMenuView extends View {
 
     public GameMenuView() {
-        super("=============="
-                + "\nGame Menu"
-                + "\n==============="
+        super(      "==========="
+                + "\n Game Menu"
+                + "\n==========="
                 + "\nV - View Map"
                 + "\nI - View Inventory"
                 + "\nP - Purchase Supplies"

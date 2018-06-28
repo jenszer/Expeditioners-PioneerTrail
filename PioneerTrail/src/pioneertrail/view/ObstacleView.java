@@ -12,9 +12,9 @@ package pioneertrail.view;
 public class ObstacleView extends View {
 
     public ObstacleView() {
-        super("==============="
+        super(      "====================="
                 + "\n Obstacle Resolution"
-                + "\n==============="
+                + "\n====================="
                 + "\n F - Fix Wagon"
                 + "\n D - Deal w/ Sickness or Injury"
                 + "\n H - Get Help"

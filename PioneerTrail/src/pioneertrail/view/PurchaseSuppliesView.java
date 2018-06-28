@@ -16,9 +16,9 @@ import pioneertrail.model.Inventory;
 public class PurchaseSuppliesView extends View {
 
     public PurchaseSuppliesView() {
-        super("==============="
+        super(      "================"
                 + "\n Purchase Items"
-                + "\n==============="
+                + "\n================"
                 + "\n F - Food"
                 + "\n H - Hammer"
                 + "\n S - Spare Wheels"

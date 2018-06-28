@@ -18,9 +18,9 @@ public class HuntForResourcesView extends View {
 
     public HuntForResourcesView() {
 
-        super("==============="
+        super(      "==========="
                 + "\n Hunt Menu"
-                + "\n==============="
+                + "\n==========="
                 + "\n H - Hunt"
                 + "\n V - View Inventory"
                 + "\n Q - Exit to Previous Menu");

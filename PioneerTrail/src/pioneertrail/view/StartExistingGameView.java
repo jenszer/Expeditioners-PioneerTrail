@@ -17,7 +17,8 @@ public class StartExistingGameView extends View {
 
     @Override
     public boolean doAction(String inputs) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       System.out.println("Not developed yet");
+       return false;
     }
 
 }

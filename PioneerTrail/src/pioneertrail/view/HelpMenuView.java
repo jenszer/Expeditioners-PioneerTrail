@@ -12,9 +12,9 @@ package pioneertrail.view;
 public class HelpMenuView extends View {
 
     public HelpMenuView() {
-        super("==============="
+        super(      "==========="
                 + "\n Help Menu"
-                + "==============="
+                + "\n==========="
                 + "\n A - About Game"
                 + "\n C - Game Controls"
                 + "\n O - Object of the game"
