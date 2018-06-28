@@ -15,19 +15,18 @@ import pioneertrail.model.Inventory;
 public class GameMenuView extends View {
 
     public GameMenuView() {
-        super("\nV - View Map"
+        super("=============="
+                + "\nGame Menu"
+                + "\n==============="
+                + "\nV - View Map"
                 + "\nI - View Inventory"
                 + "\nP - Purchase Supplies"
                 + "\nM - Move"
                 + "\nO - Obstacle Resolution"
                 + "\nH - Hunt for Resources"
                 + "\nS - Save Game"
-                + "\nZ - Get Help");
-    }
-
-    public String getUserInput() {
-        String input = this.getInputs();
-        return input;
+                + "\nZ - Get Help"
+                + "\nQ - Return to Main Menu");
     }
 
     @Override

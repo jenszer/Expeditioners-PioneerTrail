@@ -9,22 +9,25 @@ package pioneertrail.view;
  *
  * @author Jacob Enszer
  */
-public class HelpMenuView extends View{
-    
-   public HelpMenuView() {
-       super("\n A - About Game"
-                    + "\n C - Game Controls"
-                    + "\n O - Object of the game"
-                    + "\n I - Items"
-                    + "\n Q - Exit to Previous Menu");
-        }
-   
+public class HelpMenuView extends View {
+
+    public HelpMenuView() {
+        super("==============="
+                + "\n Help Menu"
+                + "==============="
+                + "\n A - About Game"
+                + "\n C - Game Controls"
+                + "\n O - Object of the game"
+                + "\n I - Items"
+                + "\n Q - Exit to Previous Menu");
+    }
+
     public boolean doAction(String inputs) {
         String menuItem = inputs;
         menuItem = inputs.toUpperCase();
-        
-       switch (menuItem){
-            case "A": 
+
+        switch (menuItem) {
+            case "A":
                 this.aboutGame();
                 break;
             case "C":
@@ -35,15 +38,15 @@ public class HelpMenuView extends View{
                 break;
             case "I":
                 this.items();
-                break;  
+                break;
             default:
-            System.out.println("\nInvalid Menu Item.");
+                System.out.println("\nInvalid Menu Item.");
                 break;
         }
-       return false;
+        return false;
     }
-    
-    public void aboutGame(){
+
+    public void aboutGame() {
         System.out.println("The Pioneer Trail game is a text based role \n"
                 + "playing game. In this game, you will be a pioneer family \n"
                 + "who leads a wagon train preparing to go west. You have \n"
@@ -51,8 +54,9 @@ public class HelpMenuView extends View{
                 + "freedom and a new life in a better place. You have heard \n"
                 + "of a place called Zion in the mountains that offers such \n"
                 + "freedom and are eager to start your journey.");
-            }
-    public void gameControls(){
+    }
+
+    public void gameControls() {
         System.out.println("Problems may arise during the trip, such as \n"
                 + "illness or death of family members, snake bites, broken \n"
                 + "wagons, adverse weather conditions, etc. You will have the\n"
@@ -64,12 +68,14 @@ public class HelpMenuView extends View{
                 + "obtain food. The game is over when at least two family \n"
                 + "members have reached Zion.");
     }
-    public void objectOfGame(){
+
+    public void objectOfGame() {
         System.out.println("The goal of the game is to reach Zion and survive\n"
                 + "with as many family members as you can. The game will be\n"
                 + "over when at least two family members have reached Zion.");
     }
-    public void items(){
+
+    public void items() {
         System.out.println("Before starting the long journey, you must buy a \n"
                 + "series of items necessary for the trip, such as: food, \n"
                 + "water, tools, spare parts for the wagon, weapons, \n"
@@ -77,5 +83,4 @@ public class HelpMenuView extends View{
                 + "have the items you need before you begin your journey.");
     }
 
-    
 }

@@ -11,7 +11,10 @@ import pioneertrail.control.GameControl;
 class NewMainMenuView extends View {
 
     public NewMainMenuView() {
-        super("\n N - Create New Game"
+        super("==============="
+                + "\nMain Menu"
+                + "\n==============="
+                + "\n N - Create New Game"
                 + "\n R - Restart Game"
                 + "\n H - Get Help"
                 + "\n E - Test Program"
