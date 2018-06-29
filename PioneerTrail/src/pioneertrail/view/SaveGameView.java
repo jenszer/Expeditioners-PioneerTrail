@@ -10,8 +10,12 @@ package pioneertrail.view;
  *
  * @author arielgeorge
  */
-public class SaveGame extends View {
+public class SaveGameView extends View {
+
+    public SaveGameView() {
+    }
     
+    @Override
     public void display(){
         
         System.out.println("Would You Like to Save Your Game?");
