@@ -15,6 +15,9 @@ import pioneertrail.model.Resource;
  */
 public class RepairWagonView extends View {
 
+    public RepairWagonView() {
+    }
+
     @Override
     public boolean doAction(String[] inputs) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -30,8 +33,7 @@ public class RepairWagonView extends View {
         
         System.out.println("Resourcez needed to repair: ");
         PioneerTrail pt = new PioneerTrail();
-        pt.
-        listItems(pt.getPlayer().getActors().get(0).getInventory().getResources());
+        pt.listItems(pt.getPlayer().getActors().get(0).getInventory().getResources());
     }
 
     public void listItems(ArrayList<Resource>  items) {
@@ -40,5 +42,10 @@ public class RepairWagonView extends View {
             System.out.println(items.get(i).getName() + '\n');
         }
         
+    }
+
+    @Override
+    public boolean doAction(String inputs) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
