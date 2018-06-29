@@ -23,8 +23,7 @@ public class SaveGameView extends View {
 
     @Override
     public boolean doAction(String inputs) {
-        String location = inputs;
-        location = inputs.toUpperCase().trim();
+        String location = inputs.toUpperCase().trim();
      
         switch (location){
             case "Y": 
