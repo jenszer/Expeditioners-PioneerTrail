@@ -24,57 +24,55 @@ public class GameControl {
         Player player = new Player();
         player.setName(playerName);
         PioneerTrail.setPlayer(player);
+        
         return player;
     }   
     public static int createNewGame(Player player){
-            if (player == null){
+        Map map = null;  
+        
+        if (player == null){
                 return -1;
             }
             
          Game game = new Game(); 
          game.setPlayer(player);
          PioneerTrail.setGame(game);
-         
-         
-         game.setItems(items);
-         game.setMap();
-         
+         createItems();
+         createMap(3,5,4);
+            if (map == null){
+            } else {
+                return -2;
+        }
+         game.setMap(map);
+         return 1;
     }
     
-    public static Inventory createItems(){
-        ArrayList<Inventory> items = new ArrayList<Inventory>();
-        String[] inventory = new String[6];   
-        
+    public static ArrayList<Inventory> createItems(){
+        ArrayList<Inventory> items = new ArrayList<>();
+               
         Inventory food = new Inventory();
         food.setAmount(2);
         food.setName("Food");
-        food.setWeight(200);
-        inventory[ItemType.Food.ordinal()] = food;
+        food.setWeight(200); 
+                
+        Inventory water = new Inventory();
+        water.setAmount(1);
+        water.setName("Water");
+        water.setWeight(10);
         
+        Inventory wheels = new Inventory();
+        wheels.setAmount(1);
+        wheels.setName("Wheels");
+        wheels.setWeight(50);
         
-        Inventory item2 = new Inventory();
-        item2.setAmount(1);
-        item2.setName("Water");
-        item1.setWeight(10);
-        
-        Inventory item3 = new Inventory();
-        item3.setAmount(1);
-        item3.setName("Wheels");
-        item3.setWeight(50);
-        
-        item1 = items.setName("Food");
-        item.setAmount(4);
-        Inventory food = items[ItemType.Food.ordinal()];
-        
-        
-        
-        
-        
-            
+        System.out.println(items.toString());
+        return items;
+       
     }
     
-    public static Map createMap(int noOfRows, int noOfColumns){
+    public static Map createMap(int noOfRows, int noOfColumns, int items){
         System.out.println("Create Map Stub");
+        return null;
     }
 
 }    
