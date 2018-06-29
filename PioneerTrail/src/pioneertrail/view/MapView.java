@@ -99,28 +99,4 @@ public class MapView extends View{
     }
        
     
-                
-        
-        
-        
-        switch (menuItem) {
-            case "A":
-                this.aboutGame();
-                break;
-            case "C":
-                this.gameControls();
-                break;
-            case "O":
-                this.objectOfGame();
-                break;
-            case "I":
-                this.items();
-                break;
-            default:
-                System.out.println("\nInvalid Menu Item.");
-                break;
-        }
-        return false;
-    }
-}
 }
