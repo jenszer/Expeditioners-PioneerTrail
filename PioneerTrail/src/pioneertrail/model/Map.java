@@ -18,6 +18,8 @@ public class Map implements Serializable {
     private int columnCount;
     private int currentRow;
     private int currentColumn;
+    private Location currentLocation;
+    private boolean visited;
     
     private ArrayList<Location> locations = new ArrayList<>();
 

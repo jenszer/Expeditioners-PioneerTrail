@@ -12,16 +12,16 @@ import java.io.Serializable;
  * @author Ariel George
  */
 public class Location implements Serializable {
-    
+
     private int row;
     private int column;
     private int milesRemaining;
     private boolean visited;
-    
+
     private Map map;
 
     public Location() {
-    }    
+    }
 
     public Map getMap() {
         return map;
@@ -100,6 +100,5 @@ public class Location implements Serializable {
         }
         return true;
     }
-    
-    
+
 }
