@@ -15,7 +15,7 @@ import java.util.Objects;
  * @author Jacob Enszer
  */
 public class Inventory implements Serializable {
-        
+
             private String name;
             private String type;
             private int amount;

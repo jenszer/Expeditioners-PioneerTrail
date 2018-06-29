@@ -19,7 +19,6 @@ public class Game implements Serializable{
         private int highScore;
         private Player Player;
         private ArrayList<Inventory> items = new ArrayList<>();
-        
         private Map map;
 
     public Game() {
@@ -55,6 +54,14 @@ public class Game implements Serializable{
 
     public void setHighScore(int highScore) {
         this.highScore = highScore;
+    }
+
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
     }
 
     @Override
