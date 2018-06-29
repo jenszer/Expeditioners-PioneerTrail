@@ -19,7 +19,9 @@ public class SaveGame extends View {
 
     @Override
     public boolean doAction(String inputs) {
-        String location = inputs[0].toUpperCase().trim();
+        String location = inputs;
+        location = inputs.toUpperCase().trim();
+     
         switch (location){
             case "Y": 
                 System.out.println("Game Saved");    
