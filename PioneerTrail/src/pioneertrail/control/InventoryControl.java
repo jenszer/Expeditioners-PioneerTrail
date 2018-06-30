@@ -14,8 +14,4 @@ import pioneertrail.model.Inventory;
  * @author Jacob Enszer
  */
 public class InventoryControl {
-    
-        private ArrayList<Inventory> inventory = new ArrayList<>();
-       
-        
-}
+  }

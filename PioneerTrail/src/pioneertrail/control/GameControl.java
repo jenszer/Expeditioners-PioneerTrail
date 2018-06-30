@@ -73,7 +73,7 @@ public class GameControl {
         wheels.setWeight(50);
         items[ItemType.Wheels.ordinal()] = wheels;
         
-        System.out.println(Arrays.toString(items));
+        System.out.println("\n" + Arrays.toString(items));
         return items;     
     }
     

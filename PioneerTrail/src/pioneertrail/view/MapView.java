@@ -17,8 +17,6 @@ import pioneertrail.model.Map;
  * @author Jacob Enszer
  */
 public class MapView extends View{
-    private final String map = "";
-    private String promptMessage;
     
     public MapView() {
           super(      "============================="
@@ -26,6 +24,7 @@ public class MapView extends View{
                 + "\n=============================");
             }
     
+    @Override
     public void display(){
         String leftIndicator;
         String rightIndicator;
