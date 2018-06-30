@@ -96,7 +96,6 @@ public static Scene[] createScenes(){
         scene7.setSceneSymbol("NR");
         
         return scenes;
->>>>>>> origin/master
 }
 
 public static Question[] createQuestions(){
