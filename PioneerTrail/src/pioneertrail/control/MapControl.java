@@ -32,10 +32,12 @@ public class MapControl {
                 location.setRow(row);
                 location.setColumn(column);
                 location.setVisited(false);
-            }              
-            }
+                return locations;
+                }              
+         return locations;   
+        }
         return locations;
-    }
+        }
 
 public static Scene[] createScenes(){
         Scene[] scenes = new Scene[7];
