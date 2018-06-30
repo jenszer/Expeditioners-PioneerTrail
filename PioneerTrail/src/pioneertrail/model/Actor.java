@@ -73,5 +73,9 @@ Actor(String name, String description, Point coordinates) {
     public String toString() {
         return "Actor{" + "name=" + name + ", description=" + description + ", type=" + type + ", gender=" + gender + ", coordinates=" + coordinates + '}';
     }
+
+    public Object getInventory() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

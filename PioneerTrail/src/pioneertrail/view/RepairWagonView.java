@@ -18,9 +18,8 @@ public class RepairWagonView extends View {
     public RepairWagonView() {
     }
 
-    @Override
     public boolean doAction(String[] inputs) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return false;
     }
     
     
@@ -31,9 +30,9 @@ public class RepairWagonView extends View {
         
         System.out.println("You lost a wheel :(");
         
-        System.out.println("Resourcez needed to repair: ");
+        System.out.println("Resources needed to repair: ");
         PioneerTrail pt = new PioneerTrail();
-        pt.listItems(pt.getPlayer().getActors().get(0).getInventory().getResources());
+        //pt.listItems(pt.getPlayer().getActors().get(0).getInventory());
     }
 
     public void listItems(ArrayList<Resource>  items) {
@@ -46,6 +45,6 @@ public class RepairWagonView extends View {
 
     @Override
     public boolean doAction(String inputs) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return false;
     }
 }
