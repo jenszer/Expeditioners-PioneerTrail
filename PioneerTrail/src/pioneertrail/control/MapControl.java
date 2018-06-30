@@ -20,24 +20,59 @@ public class MapControl {
             map.setLocations(map.getLocations()[row][column]);
             map.getLocations().setVisited(true);
             } */      
-public static Location[][] createLocations(int rows, int columns){
-    System.out.println("CreateLocations Stub");
-    return null;
+private static Location[][] createLocations(int rows, int columns){
+    if (rows < 1 || columns < 1 ){
+        return null;
+    }
+    Location[][] locations = new Location[4][4];
+    locations[0][0] = new Location();
+    for (int i=0; i < locations.length; i++) {
+        for (int k=0; k <= locations[i].length; k++){
+           
+        }
+    }
+    /* i know i need setters buuut idk where */
+    return locations;
+}
+private static Scene[] createScenes(){
+    Scene scenes[] = new Scene[4];
+    public enum SceneType {
+        start,
+        lumber,
+        yoIDK, 
+        cries,
+        finish;
+    }
+    scenes[SceneType.lumber.ordinal()] = lumber;
     
-}
-public static Scene[] createScenes(){
-        System.out.println("Create Scenes Stub");
     return null;
 }
-public static Question[] createQuestions(){
+private static Question[] createQuestions(){
         System.out.println("Create Questions Stub");
+
+// DO WE EVEN HAVE QUESTIONS???
+
     return null;
 }
-public static void assignQuestionsToScenes(Question[] questions, Scene[] scenes){
+private static void assignQuestionsToScenes(Question[] questions, Scene[] scenes){
         System.out.println("Assign Questions To Scenestub");
+
+// DO WE EVEN HAVE QUESTIONS???
+
 }
 
-public static void assignScenesToLocation(Scene[] scenes, Location[][] locations){
-        System.out.println("Assign To Lcoations Stub");
-}            
+private static void assignScenesToLocation(Map map, Scene[] scenes){
+    Location[][] locations = map.getLocations();
+
+    locations [0][0].setScene(scenes[SceneType.desert.ordinal()]);
+    locations [0][1].setScene(scenes[SceneType.desert.ordinal()]);
+    locations [0][2].setScene(scenes[SceneType.start.ordinal()]);
+    locations [0][3].setScene(scenes[SceneType.beach.ordinal()]);
+    locations [0][4].setScene(scenes[SceneType.ocean.ordinal()]);
+
 }
+
+
+
+
+}            
