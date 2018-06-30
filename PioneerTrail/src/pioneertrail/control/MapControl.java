@@ -36,8 +36,9 @@ public class MapControl {
                 }              
         return locations;
         }
-
-public static Scene[] createScenes(){
+        return locations;
+    }
+    public static Scene[] createScenes(){
         Scene[] scenes = new Scene[7];
         
         Scene scene1 = new Scene();
