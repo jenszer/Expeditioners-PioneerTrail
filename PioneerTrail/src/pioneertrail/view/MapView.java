@@ -26,29 +26,29 @@ public class MapView extends View{
             }
     
     public void displayMap(){
-        String leftIndicator = "";
-        String rightIndicator = "";
+        String leftIndicator;
+        String rightIndicator;
         Game game = PioneerTrail.getGame();
         Map map = game.getMap();
         Location[][] locations = map.getLocations();
         
         
         System.out.println(" |");
-        for(column = 0; column < locations[0].length; column ++){
+        for(int column = 0; column < locations[0].length; column ++){
             System.out.println(" " + column + " |");
         }
         System.out.println();
-        for (row = 0; row < locations.length; row++){
+        for (int row = 0; row < locations.length; row++){
             System.out.println(row + "");
-        }
-            for (column = 0; column < locations[row].length; column++){
+        
+            for (int column = 0; column < locations[row].length; column++){
             leftIndicator = " ";
             rightIndicator = " ";
-        }
-            if(locations[row][column] == map.getCurrentLocation()){
+        
+            if(locations[row][column] == map.getLocations()locations){
             leftIndicator = "*";
             rightIndicator = "*";
-        }
+            }
             else if(locations[row][column].isVisited()){
             leftIndicator = "<";
             rightIndicator = ">";
@@ -63,6 +63,8 @@ public class MapView extends View{
                 + rightIndicator);
             }
             System.out.println("|");
+    }
+        }
     }
     
     @Override
@@ -90,13 +92,7 @@ public class MapView extends View{
             movePlayer(map, 0, 0);
         }
     
-        public static void movePlayer(Map map, int row, int column) {
-            map.setCurrentLocation(map.getLocations()[row][colum]);
-            map.getCurrentLocation().setVisited(true);
-            map.setCurrentRow(row);
-            map.setCurrentColumn(column);
-        
-    }
+
        
     
 }

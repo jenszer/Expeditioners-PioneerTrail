@@ -18,19 +18,19 @@ public class Map implements Serializable {
     private int columnCount;
     private int currentRow;
     private int currentColumn;
-    private Location currentLocation;
+    private Location[][] currentLocation;
     private boolean visited;
     
-    private ArrayList<Location> locations = new ArrayList<>();
+    private Location[][] locations = new Location[columnCount][rowCount];
 
     public Map() {
     }
 
-    public ArrayList<Location> getLocations() {
+    public Location[][] getLocations() {
         return locations;
     }
 
-    public void setLocations(ArrayList<Location> locations) {
+    public void setLocations(Location[][] locations) {
         this.locations = locations;
     }
 
