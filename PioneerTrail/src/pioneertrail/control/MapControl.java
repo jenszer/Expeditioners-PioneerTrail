@@ -14,7 +14,7 @@ import pioneertrail.model.SceneType;
 
 /**
  *
- * @author Jacob Enszer
+ * @author Jacob Enszer & Ariel George
  */
 public class MapControl {
      /*      public static void movePlayer(Map map, int row, int column) {
