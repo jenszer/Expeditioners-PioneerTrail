@@ -96,4 +96,14 @@ public class GameControl {
         
         return map;
     }
+    
+    public static Location [] [] createLocations(int rows, int columns){
+        if (rows < 1 || columns < 1){
+            return null;
+        }
+        Location[][]  locations = new Location[rows][columns];
+        for ()
+   
+    
+    
 }    
