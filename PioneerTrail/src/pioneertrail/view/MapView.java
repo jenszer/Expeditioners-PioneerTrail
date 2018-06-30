@@ -7,6 +7,7 @@ package pioneertrail.view;
 
 import java.util.ArrayList;
 import pioneertrail.PioneerTrail;
+import pioneertrail.control.MapControl;
 import pioneertrail.model.Game;
 import pioneertrail.model.Location;
 import pioneertrail.model.Map;
@@ -25,7 +26,7 @@ public class MapView extends View{
                 + "\n=============================");
             }
     
-    public void displayMap(){
+    public void display(){
         String leftIndicator;
         String rightIndicator;
         Game game = PioneerTrail.getGame();
@@ -41,11 +42,11 @@ public class MapView extends View{
         for (int row = 0; row < locations.length; row++){
             System.out.println(row + "");
         
-            for (int column = 0; column < locations[row].length; column++){
+            for (int column = 0; column < locations[column].length; column++){
             leftIndicator = " ";
             rightIndicator = " ";
         
-            if(locations[row][column] == map.getLocations()locations){
+            if(locations[row][column] == locations[map.getCurrentRow()][map.getCurrentColumn()]){
             leftIndicator = "*";
             rightIndicator = "*";
             }
@@ -59,13 +60,14 @@ public class MapView extends View{
             }
             else{
                 System.out.println(leftIndicator
-                + locations[row][column].getScene().getMapSymbol()
+                + locations[row][column].getScene().getSceneSymbol()
                 + rightIndicator);
+            }
             }
             System.out.println("|");
     }
         }
-    }
+    
     
     @Override
     public boolean doAction(String mapOption) {
@@ -77,9 +79,9 @@ public class MapView extends View{
         for(int row = 0; row < locations.length; row++){
             for (int column = 0; column < locations[row].length; column++){
                 if(locations[row][column].getScene() != null){
-                    if(mapOption.equals(locations[row][colum].getScene().getMapSymbol())) {
-                       mapControl.movePlayer(map,row,column);
-                       return true
+                    if(mapOption.equals(locations[row][column].getScene().getSceneSymbol())) {
+                       MapControl.movePlayer(map,row,column);
+                       return true;
                                }
                 }
             }
@@ -88,11 +90,9 @@ public class MapView extends View{
         return false;
        }
     
-        public static void movePlayerToStartingLocation(Map map){
-            movePlayer(map, 0, 0);
-        }
-    
 
+
+}
        
     
-}
+

@@ -18,12 +18,18 @@ public class Map implements Serializable {
     private int columnCount;
     private int currentRow;
     private int currentColumn;
-    private Location[][] currentLocation;
     private boolean visited;
-    
     private Location[][] locations = new Location[columnCount][rowCount];
 
     public Map() {
+    }
+
+    public boolean isVisited() {
+        return visited;
+    }
+
+    public void setVisited(boolean visited) {
+        this.visited = visited;
     }
 
     public Location[][] getLocations() {

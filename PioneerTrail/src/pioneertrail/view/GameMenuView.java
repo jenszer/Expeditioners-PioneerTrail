@@ -67,7 +67,9 @@ public class GameMenuView extends View {
     }
 
     public void viewMap() {
-        System.out.println("View Map Stub");
+        MapView map = new MapView();
+        map.display();
+        
     }
 
     public void viewInventory() {
