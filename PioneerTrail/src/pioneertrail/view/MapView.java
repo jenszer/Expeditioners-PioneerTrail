@@ -7,6 +7,7 @@ package pioneertrail.view;
 
 import java.util.ArrayList;
 import pioneertrail.PioneerTrail;
+import pioneertrail.control.MapControl;
 import pioneertrail.model.Game;
 import pioneertrail.model.Location;
 import pioneertrail.model.Map;
@@ -45,7 +46,7 @@ public class MapView extends View{
             leftIndicator = " ";
             rightIndicator = " ";
         
-            if(locations[row][column] == map.getLocations()){
+            if(locations[row][column] == locations[map.getCurrentRow()][map.getCurrentColumn()]){
             leftIndicator = "*";
             rightIndicator = "*";
             }
@@ -66,7 +67,7 @@ public class MapView extends View{
             System.out.println("|");
     }
         }
-    }
+    
     
     @Override
     public boolean doAction(String mapOption) {
@@ -78,9 +79,9 @@ public class MapView extends View{
         for(int row = 0; row < locations.length; row++){
             for (int column = 0; column < locations[row].length; column++){
                 if(locations[row][column].getScene() != null){
-                    if(mapOption.equals(locations[row][colum].getScene().getMapSymbol())) {
-                       mapControl.movePlayer(map,row,column);
-                       return true
+                    if(mapOption.equals(locations[row][column].getScene().getSceneSymbol())) {
+                       MapControl.movePlayer(map,row,column);
+                       return true;
                                }
                 }
             }
@@ -89,11 +90,9 @@ public class MapView extends View{
         return false;
        }
     
-        public static void movePlayerToStartingLocation(Map map){
-            movePlayer(map, 0, 0);
-        }
-    
 
+
+}
        
     
-}
+

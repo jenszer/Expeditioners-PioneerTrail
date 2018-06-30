@@ -117,5 +117,15 @@ public static void assignScenesToLocation(Map map, Scene[] scenes){
         locations[1][0].setScene(scenes[SceneType.GardenGrove.ordinal()]);     
         locations[1][1].setScene(scenes[SceneType.NishnabotnaRiver.ordinal()]);
                 
-    }            
+    }
+public static void movePlayerToStartingLocation(Map map){
+        movePlayer(map, 0, 0);
+        }
+
+public static void movePlayer(Map map, int Row, int Column){
+        map.setLocations(map.getLocations());
+        map.getCurrentRow();
+        map.getCurrentColumn();
+        map.setVisited(true);
+}      
 }
