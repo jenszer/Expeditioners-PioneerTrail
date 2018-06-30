@@ -6,6 +6,7 @@
 package pioneertrail.control;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import pioneertrail.PioneerTrail;
 import pioneertrail.model.Actor;
 import pioneertrail.model.Game;
@@ -19,6 +20,9 @@ import pioneertrail.model.Player;
  * @author Jacob Enszer
  */
 public class GameControl {
+
+    public GameControl() {
+    }
     
     public static Player savePlayer(String playerName) {
         Player player = new Player();
@@ -47,27 +51,29 @@ public class GameControl {
          return 1;
     }
     
-    public static ArrayList<Inventory> createItems(){
-        ArrayList<Inventory> items = new ArrayList<>();
+    public static createItems(){
+        Inventory[] items = new Inventory[6];
                
         Inventory food = new Inventory();
         food.setAmount(2);
         food.setName("Food");
         food.setWeight(200); 
+        items[ItemType.Food.ordinal()] = food;
                 
         Inventory water = new Inventory();
         water.setAmount(1);
         water.setName("Water");
         water.setWeight(10);
+        items[ItemType.Water.ordinal()] = water;
         
         Inventory wheels = new Inventory();
         wheels.setAmount(1);
         wheels.setName("Wheels");
         wheels.setWeight(50);
+        items[ItemType.Wheels.ordinal()] = wheels;
         
-        System.out.println(items.toString());
-        return items;
-       
+        System.out.println(Arrays.toString(items));
+        return items;     
     }
     
     public static Map createMap(int noOfRows, int noOfColumns, int items){

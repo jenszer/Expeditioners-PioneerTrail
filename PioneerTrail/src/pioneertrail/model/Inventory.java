@@ -22,7 +22,7 @@ public class Inventory implements Serializable {
             private int weight;
             private String description;
             private Game Game;
-            private ArrayList<Resource> resources = new ArrayList<>();
+            private Resource resources = new Resource();
 
         public Inventory() {
         }
@@ -35,11 +35,11 @@ public class Inventory implements Serializable {
         this.Game = Game;
     }
 
-    public ArrayList<Resource> getResources() {
+    public Resource getResources() {
         return resources;
     }
 
-    public void setResources(ArrayList<Resource> resources) {
+    public void setResources(Resource resources) {
         this.resources = resources;
     }
             
