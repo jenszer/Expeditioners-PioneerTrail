@@ -22,6 +22,7 @@ public class GameMenuView extends View {
                 + "\nI - View Inventory"
                 + "\nP - Purchase Supplies"
                 + "\nM - Move"
+                + "\nR - Repair Wagon"
                 + "\nO - Obstacle Resolution"
                 + "\nH - Hunt for Resources"
                 + "\nS - Save Game"
@@ -47,6 +48,8 @@ public class GameMenuView extends View {
             case "M":
                 this.move();
                 break;
+            case "R":
+                this.repairWagon();
             case "O":
                 this.obstacleResolution();
                 break;
