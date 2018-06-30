@@ -24,7 +24,7 @@ private final String description;
 private String type;
 private String gender;
 private final Point coordinates;
-
+private Inventory stuff;
 private Player Player;
 
 Actor(String name, String description, Point coordinates) {
@@ -69,6 +69,14 @@ Actor(String name, String description, Point coordinates) {
         this.Player = Player;
     }
 
+    public Inventory getStuff() {
+        return stuff;
+    }
+
+    public void setStuff(Inventory stuff) {
+        this.stuff = stuff;
+    }
+    
     @Override
     public String toString() {
         return "Actor{" + "name=" + name + ", description=" + description + ", type=" + type + ", gender=" + gender + ", coordinates=" + coordinates + '}';

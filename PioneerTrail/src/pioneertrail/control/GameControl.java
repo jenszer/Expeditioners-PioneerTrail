@@ -8,15 +8,7 @@ package pioneertrail.control;
 import java.util.ArrayList;
 import java.util.Arrays;
 import pioneertrail.PioneerTrail;
-import pioneertrail.model.Actor;
-import pioneertrail.model.Game;
-import pioneertrail.model.Inventory;
-import pioneertrail.model.ItemType;
-import pioneertrail.model.Location;
-import pioneertrail.model.Map;
-import pioneertrail.model.Player;
-import pioneertrail.model.Question;
-import pioneertrail.model.Scene;
+import pioneertrail.model.*;
 
 /**
  *
@@ -33,7 +25,7 @@ public class GameControl {
         return player;
     }   
     public static int createNewGame(Player player){
-        Map map = null;  
+        Map map = createMap(4,4);  
         
         if (player == null){
                 return -1;
@@ -42,8 +34,8 @@ public class GameControl {
          Game game = new Game(); 
          game.setPlayer(player);
          PioneerTrail.setGame(game);
-         createItems();
-         createMap(5,5);
+         Resource[] items = createItems();
+         
             if (map == null){
             } else {
                 return -2;
@@ -52,22 +44,22 @@ public class GameControl {
          return 1;
     }
     
-    public static Inventory[] createItems(){
-        Inventory[] items = new Inventory[6];
+    public static Resource[] createItems(){
+        Resource[] items = new Resource[6];
                
-        Inventory food = new Inventory();
+        Resource food = new Resource();
         food.setAmount(2);
         food.setName("Food");
         food.setWeight(200); 
         items[ItemType.Food.ordinal()] = food;
                 
-        Inventory water = new Inventory();
+        Resource water = new Resource();
         water.setAmount(1);
         water.setName("Water");
         water.setWeight(10);
         items[ItemType.Water.ordinal()] = water;
         
-        Inventory wheels = new Inventory();
+        Resource wheels = new Resource();
         wheels.setAmount(1);
         wheels.setName("Wheels");
         wheels.setWeight(50);

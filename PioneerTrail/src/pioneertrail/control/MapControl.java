@@ -14,7 +14,7 @@ import pioneertrail.model.SceneType;
 
 /**
  *
- * @author Jacob Enszer
+ * @author Jacob Enszer & Ariel George
  */
 public class MapControl {
      /*      public static void movePlayer(Map map, int row, int column) {
@@ -34,8 +34,6 @@ public class MapControl {
                 location.setVisited(false);
                 return locations;
                 }              
-         return locations;   
-        }
         return locations;
         }
 
@@ -98,14 +96,21 @@ public static Scene[] createScenes(){
         scene7.setSceneSymbol("NR");
         
         return scenes;
+>>>>>>> origin/master
 }
 
 public static Question[] createQuestions(){
         System.out.println("Create Questions Stub");
+
+// DO WE EVEN HAVE QUESTIONS???
+
     return null;
 }
-public static void assignQuestionsToScenes(Question[] questions, Scene[] scenes){
+private static void assignQuestionsToScenes(Question[] questions, Scene[] scenes){
         System.out.println("Assign Questions To Scenestub");
+
+// DO WE EVEN HAVE QUESTIONS???
+
 }
 
 public static void assignScenesToLocation(Map map, Scene[] scenes){
@@ -129,5 +134,9 @@ public static void movePlayer(Map map, int Row, int Column){
         map.getCurrentRow();
         map.getCurrentColumn();
         map.setVisited(true);
-}      
 }
+
+
+
+
+}            
