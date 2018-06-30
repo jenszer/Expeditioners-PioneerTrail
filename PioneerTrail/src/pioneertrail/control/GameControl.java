@@ -12,8 +12,11 @@ import pioneertrail.model.Actor;
 import pioneertrail.model.Game;
 import pioneertrail.model.Inventory;
 import pioneertrail.model.ItemType;
+import pioneertrail.model.Location;
 import pioneertrail.model.Map;
 import pioneertrail.model.Player;
+import pioneertrail.model.Question;
+import pioneertrail.model.Scene;
 
 /**
  *
@@ -21,8 +24,6 @@ import pioneertrail.model.Player;
  */
 public class GameControl {
 
-    public GameControl() {
-    }
     
     public static Player savePlayer(String playerName) {
         Player player = new Player();
@@ -42,7 +43,7 @@ public class GameControl {
          game.setPlayer(player);
          PioneerTrail.setGame(game);
          createItems();
-         createMap(3,5,4);
+         createMap(5,5);
             if (map == null){
             } else {
                 return -2;
@@ -51,7 +52,7 @@ public class GameControl {
          return 1;
     }
     
-    public static createItems(){
+    public static Inventory[] createItems(){
         Inventory[] items = new Inventory[6];
                
         Inventory food = new Inventory();
@@ -76,9 +77,23 @@ public class GameControl {
         return items;     
     }
     
-    public static Map createMap(int noOfRows, int noOfColumns, int items){
-        System.out.println("Create Map Stub");
-        return null;
+    public static Map createMap(int noOfRows, int noOfColumns){
+        if (noOfRows < 0 || noOfColumns < 0){
+            return null;
+        }
+     
+        Map map = new Map();
+        map.setRowCount(noOfRows);
+        map.setColumnCount(noOfColumns);
+        
+        Location[][] locations = MapControl.createLocations(noOfRows, noOfColumns);
+        
+        Scene[] scenes = MapControl.createScenes();
+        Question[] questions = MapControl.createQuestions();
+     
+        MapControl.assignQuestionsToScenes(questions, scenes);
+        MapControl.assignScenesToLocation(scenes, locations);
+        
+        return map;
     }
-
 }    
