@@ -91,19 +91,10 @@ public class GameControl {
         Scene[] scenes = MapControl.createScenes();
         Question[] questions = MapControl.createQuestions();
      
-        MapControl.assignQuestionsToScenes(questions, scenes);
-        MapControl.assignScenesToLocation(scenes, locations);
+       // MapControl.assignQuestionsToScenes(questions, scenes);
+       // MapControl.assignScenesToLocation(scenes, locations);
         
         return map;
     }
-    
-    public static Location [] [] createLocations(int rows, int columns){
-        if (rows < 1 || columns < 1){
-            return null;
-        }
-        Location[][]  locations = new Location[rows][columns];
-        for ()
-   
-    
     
 }    

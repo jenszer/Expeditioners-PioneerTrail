@@ -17,10 +17,19 @@ public class Location implements Serializable {
     private int column;
     private int milesRemaining;
     private boolean visited;
+    private Scene scene;
 
     private Map map;
 
     public Location() {
+    }
+
+    public Scene getScene() {
+        return scene;
+    }
+
+    public void setScene(Scene scene) {
+        this.scene = scene;
     }
 
     public Map getMap() {

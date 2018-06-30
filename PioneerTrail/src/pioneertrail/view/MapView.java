@@ -25,7 +25,7 @@ public class MapView extends View{
                 + "\n=============================");
             }
     
-    public void displayMap(){
+    public void display(){
         String leftIndicator;
         String rightIndicator;
         Game game = PioneerTrail.getGame();
@@ -45,7 +45,7 @@ public class MapView extends View{
             leftIndicator = " ";
             rightIndicator = " ";
         
-            if(locations[row][column] == map.getLocations()locations){
+            if(locations[row][column] == map.getLocations()){
             leftIndicator = "*";
             rightIndicator = "*";
             }
@@ -59,8 +59,9 @@ public class MapView extends View{
             }
             else{
                 System.out.println(leftIndicator
-                + locations[row][column].getScene().getMapSymbol()
+                + locations[row][column].getScene().getSceneSymbol()
                 + rightIndicator);
+            }
             }
             System.out.println("|");
     }
