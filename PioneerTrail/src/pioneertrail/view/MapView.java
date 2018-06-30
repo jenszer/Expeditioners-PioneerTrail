@@ -41,7 +41,7 @@ public class MapView extends View{
         for (int row = 0; row < locations.length; row++){
             System.out.println(row + "");
         
-            for (int column = 0; column < locations[row].length; column++){
+            for (int column = 0; column < locations[column].length; column++){
             leftIndicator = " ";
             rightIndicator = " ";
         
