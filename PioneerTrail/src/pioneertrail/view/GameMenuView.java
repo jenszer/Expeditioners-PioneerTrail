@@ -99,6 +99,11 @@ public class GameMenuView extends View {
         HuntForResourcesView huntResources = new HuntForResourcesView();
         huntResources.display();
     }
+    
+    public void repairWagon() {
+        RepairWagonView repairWagon = new RepairWagonView();
+        repairWagon.display();
+    }
 
     public void saveGame() {
         System.out.println("Save Game Stub");
