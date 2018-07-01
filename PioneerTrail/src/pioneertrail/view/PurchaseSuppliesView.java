@@ -25,8 +25,7 @@ public class PurchaseSuppliesView extends View {
                 + "\n B - Bullets"
                 + "\n D - Drinking Water"
                 + "\n Q - Quit");
-            System.out.println(inventory);
-    }
+            }
 
     Game game = new Game();
 
@@ -97,7 +96,6 @@ public class PurchaseSuppliesView extends View {
     }
 
     public void viewInventory() {
-        Inventory inventory = new Inventory();
         System.out.println(inventory.toString());
     }
 

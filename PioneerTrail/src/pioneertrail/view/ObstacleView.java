@@ -5,6 +5,8 @@
  */
 package pioneertrail.view;
 
+import pioneertrail.control.ObstacleControl;
+
 /**
  *
  * @author Jacob Enszer
@@ -45,10 +47,23 @@ public class ObstacleView extends View {
 
     public void fixWagon() {
         System.out.println("Fix Wagon Stub");
+        
     }
 
-    public void cureSickness() {
-        System.out.println("\nCure Sickness Stub");
+    public int cureSickness() {
+            int mortRate = (int) (Math.random() * 6);
+        System.out.println("How much water would you like to use?");
+            String input = this.getInputs();    
+            int water = Integer.parseInt(input);
+        System.out.println("How much food would you like to use?");
+            String input1 = this.getInputs();
+            int food = Integer.parseInt(input1);
+        System.out.println("How long would you like to rest?");
+            String input2 = this.getInputs();
+            int rest = Integer.parseInt(input2);
+                
+        int death = ObstacleControl.calcMortality(mortRate, food, water, rest);
+        return death;   
     }
 
     public void getHelp() {

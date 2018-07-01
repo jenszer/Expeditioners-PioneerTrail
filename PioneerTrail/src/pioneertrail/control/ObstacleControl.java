@@ -34,5 +34,8 @@ public class ObstacleControl {
             return death;
         }
     }
-        
+    
+    public static int fixWagon(int Wheels){
+    return -1;
+    }    
     }
