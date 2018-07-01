@@ -6,21 +6,23 @@
 package pioneertrail.view;
 
 import java.util.ArrayList;
-import pioneertrail.control.HarvestHuntControl;
+import pioneertrail.model.Game;
 import pioneertrail.model.Inventory;
+import pioneertrail.model.ItemType;
+import pioneertrail.model.Resource;
 
 /**
  *
  * @author Hector Mendoza
  */
 public class ListInventoryView extends View {
-
-    private final ArrayList<Inventory> inventories = new ArrayList<>();
+    Game game = new Game();
+    private final ArrayList<Inventory> inventory = game.getItems();
 
     @Override
     public boolean doAction(String inputs) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-
 }
+    

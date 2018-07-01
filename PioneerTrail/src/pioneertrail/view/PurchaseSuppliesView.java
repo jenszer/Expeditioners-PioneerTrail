@@ -25,11 +25,13 @@ public class PurchaseSuppliesView extends View {
                 + "\n B - Bullets"
                 + "\n D - Drinking Water"
                 + "\n Q - Quit");
+            System.out.println(inventory);
     }
 
     Game game = new Game();
 
-    private final ArrayList<Inventory> inventory = game.getItems();
+    ArrayList<Inventory> inventory = game.getItems();
+
 
     @Override
     public boolean doAction(String inputs) {

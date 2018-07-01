@@ -6,12 +6,13 @@
 package pioneertrail.control;
 
 import java.util.ArrayList;
-import pioneertrail.model.Game;
 import pioneertrail.model.Inventory;
+import pioneertrail.model.Resource;
 
 /**
  *
  * @author Jacob Enszer
  */
 public class InventoryControl {
+  
   }
