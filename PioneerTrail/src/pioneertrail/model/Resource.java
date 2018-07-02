@@ -17,11 +17,38 @@ public class Resource implements Serializable {
     private String type;
     private int amount;
     private int weight;
+    private int price;
+    public boolean use_able;
     private String description;
     
     private Inventory Inventory;
 
     public Resource() {
+    }
+
+    public Resource(String name, String description, int price, boolean use_able) {
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.use_able = use_able;
+    
+    
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public boolean isUse_able() {
+        return use_able;
+    }
+
+    public void setUse_able(boolean use_able) {
+        this.use_able = use_able;
     }
 
     public Inventory getInventory() {
