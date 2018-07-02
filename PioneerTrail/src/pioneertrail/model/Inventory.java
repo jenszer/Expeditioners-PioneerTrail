@@ -24,29 +24,14 @@ public class Inventory implements Serializable {
             private Game Game;
             private ArrayList <Resource> resources= new ArrayList<Resource>();
 
-        public Inventory() {
-        }
 
-    public Inventory(Resource resource, int i) {
+    public Inventory(Resource resource, int amount) {
         this.name = name;
         this.amount = amount;
         }
 
-    public Inventory(Resource resource, int amount) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public Inventory(Resource resource, int amount) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public Inventory(Resource resource, int amount) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public Inventory(Resource resource, int amount) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    public Inventory() {
+       }
 
     public Game getGame() {
         return Game;

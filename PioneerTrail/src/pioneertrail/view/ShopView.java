@@ -22,7 +22,7 @@ public class ShopView {
     }
     
     private void addNewItem(Inventory item, String name, String 
-            description, int price, boolean use_able, int amount){
+            description, int price, boolean use_able, int amount){     
         item.setResources(new Inventory(new Resource(name,description,
                 price, use_able), amount));
     }
