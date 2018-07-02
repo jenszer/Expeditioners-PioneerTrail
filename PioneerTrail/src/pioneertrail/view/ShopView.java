@@ -5,6 +5,7 @@
  */
 package pioneertrail.view;
 
+import java.util.ArrayList;
 import pioneertrail.model.Inventory;
 import pioneertrail.model.Resource;
 
