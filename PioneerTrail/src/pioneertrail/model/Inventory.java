@@ -134,6 +134,14 @@ public class Inventory implements Serializable {
             }
             return true;
         }
+
+    public Inventory getAmount(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public int size() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
         
             
         

@@ -31,8 +31,7 @@ public class Resource implements Serializable {
         this.description = description;
         this.price = price;
         this.use_able = use_able;
-    
-    
+       
     }
 
     public int getPrice() {
@@ -143,6 +142,10 @@ public class Resource implements Serializable {
             return false;
         }
         return true;
+    }
+
+    public int getPrice(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
