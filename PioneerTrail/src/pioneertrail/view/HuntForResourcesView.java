@@ -46,12 +46,13 @@ public class HuntForResourcesView extends View {
         return false;
     }
 
-    public int huntResources() throws HarvestHuntControlException {
+    public int huntResources() {
         String inputs = this.getInput("\nThere is/are " + resources + " resources at this location."
                 + "\nHow Many Bullets Would You"
                 + "Like to Use?\n");
         int noBullets = Integer.parseInt(inputs);
-        int weight = HarvestHuntControl.calcHuntForResources(resources, noBullets);
+        int weight = 0;
+        
         try{
         HarvestHuntControl.calcHuntForResources(resources, noBullets);
         } catch (HarvestHuntControlException ie){
