@@ -56,8 +56,9 @@ public class HuntForResourcesView extends View {
         String inputs = this.getInput("\nThere is/are " + resources + " resources at this location."
                 + "\nHow Many Bullets Would You"
                 + "Like to Use?\n");
-       try{
-            int noBullets = Integer.parseInt(inputs);
+        int noBullets = 0;
+        try{
+         Integer.parseInt(inputs);
        } catch (NumberFormatException ie){
         System.out.println(ie.getMessage());
      }
