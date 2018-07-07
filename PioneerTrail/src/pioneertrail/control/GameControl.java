@@ -8,6 +8,7 @@ package pioneertrail.control;
 import java.util.ArrayList;
 import java.util.Arrays;
 import pioneertrail.PioneerTrail;
+import pioneertrail.exceptions.GameControlException;
 import pioneertrail.model.*;
 
 /**
@@ -24,11 +25,12 @@ public class GameControl {
         
         return player;
     }   
-    public static int createNewGame(Player player){
+    public static void createNewGame(Player player)
+        throws GameControlException{
         Map map = createMap(4,4);  
         
         if (player == null){
-                return -1;
+                throw new GameControlException("Must enter a name.");
             }
             
          Game game = new Game(); 
@@ -38,10 +40,9 @@ public class GameControl {
          
             if (map == null){
             } else {
-                return -2;
+                throw new GameControlException("Error creating player");
         }
          game.setMap(map);
-         return 1;
     }
     
     public static Resource[] createItems(){

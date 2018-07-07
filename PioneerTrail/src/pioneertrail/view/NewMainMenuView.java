@@ -3,6 +3,7 @@ package pioneertrail.view;
 import java.util.Scanner;
 import pioneertrail.PioneerTrail;
 import pioneertrail.control.GameControl;
+import pioneertrail.exceptions.GameControlException;
 
 /**
  *
@@ -46,11 +47,18 @@ class NewMainMenuView extends View {
         return false;
     }
 
-    public void startNewGame() {
+    public boolean startNewGame() {
         //Create a New Game
-        GameControl.createNewGame(PioneerTrail.getPlayer());
+        try {
+            GameControl.createNewGame(PioneerTrail.getPlayer());
+        } catch (GameControlException ie){
+            System.out.println(ie.getMessage());
+            return false;
+        }
+               
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.display();
+        return true;
     }
 
     public void restartGame() {
