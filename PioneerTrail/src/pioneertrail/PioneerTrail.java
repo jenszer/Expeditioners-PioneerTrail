@@ -65,9 +65,12 @@ public class PioneerTrail {
     private static Inventory inventory;
 
     public static void main(String[] args) {
-
+        try{
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.display();
+        } catch (Throwable ie){
+            System.out.println(ie.getMessage());
+        }
 
     }
 

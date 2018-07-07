@@ -5,6 +5,8 @@
  */
 package pioneertrail.view;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import pioneertrail.control.HarvestHuntControl;
 import pioneertrail.exceptions.HarvestHuntControlException;
 import pioneertrail.model.Inventory;
@@ -34,7 +36,13 @@ public class HuntForResourcesView extends View {
 
         switch (menuItem) {
             case "H":
+        {
+            try {
                 this.huntResources();
+            } catch (HarvestHuntControlException ie) {
+               System.out.println(ie.getMessage());
+            }
+        }
                 break;
             case "V":
                 this.viewInventory();
@@ -46,18 +54,18 @@ public class HuntForResourcesView extends View {
         return false;
     }
 
-    public int huntResources() {
+    public int huntResources() throws HarvestHuntControlException{
         String inputs = this.getInput("\nThere is/are " + resources + " resources at this location."
                 + "\nHow Many Bullets Would You"
                 + "Like to Use?\n");
-        int noBullets = Integer.parseInt(inputs);
+       try{
+            int noBullets = Integer.parseInt(inputs);
+       } catch (NumberFormatException ie){
+        System.out.println(ie.getMessage());
+     }
         int weight = 0;
         
-        try{
         HarvestHuntControl.calcHuntForResources(resources, noBullets);
-        } catch (HarvestHuntControlException ie){
-            System.out.println(ie.getMessage());
-        }
         
         System.out.println("You gathered " + weight + "lbs of resources");
         return weight;
