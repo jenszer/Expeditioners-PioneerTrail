@@ -56,15 +56,14 @@ public class HuntForResourcesView extends View {
         String inputs = this.getInput("\nThere is/are " + resources + " resources at this location."
                 + "\nHow Many Bullets Would You"
                 + "Like to Use?\n");
-        int noBullets = 0;
+        int noBullets = Integer.parseInt(inputs);
         try{
          Integer.parseInt(inputs);
        } catch (NumberFormatException ie){
         System.out.println(ie.getMessage());
      }
-        int weight = 0;
-        
-        HarvestHuntControl.calcHuntForResources(resources, noBullets);
+               
+        int weight = HarvestHuntControl.calcHuntForResources(resources, noBullets);
         
         System.out.println("You gathered " + weight + "lbs of resources");
         return weight;

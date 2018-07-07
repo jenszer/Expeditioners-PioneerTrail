@@ -27,7 +27,7 @@ public class GameControl {
     }   
     public static void createNewGame(Player player)
         throws GameControlException{
-        Map map = createMap(4,4);  
+   //     Map map = createMap(4,4);  
         
         if (player == null){
                 throw new GameControlException("Must enter a name.");
@@ -36,9 +36,10 @@ public class GameControl {
          Game game = new Game(); 
          game.setPlayer(player);
          PioneerTrail.setGame(game);
-         Resource[] items = createItems();
+    }
+   //      Resource[] items = createItems();
          
-            if (map == null){
+ /*           if (map == null){
             } else {
                 throw new GameControlException("Error creating player");
         }
@@ -88,6 +89,6 @@ public class GameControl {
        // MapControl.assignScenesToLocation(scenes, locations);
         
         return map;
-    }
+    }*/
     
 }    
