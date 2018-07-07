@@ -5,8 +5,6 @@
  */
 package pioneertrail.view;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import pioneertrail.control.HarvestHuntControl;
 import pioneertrail.exceptions.HarvestHuntControlException;
 import pioneertrail.model.Inventory;
