@@ -63,11 +63,16 @@ public class ObstacleView extends View {
     }
 
     public void fixWagon() throws ObstacleControlException {
-        String inputs = this.getInput("\nYour wagon is broken down.");
+        System.out.println("\nYour wagon is broken down.");
         
         System.out.println("How many wheels would you like to use?");
             String input = this.getInputs();
             int wheels = Integer.parseInt(input);
+            try{
+            Integer.parseInt(input);
+            } catch (NumberFormatException ie){
+                System.out.println(ie.getMessage());
+            }
             ObstacleControl.fixWagon(wheels);
              }
 
@@ -79,12 +84,27 @@ public class ObstacleView extends View {
         System.out.println("How much water would you like to use?");
             String input = this.getInputs();    
             int water = Integer.parseInt(input);
+            try{
+                Integer.parseInt(input);
+            } catch (NumberFormatException ie){
+                System.out.println(ie.getMessage());
+            }
         System.out.println("How much food would you like to use?");
             String input1 = this.getInputs();
             int food = Integer.parseInt(input1);
+             try{
+                Integer.parseInt(input1);
+            } catch (NumberFormatException ie){
+                System.out.println(ie.getMessage());
+            }
         System.out.println("How long would you like to rest?");
             String input2 = this.getInputs();
-            int rest = Integer.parseInt(input2);    
+            int rest = Integer.parseInt(input2); 
+             try{
+                Integer.parseInt(input2);
+            } catch (NumberFormatException ie){
+                System.out.println(ie.getMessage());
+            }
            
         int death = ObstacleControl.calcMortality(mortRate, food, water, rest);
         return death;   
