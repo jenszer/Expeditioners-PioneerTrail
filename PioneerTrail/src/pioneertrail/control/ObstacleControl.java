@@ -5,21 +5,24 @@
  */
 package pioneertrail.control;
 
+import pioneertrail.exceptions.ObstacleControlException;
+
 public class ObstacleControl {
       
-    public static int calcMortality(int mortalityRate, int noFood, int noWater, int noRest){
+    public static int calcMortality(int mortalityRate, int noFood, 
+            int noWater, int noRest) throws ObstacleControlException{
         int resourceUse;
         float deathRate;
         int death;
                
         if (noWater < 1){ 
-        return -1;
-        }      
+            throw new ObstacleControlException("You must use at least 1 water");
+        }    
         if (noFood < 1){
-        return -2;
+            throw new ObstacleControlException("You must use at least 1 food");
         }
         if(noRest < 1){
-        return -3;
+            throw new ObstacleControlException("You must use at least 1 rest");
         }
        
         resourceUse = noRest + noFood + noWater;
@@ -35,7 +38,13 @@ public class ObstacleControl {
         }
     }
     
-    public static int fixWagon(int Wheels){
-    return -1;
-    }    
+    public static void fixWagon(int Wheels) 
+            throws ObstacleControlException{
+        if (Wheels < 1){
+            throw new ObstacleControlException("You must use at least 1 wheel");        }
+       
+        else {
+            System.out.println("You've fixed your wagon");
+        } 
     }
+}

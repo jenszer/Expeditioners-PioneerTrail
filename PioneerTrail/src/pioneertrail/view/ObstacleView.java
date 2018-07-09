@@ -5,7 +5,10 @@
  */
 package pioneertrail.view;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import pioneertrail.control.ObstacleControl;
+import pioneertrail.exceptions.ObstacleControlException;
 
 /**
  *
@@ -30,10 +33,24 @@ public class ObstacleView extends View {
 
         switch (menuItem) {
             case "F":
+        {
+            try {
                 this.fixWagon();
+            } catch (ObstacleControlException ie) {
+                System.out.println(ie.getMessage());
+                return true;
+            }
+        }
                 break;
             case "D":
+        {
+            try {
                 this.cureSickness();
+            } catch (ObstacleControlException ie) {
+                 System.out.println(ie.getMessage());
+                 return true;
+            }
+        }
                 break;
             case "H":
                 this.getHelp();
@@ -45,12 +62,14 @@ public class ObstacleView extends View {
         return false;
     }
 
-    public void fixWagon() {
-        System.out.println("Fix Wagon Stub");
-        
-    }
+    public void fixWagon() throws ObstacleControlException {
+        System.out.println("How many wheels would you like to use?");
+            String input = this.getInputs();
+            int wheels = Integer.parseInt(input);
+            ObstacleControl.fixWagon(wheels);
+             }
 
-    public int cureSickness() {
+    public int cureSickness() throws ObstacleControlException {
             int mortRate = (int) (Math.random() * 6);
         System.out.println("How much water would you like to use?");
             String input = this.getInputs();    
@@ -60,8 +79,8 @@ public class ObstacleView extends View {
             int food = Integer.parseInt(input1);
         System.out.println("How long would you like to rest?");
             String input2 = this.getInputs();
-            int rest = Integer.parseInt(input2);
-                
+            int rest = Integer.parseInt(input2);    
+           
         int death = ObstacleControl.calcMortality(mortRate, food, water, rest);
         return death;   
     }

@@ -39,6 +39,7 @@ public class HuntForResourcesView extends View {
                 this.huntResources();
             } catch (HarvestHuntControlException ie) {
                System.out.println(ie.getMessage());
+               return true;
             }
         }
                 break;
