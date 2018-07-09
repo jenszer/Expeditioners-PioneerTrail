@@ -63,6 +63,8 @@ public class ObstacleView extends View {
     }
 
     public void fixWagon() throws ObstacleControlException {
+        String inputs = this.getInput("\nYour wagon is broken down.");
+        
         System.out.println("How many wheels would you like to use?");
             String input = this.getInputs();
             int wheels = Integer.parseInt(input);
@@ -71,6 +73,9 @@ public class ObstacleView extends View {
 
     public int cureSickness() throws ObstacleControlException {
             int mortRate = (int) (Math.random() * 6);
+        System.out.println("\nOne of your party" 
+                + " is sick. Their likelihood of survival is: "
+                + mortRate);        
         System.out.println("How much water would you like to use?");
             String input = this.getInputs();    
             int water = Integer.parseInt(input);
