@@ -30,10 +30,12 @@ public class ObstacleControl {
         
         if(deathRate >= .5){
             death = 1;
+            System.out.println("You have lost a member of your party");
             return death;
         }
         else{
             death = 0;
+            System.out.println("You've saved your party member");
             return death;
         }
     }

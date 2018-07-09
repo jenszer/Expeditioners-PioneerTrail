@@ -38,7 +38,7 @@ public class ObstacleView extends View {
                 this.fixWagon();
             } catch (ObstacleControlException ie) {
                 System.out.println(ie.getMessage());
-                return true;
+                return false;
             }
         }
                 break;
@@ -48,7 +48,7 @@ public class ObstacleView extends View {
                 this.cureSickness();
             } catch (ObstacleControlException ie) {
                  System.out.println(ie.getMessage());
-                 return true;
+                 return false;
             }
         }
                 break;
@@ -59,7 +59,7 @@ public class ObstacleView extends View {
                 System.out.println("\nInvalid Menu Item.");
                 break;
         }
-        return false;
+        return true;
     }
 
     public void fixWagon() throws ObstacleControlException {
