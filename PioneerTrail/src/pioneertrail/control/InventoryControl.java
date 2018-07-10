@@ -53,19 +53,16 @@ public class InventoryControl extends ArrayList<Inventory>{
             return item.getAmount();
         }
     }
-    public Inventory inventoryTotal(Inventory item, Inventory amount){
+    /* public ArrayList<Resource> getResources(){
        
-        for (int i = 0; i < item.size(); i++){
-            item = item.getAmount(i);
-            Inventory qty;
-            qty = item.getAmount(i);
-            Resource resource = new Resource();
-            int cost = resource.getPrice(i);
-            Inventory total = cost * qty;
+        for (int i = 0; i < ArrayList<Resource>.size(); i++){
+            
+            amount = amount.getAmount(i)
+                       
+            Inventory total = cost * item;
 
-        
     }
         return item;
-    } 
+    } */
             
 }
