@@ -2,6 +2,7 @@
  */
 package pioneertrail.control;
 
+import pioneertrail.exceptions.WagonControlException;
 import pioneertrail.model.Inventory;
 import pioneertrail.model.Wagon;
 
@@ -11,19 +12,17 @@ import pioneertrail.model.Wagon;
  */
 public class WagonControl {
     
-
-
-    
-    public static int calcRemainingWeight(Wagon wagon, Inventory inventoryItem){
+    public static int calcRemainingWeight(Wagon wagon, Inventory inventoryItem)
+    throws WagonControlException {
         
         if (inventoryItem.getAmount() < 1){ 
-        return -3;
+            throw new WagonControlException("You must have at least 1 amount");
         }      
         if (inventoryItem.getWeight() < 1){
-        return -4;
+            throw new WagonControlException("Weight cannot be 0");
         }
         if(wagon.getCurrentWeight() < 0){
-        return -5;
+            throw new WagonControlException("Current weight must be more than 0");
         }
         if(wagon.getCurrentWeight() >= wagon.getMaxWeight()){
         return -1;
