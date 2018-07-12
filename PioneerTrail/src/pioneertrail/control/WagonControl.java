@@ -25,10 +25,10 @@ public class WagonControl {
             throw new WagonControlException("Current weight must be more than 0");
         }
         if(wagon.getCurrentWeight() >= wagon.getMaxWeight()){
-        return -1;
+            throw new WagonControlException("Max Weight Excceeded");
         }       
         if(wagon.getCurrentWeight() +(inventoryItem.getAmount() *inventoryItem.getWeight()) > wagon.getMaxWeight()){
-        return -2;
+            throw new WagonControlException("Max Weight Excceeded");
         }  
         wagon.setCurrentWeight(wagon.getCurrentWeight() + inventoryItem.getAmount() * inventoryItem.getWeight());
         return wagon.getCurrentWeight();
