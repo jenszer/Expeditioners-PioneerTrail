@@ -6,6 +6,8 @@
 package pioneertrail.view;
 
 import java.util.ArrayList;
+import pioneertrail.exceptions.WagonControlException;
+import pioneertrail.control.WagonControl;
 import pioneertrail.model.Game;
 import pioneertrail.model.Inventory;
 import pioneertrail.model.Resource;
@@ -40,27 +42,67 @@ public class PurchaseSuppliesView extends View {
 
         switch (menuItem) {
             case "F":
-                this.purchaseFood();
-                break;
-            case "H":
+            { 
+              try {
+                  this.purchaseFood();
+                } catch (WagonControlException ie) {
+                   System.out.println(ie.getMessage());
+                   return true;
+            }
+        }
+         break;
+         
+        case "H":
+          {
+            try {
                 this.purchaseHammer();
+            } catch (WagonControlException ie) {
+               System.out.println(ie.getMessage());
+               return true;
+            }
+        }
                 break;
-            case "S":
+         
+        case "S":
+          {
+            try {
                 this.purchaseSpareWheels();
-                break;
-            case "B":
+            } catch (WagonControlException ie) {
+               System.out.println(ie.getMessage());
+               return true;
+            }
+       }
+              break;
+         
+        case "B":
+        {
+            try {
                 this.purchaseBullets();
+            } catch (WagonControlException ie) {
+               System.out.println(ie.getMessage());
+               return true;
+            }
+        }
                 break;
-            case "D":
+         
+          case "D":
+            {
+            try {
                 this.purchaseDrinkingWater();
-                break;
+            } catch (WagonControlException ie) {
+               System.out.println(ie.getMessage());
+               return true;
+            }
+        }
+               break;        
+         
+  
             default:
                 System.out.println("\nInvalid Menu Item.");
                 break;
-        }
-        return false;
+   
     }
-
+        
     public int purchaseFood() {
         Resource resource = new Resource();
         resource.setAmount(1);
