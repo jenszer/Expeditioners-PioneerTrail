@@ -7,7 +7,7 @@ package pioneertrail.model;
 
 /**
  *
- * @author Jacob Enszer
+ * @author arielgeorge
  */
 public enum ItemType {
     Water,
