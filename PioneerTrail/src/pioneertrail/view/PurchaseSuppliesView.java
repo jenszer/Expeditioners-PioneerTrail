@@ -102,8 +102,10 @@ public class PurchaseSuppliesView extends View {
                 break;
    
     }
-        
-    public int purchaseFood() {
+        return false;
+    }        
+    public int purchaseFood() 
+        throws WagonControlException{
         Resource resource = new Resource();
         resource.setAmount(1);
         System.out.println("You've purchased " 
@@ -111,14 +113,16 @@ public class PurchaseSuppliesView extends View {
         return 0;
     }
 
-    public int purchaseAxe() {
+    public int purchaseAxe() 
+        throws WagonControlException{
         Resource resource = new Resource();
         resource.setAmount(1);
         System.out.println("You've purchased " 
                 + resource.getAmount() + "Axe");
     return 0;
     }
-    public int purchaseHammer() {
+    public int purchaseHammer()
+        throws WagonControlException{
         Resource resource = new Resource();
         resource.setAmount(1);
         System.out.println("You've purchased " 
@@ -126,7 +130,8 @@ public class PurchaseSuppliesView extends View {
         return 0;
     }
 
-    public int purchaseSpareWheels() {
+    public int purchaseSpareWheels()
+        throws WagonControlException{
         Resource resource = new Resource();
         resource.setAmount(1);
         System.out.println("You've purchased " 
@@ -134,7 +139,8 @@ public class PurchaseSuppliesView extends View {
         return 0;
     }
 
-    public int purchaseBullets() {
+    public int purchaseBullets()
+        throws WagonControlException{
         Resource resource = new Resource();
         resource.setAmount(1);
         System.out.println("You've purchased " 
@@ -142,7 +148,8 @@ public class PurchaseSuppliesView extends View {
         return 0;
     }
 
-    public int purchaseWood() {
+    public int purchaseWood()
+        throws WagonControlException{
         Resource resource = new Resource();
         resource.setAmount(1);
         System.out.println("You've purchased " 
@@ -150,7 +157,8 @@ public class PurchaseSuppliesView extends View {
         return 0;
     }
 
-    public int purchaseDrinkingWater() {
+    public int purchaseDrinkingWater() 
+        throws WagonControlException{
         Resource resource = new Resource();
         resource.setAmount(1);
         System.out.println("You've purchased " 
