@@ -5,6 +5,12 @@
  */
 package pioneertrail;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import pioneertrail.model.Resource;
 import pioneertrail.model.Question;
 import pioneertrail.model.Scene;
@@ -55,6 +61,22 @@ public class PioneerTrail {
         PioneerTrail.inventory = inventory;
     }
 
+    public static PrintWriter getOutFile() {
+        return outFile;
+    }
+
+    public static void setOutFile(PrintWriter outFile) {
+        PioneerTrail.outFile = outFile;
+    }
+
+    public static BufferedReader getInFile() {
+        return inFile;
+    }
+
+    public static void setInFile(BufferedReader inFile) {
+        PioneerTrail.inFile = inFile;
+    }
+
     /**
      *
      * @param args
@@ -63,6 +85,8 @@ public class PioneerTrail {
     private static Game game;
     private static Resource resource;
     private static Inventory inventory;
+    private static PrintWriter outFile =null;
+    private static BufferedReader inFile = null;
 
     public static void main(String[] args) {
         try{
@@ -70,6 +94,30 @@ public class PioneerTrail {
         startProgramView.display();
         } catch (Throwable ie){
             System.out.println(ie.getMessage());
+        }
+        try{
+        PioneerTrail.inFile = 
+                new BufferedReader(new InputStreamReader(System.in));
+        
+        PioneerTrail.outFile = new PrintWriter(System.out, true);
+        } catch (Throwable ie) {
+            
+            System.out.println("Exception: " + ie.toString() +
+                    "\nCause: " + ie.getCause() +
+                    "\nMessage: " + ie.getMessage());
+            ie.printStackTrace();
+        }
+        finally {
+            try {
+                if (PioneerTrail.inFile != null)
+                    PioneerTrail.inFile.close();
+                if (PioneerTrail.outFile != null)
+                    PioneerTrail.outFile.close();
+            } catch (IOException ex) {
+                System.out.println("Input/Output did not close successfully");
+                return;
+            }
+            
         }
 
     }

@@ -5,7 +5,10 @@
  */
 package pioneertrail.view;
 
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 import java.util.Scanner;
+import pioneertrail.PioneerTrail;
 
 /**
  *
@@ -14,6 +17,9 @@ import java.util.Scanner;
 public abstract class View implements ViewInterface {
 
     protected String promptMessage;
+    
+    protected final BufferedReader keyboard = PioneerTrail.getInFile();
+    protected final PrintWriter console = PioneerTrail.getOutFile();
 
     public View() {
     }
