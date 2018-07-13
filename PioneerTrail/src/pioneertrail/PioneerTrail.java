@@ -9,18 +9,10 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import pioneertrail.model.Resource;
-import pioneertrail.model.Question;
-import pioneertrail.model.Scene;
 import pioneertrail.model.Player;
-import pioneertrail.model.Map;
-import pioneertrail.model.Actor;
 import pioneertrail.model.Game;
 import pioneertrail.model.Inventory;
-import pioneertrail.model.Location;
-import pioneertrail.model.Wagon;
 import pioneertrail.view.StartProgramView;
 
 /**
@@ -77,6 +69,14 @@ public class PioneerTrail {
         PioneerTrail.inFile = inFile;
     }
 
+    public static PrintWriter getLogFile() {
+        return logFile;
+    }
+
+    public static void setLogFile(PrintWriter logFile) {
+        PioneerTrail.logFile = logFile;
+    }
+
     /**
      *
      * @param args
@@ -87,6 +87,7 @@ public class PioneerTrail {
     private static Inventory inventory;
     private static PrintWriter outFile =null;
     private static BufferedReader inFile = null;
+    private static PrintWriter logFile = null;
 
     public static void main(String[] args) {
         try{
@@ -98,8 +99,9 @@ public class PioneerTrail {
         try{
         PioneerTrail.inFile = 
                 new BufferedReader(new InputStreamReader(System.in));
-        
         PioneerTrail.outFile = new PrintWriter(System.out, true);
+        PioneerTrail.logFile = new PrintWriter("logFile.txt");
+        
         } catch (Throwable ie) {
             
             System.out.println("Exception: " + ie.toString() +
@@ -113,6 +115,8 @@ public class PioneerTrail {
                     PioneerTrail.inFile.close();
                 if (PioneerTrail.outFile != null)
                     PioneerTrail.outFile.close();
+                 if (PioneerTrail.logFile != null)
+                    PioneerTrail.logFile.close();
             } catch (IOException ex) {
                 System.out.println("Input/Output did not close successfully");
                 return;
