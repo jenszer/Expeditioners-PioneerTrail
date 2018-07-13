@@ -85,22 +85,20 @@ public class PioneerTrail {
     private static Game game;
     private static Resource resource;
     private static Inventory inventory;
-    private static PrintWriter outFile =null;
+    private static PrintWriter outFile = null;
     private static BufferedReader inFile = null;
     private static PrintWriter logFile = null;
 
     public static void main(String[] args) {
-        try{
-        StartProgramView startProgramView = new StartProgramView();
-        startProgramView.display();
-        } catch (Throwable ie){
-            System.out.println(ie.getMessage());
-        }
+
         try{
         PioneerTrail.inFile = 
                 new BufferedReader(new InputStreamReader(System.in));
         PioneerTrail.outFile = new PrintWriter(System.out, true);
         PioneerTrail.logFile = new PrintWriter("logFile.txt");
+        
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.display();
         
         } catch (Throwable ie) {
             

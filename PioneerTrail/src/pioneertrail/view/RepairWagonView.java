@@ -32,7 +32,8 @@ public class RepairWagonView extends View {
         
         this.console.println("Resources needed to repair: ");
         PioneerTrail pt = new PioneerTrail();
-        this.listItems(pt.getPlayer().getActors().get(0).getStuff().getResources());
+        this.listItems(pt.getPlayer().getActors().
+                get(0).getStuff().getResources());
     }
 
     public void listItems(ArrayList<Resource>  items) {
