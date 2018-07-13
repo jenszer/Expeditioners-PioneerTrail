@@ -6,8 +6,8 @@
 package pioneertrail.view;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Scanner;
 import pioneertrail.PioneerTrail;
 
 /**
@@ -54,18 +54,23 @@ public abstract class View implements ViewInterface {
         System.out.println(menuPrompt);
 
         boolean valid = false;
-        while (valid == false) {
-            System.out.println("Input:");
-            Scanner userInput = new Scanner(System.in);
-            inputs = userInput.nextLine();
-
-            if (inputs.trim().equals("") == true) {
-                System.out.println("You must enter a non-blank value");
-                continue;
+        try {
+            while (valid == false) {
+                System.out.println("Input:");
+                inputs = this.keyboard.readLine();
+                
+                if (inputs.trim().equals("") == true) {
+                    System.out.println("You must enter a non-blank value");
+                    continue;
+                }
+                
+                valid = true;
             }
-
-            valid = true;
-        }
+            } catch (IOException ex) {
+                System.out.println("Error Reading Input: " 
+                        + ex.getMessage()); 
+            }
+        
         return inputs;
     }
 

@@ -1,6 +1,5 @@
 package pioneertrail.view;
 
-import java.util.Scanner;
 import pioneertrail.PioneerTrail;
 import pioneertrail.control.GameControl;
 import pioneertrail.exceptions.GameControlException;
