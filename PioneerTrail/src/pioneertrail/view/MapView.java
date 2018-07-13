@@ -85,7 +85,8 @@ public class MapView extends View{
                 }
             }
         }
-        System.out.println("\n***Invalid selection***Try Again Later");
+        ErrorView.display(this.getClass().getName(),
+                "\n***Invalid selection***Try Again Later");
         return false;
        }
     
