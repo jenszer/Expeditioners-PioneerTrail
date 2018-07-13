@@ -19,7 +19,7 @@ import pioneertrail.model.Resource;
 public class PurchaseSuppliesView extends View {
 
     public PurchaseSuppliesView() {
-        super(      "================"
+        super("================"
                 + "\n Purchase Items"
                 + "\n================"
                 + "\n F - Food"
@@ -28,12 +28,11 @@ public class PurchaseSuppliesView extends View {
                 + "\n B - Bullets"
                 + "\n D - Drinking Water"
                 + "\n Q - Quit");
-            }
+    }
 
     Game game = new Game();
 
     ArrayList<Inventory> inventory = game.getItems();
-
 
     @Override
     public boolean doAction(String inputs) {
@@ -41,128 +40,124 @@ public class PurchaseSuppliesView extends View {
         menuItem = inputs.toUpperCase();
 
         switch (menuItem) {
-            case "F":
-            { 
-              try {
-                  this.purchaseFood();
+            case "F": {
+                try {
+                    this.purchaseFood();
                 } catch (WagonControlException ie) {
-                   this.console.println(ie.getMessage());
-                   return true;
+                    this.console.println(ie.getMessage());
+                    return true;
+                }
             }
-        }
-         break;
-         
-        case "H":
-          {
-            try {
-                this.purchaseHammer();
-            } catch (WagonControlException ie) {
-               this.console.println(ie.getMessage());
-               return true;
+            break;
+
+            case "H": {
+                try {
+                    this.purchaseHammer();
+                } catch (WagonControlException ie) {
+                    this.console.println(ie.getMessage());
+                    return true;
+                }
             }
-        }
-                break;
-         
-        case "S":
-          {
-            try {
-                this.purchaseSpareWheels();
-            } catch (WagonControlException ie) {
-               this.console.println(ie.getMessage());
-               return true;
+            break;
+
+            case "S": {
+                try {
+                    this.purchaseSpareWheels();
+                } catch (WagonControlException ie) {
+                    this.console.println(ie.getMessage());
+                    return true;
+                }
             }
-       }
-              break;
-         
-        case "B":
-        {
-            try {
-                this.purchaseBullets();
-            } catch (WagonControlException ie) {
-               this.console.println(ie.getMessage());
-               return true;
+            break;
+
+            case "B": {
+                try {
+                    this.purchaseBullets();
+                } catch (WagonControlException ie) {
+                    this.console.println(ie.getMessage());
+                    return true;
+                }
             }
-        }
-                break;
-         
-          case "D":
-            {
-            try {
-                this.purchaseDrinkingWater();
-            } catch (WagonControlException ie) {
-               this.console.println(ie.getMessage());
-               return true;
+            break;
+
+            case "D": {
+                try {
+                    this.purchaseDrinkingWater();
+                } catch (WagonControlException ie) {
+                    this.console.println(ie.getMessage());
+                    return true;
+                }
             }
-        }
-               break;        
-         
-  
+            break;
+
             default:
                 ErrorView.display(this.getClass().getName(),
                         "\nInvalid Menu Item.");
                 break;
-   
-    }
+
+        }
         return false;
-    }        
-    public int purchaseFood() 
-        throws WagonControlException{
+    }
+
+    public int purchaseFood()
+            throws WagonControlException {
         Resource resource = new Resource();
         resource.setAmount(1);
-        this.console.println("You've purchased " 
+        this.console.println("You've purchased "
                 + resource.getAmount() + "Food");
         return 0;
     }
 
-    public int purchaseAxe() 
-        throws WagonControlException{
+    public int purchaseAxe()
+            throws WagonControlException {
         Resource resource = new Resource();
         resource.setAmount(1);
-        this.console.println("You've purchased " 
+        this.console.println("You've purchased "
                 + resource.getAmount() + "Axe");
-    return 0;
+        return 0;
     }
+
     public int purchaseHammer()
-        throws WagonControlException{
+            throws WagonControlException {
         Resource resource = new Resource();
         resource.setAmount(1);
-        this.console.println("You've purchased " 
+        this.console.println("You've purchased "
                 + resource.getAmount() + "Hammer");
         return 0;
     }
 
     public int purchaseSpareWheels()
-        throws WagonControlException{
+            throws WagonControlException {
         Resource resource = new Resource();
         resource.setAmount(1);
-        this.console.println("You've purchased " 
+        this.console.println("You've purchased "
                 + resource.getAmount() + "Wheel");
         return 0;
     }
 
     public int purchaseBullets()
-        throws WagonControlException{
+            throws WagonControlException {
         Resource resource = new Resource();
         resource.setAmount(1);
-        this.console.println("You've purchased " 
+        this.console.println("You've purchased "
                 + resource.getAmount() + "Bullet");
         return 0;
     }
 
     public int purchaseWood()
-        throws WagonControlException{
+            throws WagonControlException {
         Resource resource = new Resource();
         resource.setAmount(1);
-        this.console.println("You've purchased " 
+        this.console.println("You've purchased "
                 + resource.getAmount() + "Wood");
         return 0;
     }
 
-    public int purchaseDrinkingWater() 
-        throws WagonControlException{
+    public int purchaseDrinkingWater()
+            throws WagonControlException {
         Resource resource = new Resource();
         resource.setAmount(1);
-        this.console.println("You've purchased " 
+        this.console.println("You've purchased "
                 + resource.getAmount() + "Water");
         return 0;
     }

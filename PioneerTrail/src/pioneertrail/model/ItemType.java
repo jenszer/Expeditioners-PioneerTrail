@@ -15,5 +15,5 @@ public enum ItemType {
     Bullets,
     Hammer,
     Wheels,
-    Rest; 
+    Rest;
 }

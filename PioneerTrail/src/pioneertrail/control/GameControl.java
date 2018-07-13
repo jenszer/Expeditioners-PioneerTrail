@@ -17,29 +17,44 @@ import pioneertrail.model.*;
  */
 public class GameControl {
 
-    
     public static Player savePlayer(String playerName) {
         Player player = new Player();
         player.setName(playerName);
         PioneerTrail.setPlayer(player);
-        
+
         return player;
-    }   
-    public static void createNewGame(Player player)
-        throws GameControlException{
-   //     Map map = createMap(4,4);  
-        
-        if (player == null){
-                throw new GameControlException("Must enter a name.");
-            }
-            
-         Game game = new Game(); 
-         game.setPlayer(player);
-         PioneerTrail.setGame(game);
     }
-   //      Resource[] items = createItems();
-         
- /*           if (map == null){
+
+    public static void createNewGame(Player player)
+            throws GameControlException {
+        //     Map map = createMap(4,4);  
+
+        if (player == null) {
+            throw new GameControlException("Must enter a name.");
+        }
+
+        Game game = new Game();
+        game.setPlayer(player);
+        PioneerTrail.setGame(game);
+    }
+
+    public static void saveGame(Game game, String filePath)
+            throws GameControlException {
+        if ((game == null) || (filePath == null)) {
+            throw new GameControlException("Invalid File Output");
+        }
+        try (ObjectOutputStream out
+                = new ObjectOutputStream(new FileOutputStream(filePath)) {
+
+            out.writeObject (game);
+
+        } catch (IOException ie) {
+                System.out.println("I/O Error: " + ie.getMessage());
+                }
+        }
+
+        //      Resource[] items = createItems();
+        /*           if (map == null){
             } else {
                 throw new GameControlException("Error creating player");
         }
@@ -90,5 +105,4 @@ public class GameControl {
         
         return map;
     }*/
-    
-}    
+    }

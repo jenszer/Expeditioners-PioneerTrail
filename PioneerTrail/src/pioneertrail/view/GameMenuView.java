@@ -18,7 +18,7 @@ import pioneertrail.model.Resource;
 public class GameMenuView extends View {
 
     public GameMenuView() {
-        super(      "==========="
+        super("==========="
                 + "\n Game Menu"
                 + "\n==========="
                 + "\nV - View Map"
@@ -76,14 +76,14 @@ public class GameMenuView extends View {
     public void viewMap() {
         MapView map = new MapView();
         map.display();
-        
+
     }
 
     public void viewInventory() {
-    Resource resource = new Resource();
-    Inventory inventory = resource.getInventory();
-    this.console.println(resource);
-        }
+        Resource resource = new Resource();
+        Inventory inventory = resource.getInventory();
+        this.console.println(resource);
+    }
 
     public void purchaseSupplies() {
         PurchaseSuppliesView purchaseSupplies = new PurchaseSuppliesView();
@@ -103,14 +103,15 @@ public class GameMenuView extends View {
         HuntForResourcesView huntResources = new HuntForResourcesView();
         huntResources.display();
     }
-    
+
     public void repairWagon() {
         RepairWagonView repairWagon = new RepairWagonView();
         repairWagon.display();
     }
 
     public void saveGame() {
-        this.console.println("Save Game Stub");
+        SaveGameView saveGameView = new SaveGameView();
+        saveGameView.display();
     }
 
     public void getHelp() {

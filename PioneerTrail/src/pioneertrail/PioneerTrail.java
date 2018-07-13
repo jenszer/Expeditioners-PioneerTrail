@@ -91,35 +91,37 @@ public class PioneerTrail {
 
     public static void main(String[] args) {
 
-        try{
-        PioneerTrail.inFile = 
-                new BufferedReader(new InputStreamReader(System.in));
-        PioneerTrail.outFile = new PrintWriter(System.out, true);
-        PioneerTrail.logFile = new PrintWriter("logFile.txt");
-        
-        StartProgramView startProgramView = new StartProgramView();
-        startProgramView.display();
-        
+        try {
+            PioneerTrail.inFile
+                    = new BufferedReader(new InputStreamReader(System.in));
+            PioneerTrail.outFile = new PrintWriter(System.out, true);
+            PioneerTrail.logFile = new PrintWriter("logFile.txt");
+
+            StartProgramView startProgramView = new StartProgramView();
+            startProgramView.display();
+
         } catch (Throwable ie) {
-            
-            System.out.println("Exception: " + ie.toString() +
-                    "\nCause: " + ie.getCause() +
-                    "\nMessage: " + ie.getMessage());
+
+            System.out.println("Exception: " + ie.toString()
+                    + "\nCause: " + ie.getCause()
+                    + "\nMessage: " + ie.getMessage());
             ie.printStackTrace();
-        }
-        finally {
+        } finally {
             try {
-                if (PioneerTrail.inFile != null)
+                if (PioneerTrail.inFile != null) {
                     PioneerTrail.inFile.close();
-                if (PioneerTrail.outFile != null)
+                }
+                if (PioneerTrail.outFile != null) {
                     PioneerTrail.outFile.close();
-                 if (PioneerTrail.logFile != null)
+                }
+                if (PioneerTrail.logFile != null) {
                     PioneerTrail.logFile.close();
+                }
             } catch (IOException ex) {
                 System.out.println("Input/Output did not close successfully");
                 return;
             }
-            
+
         }
 
     }

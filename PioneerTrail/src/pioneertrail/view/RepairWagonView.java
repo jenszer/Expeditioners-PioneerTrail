@@ -21,27 +21,26 @@ public class RepairWagonView extends View {
     public boolean doAction(String[] inputs) {
         return false;
     }
-    
-    
+
     @Override
-    public void display(){
-        
+    public void display() {
+
         this.console.println("Your Wagon Has Been Wrecked. :(");
-        
+
         this.console.println("You lost a wheel :(");
-        
+
         this.console.println("Resources needed to repair: ");
         PioneerTrail pt = new PioneerTrail();
         this.listItems(pt.getPlayer().getActors().
                 get(0).getStuff().getResources());
     }
 
-    public void listItems(ArrayList<Resource>  items) {
-        for (int i = 0; i < items.size(); i++){
-            
+    public void listItems(ArrayList<Resource> items) {
+        for (int i = 0; i < items.size(); i++) {
+
             this.console.println(items.get(i).getName() + '\n');
         }
-        
+
     }
 
     @Override

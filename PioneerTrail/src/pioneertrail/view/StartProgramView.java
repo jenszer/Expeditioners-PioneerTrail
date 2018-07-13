@@ -5,7 +5,6 @@ package pioneertrail.view;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 import pioneertrail.control.GameControl;
 import pioneertrail.model.Player;
 

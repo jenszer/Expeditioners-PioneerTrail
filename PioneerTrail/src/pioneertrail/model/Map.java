@@ -13,7 +13,7 @@ import java.util.ArrayList;
  * @author Ariel George
  */
 public class Map implements Serializable {
-    
+
     private int rowCount;
     private int columnCount;
     private int currentRow;
@@ -101,5 +101,5 @@ public class Map implements Serializable {
         }
         return true;
     }
-        
+
 }

@@ -13,17 +13,17 @@ import java.util.ArrayList;
  *
  * @author Jacob Enszer & Ariel George & Hector Mendoza
  */
-public class Player implements Serializable{
-            
-            private String name;
-            private int highScore;
-            private int age;
-            private String gender;
-            private int health;
-            private int thirst;
-            private int hunger;
-            private ArrayList<Game> games = new ArrayList<>();
-            private ArrayList<Actor> actors = new ArrayList<>();
+public class Player implements Serializable {
+
+    private String name;
+    private int highScore;
+    private int age;
+    private String gender;
+    private int health;
+    private int thirst;
+    private int hunger;
+    private ArrayList<Game> games = new ArrayList<>();
+    private ArrayList<Actor> actors = new ArrayList<>();
 
     public Player() {
     }
@@ -35,7 +35,6 @@ public class Player implements Serializable{
     public void setGames(ArrayList<Game> games) {
         this.games = games;
     }
-    
 
     public ArrayList<Actor> getActors() {
         return actors;
@@ -43,8 +42,7 @@ public class Player implements Serializable{
 
     public void setActors(ArrayList<Actor> actors) {
         this.actors = actors;
-    }      
-    
+    }
 
     public String getName() {
         return name;
@@ -119,8 +117,6 @@ public class Player implements Serializable{
     public String toString() {
         return "Player{" + "name=" + name + ", highScore=" + highScore + ", age=" + age + ", gender=" + gender + ", health=" + health + ", thirst=" + thirst + ", hunger=" + hunger + '}';
     }
-    
-    
 
     @Override
     public boolean equals(Object obj) {

@@ -29,5 +29,5 @@ public class HarvestHuntControlException extends Exception {
     public HarvestHuntControlException(String string, Throwable thrwbl, boolean bln, boolean bln1) {
         super(string, thrwbl, bln, bln1);
     }
-    
+
 }

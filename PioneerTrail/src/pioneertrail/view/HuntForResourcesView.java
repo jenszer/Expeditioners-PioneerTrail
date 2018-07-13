@@ -19,7 +19,7 @@ public class HuntForResourcesView extends View {
 
     public HuntForResourcesView() {
 
-        super(      "==========="
+        super("==========="
                 + "\n Hunt Menu"
                 + "\n==========="
                 + "\n H - Hunt"
@@ -33,16 +33,15 @@ public class HuntForResourcesView extends View {
         menuItem = inputs.toUpperCase();
 
         switch (menuItem) {
-            case "H":
-        {
-            try {
-                this.huntResources();
-            } catch (HarvestHuntControlException ie) {
-               this.console.println(ie.getMessage());
-               return true;
+            case "H": {
+                try {
+                    this.huntResources();
+                } catch (HarvestHuntControlException ie) {
+                    this.console.println(ie.getMessage());
+                    return true;
+                }
             }
-        }
-                break;
+            break;
             case "V":
                 this.viewInventory();
                 break;
@@ -54,19 +53,19 @@ public class HuntForResourcesView extends View {
         return false;
     }
 
-    public int huntResources() throws HarvestHuntControlException{
+    public int huntResources() throws HarvestHuntControlException {
         String inputs = this.getInput("\nThere is/are " + resources + " resources at this location."
                 + "\nHow Many Bullets Would You"
                 + "Like to Use?\n");
         int noBullets = Integer.parseInt(inputs);
-        try{
-         Integer.parseInt(inputs);
-       } catch (NumberFormatException ie){
-        this.console.println(ie.getMessage());
-     }
-               
+        try {
+            Integer.parseInt(inputs);
+        } catch (NumberFormatException ie) {
+            this.console.println(ie.getMessage());
+        }
+
         int weight = HarvestHuntControl.calcHuntForResources(resources, noBullets);
-        
+
         this.console.println("You gathered " + weight + "lbs of resources");
         return weight;
 

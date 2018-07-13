@@ -17,7 +17,7 @@ import pioneertrail.PioneerTrail;
 public abstract class View implements ViewInterface {
 
     protected String promptMessage;
-    
+
     protected final BufferedReader keyboard = PioneerTrail.getInFile();
     protected final PrintWriter console = PioneerTrail.getOutFile();
 
@@ -59,21 +59,21 @@ public abstract class View implements ViewInterface {
             while (valid == false) {
                 this.console.println("Input:");
                 inputs = this.keyboard.readLine();
-                
+
                 if (inputs.trim().equals("") == true) {
                     ErrorView.display(this.getClass().getName(),
                             "You must enter a non-blank value");
                     continue;
                 }
-                
+
                 valid = true;
             }
-            } catch (IOException ex) {
-                ErrorView.display(this.getClass().getName(),
-                        "Error Reading Input: " 
-                        + ex.getMessage()); 
-            }
-        
+        } catch (IOException ex) {
+            ErrorView.display(this.getClass().getName(),
+                    "Error Reading Input: "
+                    + ex.getMessage());
+        }
+
         return inputs;
     }
 

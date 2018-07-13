@@ -7,31 +7,33 @@ package pioneertrail.model;
 
 import pioneertrail.model.Player;
 import java.awt.Point;
-        
+
 /**
  *
-<<<<<<< HEAD
- * @author Ariel George, Hector Mendoza, Jacob Enzer
+ * <<<<<<< HEAD
+ * @a
+ *
+ * uthor Ariel George, Hector Mendoza, Jacob Enzer
  */
 public enum Actor {
-Father("Micheal", "Greatest Dad in the World.", new Point(1,1)),
-Mother("Karen", "Greatest Mom in the World.", new Point(2,3)),
-Son("John", "Rebellious Teen, but still a good kid.", new Point(3,4)),
-Daughter("Mary", "Energetic 9yr old, going on 10.", new Point(3,5));
+    Father("Micheal", "Greatest Dad in the World.", new Point(1, 1)),
+    Mother("Karen", "Greatest Mom in the World.", new Point(2, 3)),
+    Son("John", "Rebellious Teen, but still a good kid.", new Point(3, 4)),
+    Daughter("Mary", "Energetic 9yr old, going on 10.", new Point(3, 5));
 
-private final String name;
-private final String description;
-private String type;
-private String gender;
-private final Point coordinates;
-private Inventory stuff;
-private Player Player;
+    private final String name;
+    private final String description;
+    private String type;
+    private String gender;
+    private final Point coordinates;
+    private Inventory stuff;
+    private Player Player;
 
-Actor(String name, String description, Point coordinates) {
-    this.name = name;
-    this.description = description;
-    this.coordinates = coordinates;
-}
+    Actor(String name, String description, Point coordinates) {
+        this.name = name;
+        this.description = description;
+        this.coordinates = coordinates;
+    }
 
     public String getName() {
         return name;
@@ -76,7 +78,7 @@ Actor(String name, String description, Point coordinates) {
     public void setStuff(Inventory stuff) {
         this.stuff = stuff;
     }
-    
+
     @Override
     public String toString() {
         return "Actor{" + "name=" + name + ", description=" + description + ", type=" + type + ", gender=" + gender + ", coordinates=" + coordinates + '}';
@@ -85,5 +87,5 @@ Actor(String name, String description, Point coordinates) {
     public Object getInventory() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }

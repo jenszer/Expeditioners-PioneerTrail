@@ -11,7 +11,7 @@ import pioneertrail.exceptions.GameControlException;
 class NewMainMenuView extends View {
 
     public NewMainMenuView() {
-        super(      "==========="
+        super("==========="
                 + "\n Main Menu"
                 + "\n==========="
                 + "\n N - Create New Game"
@@ -51,11 +51,11 @@ class NewMainMenuView extends View {
         //Create a New Game
         try {
             GameControl.createNewGame(PioneerTrail.getPlayer());
-        } catch (GameControlException ie){
+        } catch (GameControlException ie) {
             this.console.println(ie.getMessage());
             return false;
         }
-               
+
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.display();
         return true;

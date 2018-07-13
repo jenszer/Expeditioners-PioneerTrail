@@ -8,14 +8,14 @@ import java.util.Objects;
  * @author Hector Mendoza
  */
 public class Question implements Serializable {
-    
+
     private String questionText;
     private String answerOne;
     private String answerTwo;
     private String answerThree;
     private String answerFour;
     private int correctAnswer;
-    
+
     private Scene scene;
 
     public Question() {
@@ -23,7 +23,7 @@ public class Question implements Serializable {
 
     public Scene getScene() {
         return scene;
-    }   
+    }
 
     public String getQuestionText() {
         return questionText;
@@ -84,14 +84,11 @@ public class Question implements Serializable {
         hash = 47 * hash + this.correctAnswer;
         return hash;
     }
-    
 
     @Override
     public String toString() {
         return "Question{" + "questionText=" + questionText + ", answerOne=" + answerOne + ", answerTwo=" + answerTwo + ", answerThree=" + answerThree + ", answerFour=" + answerFour + ", correctAnswer=" + correctAnswer + '}';
     }
-    
-    
 
     @Override
     public boolean equals(Object obj) {
@@ -124,5 +121,5 @@ public class Question implements Serializable {
             return false;
         }
         return true;
-    }   
+    }
 }

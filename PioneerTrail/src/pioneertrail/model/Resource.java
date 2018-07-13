@@ -13,6 +13,7 @@ import java.util.Objects;
  * @author Jacob Enszer
  */
 public class Resource implements Serializable {
+
     private String name;
     private String type;
     private int amount;
@@ -20,7 +21,7 @@ public class Resource implements Serializable {
     private int price;
     public boolean use_able;
     private String description;
-    
+
     private Inventory Inventory;
 
     public Resource() {
@@ -31,7 +32,7 @@ public class Resource implements Serializable {
         this.description = description;
         this.price = price;
         this.use_able = use_able;
-       
+
     }
 
     public int getPrice() {
@@ -147,5 +148,5 @@ public class Resource implements Serializable {
     public int getPrice(int i) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }

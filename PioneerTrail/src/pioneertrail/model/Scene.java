@@ -9,15 +9,14 @@ import java.util.Objects;
  * @author Hector Mendoza
  */
 public class Scene implements Serializable {
-    
+
     private String name;
     private String description;
     private String sceneSymbol;
     private String obstacleType;
     private int mortalityRate;
-    
+
     private ArrayList<Question> questions = new ArrayList<>();
-    
 
     public Scene() {
     }
@@ -29,7 +28,6 @@ public class Scene implements Serializable {
     public void setQuestions(ArrayList<Question> questions) {
         this.questions = questions;
     }
-    
 
     public String getName() {
         return name;
@@ -86,8 +84,6 @@ public class Scene implements Serializable {
     public String toString() {
         return "Scene{" + "name=" + name + ", description=" + description + ", sceneSymbol=" + sceneSymbol + ", obstacleType=" + obstacleType + ", mortalityRate=" + mortalityRate + '}';
     }
-    
-    
 
     @Override
     public boolean equals(Object obj) {
@@ -117,8 +113,6 @@ public class Scene implements Serializable {
             return false;
         }
         return true;
-    }    
-    
-    
-    
+    }
+
 }

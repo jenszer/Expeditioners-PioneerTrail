@@ -17,8 +17,8 @@ public class StartExistingGameView extends View {
 
     @Override
     public boolean doAction(String inputs) {
-       this.console.println("Not developed yet");
-       return false;
+        this.console.println("Not developed yet");
+        return false;
     }
 
 }

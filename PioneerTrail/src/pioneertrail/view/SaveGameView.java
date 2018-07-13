@@ -14,26 +14,27 @@ public class SaveGameView extends View {
 
     public SaveGameView() {
     }
-    
+
     @Override
-    public void display(){
-        
+    public void display() {
         this.console.println("Would You Like to Save Your Game?");
+        String inputs = this.getInputs();
+
     }
 
     @Override
     public boolean doAction(String inputs) {
         String location = inputs.toUpperCase().trim();
-     
-        switch (location){
-            case "Y": 
-                this.console.println("Game Saved");    
+
+        switch (location) {
+            case "Y":
+                this.console.println("Game Saved");
                 break;
             case "N":
                 this.console.println("Game not Saved");
-    }
-                             
+        }
+
         return true;
     }
-    
+
 }

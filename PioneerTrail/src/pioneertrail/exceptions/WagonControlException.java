@@ -29,5 +29,5 @@ public class WagonControlException extends Exception {
     public WagonControlException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
-    
+
 }

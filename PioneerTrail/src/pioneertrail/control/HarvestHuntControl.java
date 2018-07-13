@@ -13,22 +13,21 @@ import pioneertrail.model.Resource;
  * @author Jacob Enszer
  */
 public class HarvestHuntControl {
-       
+
     public static int calcHuntForResources(int noElk, int noBullets)
-        throws HarvestHuntControlException{
-        if (noElk < 1){ 
-        throw new HarvestHuntControlException("No Elk in Location");
-        }      
-        if (noBullets < 1 || noBullets > 20){
-        throw new HarvestHuntControlException("Incorrect Bullet Quantity");
+            throws HarvestHuntControlException {
+        if (noElk < 1) {
+            throw new HarvestHuntControlException("No Elk in Location");
         }
-        if(noBullets >= noElk){
-        int weight = noElk * 50;
-        return weight;
+        if (noBullets < 1 || noBullets > 20) {
+            throw new HarvestHuntControlException("Incorrect Bullet Quantity");
         }
-        else { 
-        int weight = (noElk - (noElk - noBullets)) * 50; 
-        return weight;
+        if (noBullets >= noElk) {
+            int weight = noElk * 50;
+            return weight;
+        } else {
+            int weight = (noElk - (noElk - noBullets)) * 50;
+            return weight;
         }
     }
 }

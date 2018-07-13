@@ -13,13 +13,13 @@ import java.util.ArrayList;
  *
  * @author Jacob Enszer, Ariel George, Hector Mendoza
  */
-public class Game implements Serializable{
-            
-        private int numPlayers;
-        private int highScore;
-        private Player Player;
-        private ArrayList<Inventory> items = new ArrayList<>();
-        private Map map;
+public class Game implements Serializable {
+
+    private int numPlayers;
+    private int highScore;
+    private Player Player;
+    private ArrayList<Inventory> items = new ArrayList<>();
+    private Map map;
 
     public Game() {
     }
@@ -76,8 +76,6 @@ public class Game implements Serializable{
     public String toString() {
         return "Game{" + "numPlayers=" + numPlayers + ", highScore=" + highScore + '}';
     }
-    
-    
 
     @Override
     public boolean equals(Object obj) {
@@ -99,7 +97,5 @@ public class Game implements Serializable{
         }
         return true;
     }
-            
-            
-            
+
 }
