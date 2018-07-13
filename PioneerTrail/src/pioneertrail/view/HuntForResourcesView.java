@@ -47,7 +47,8 @@ public class HuntForResourcesView extends View {
                 this.viewInventory();
                 break;
             default:
-                System.out.println("\nInvalid Menu Item.");
+                ErrorView.display(this.getClass().getName(),
+                        "\nInvalid Menu Item.");
                 break;
         }
         return false;

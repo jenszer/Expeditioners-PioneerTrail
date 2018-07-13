@@ -33,7 +33,8 @@ public class StartProgramView extends View {
     public boolean doAction(String inputs) {
 
         if (inputs.equals("")) {
-            System.out.println("Could not create the player. "
+            ErrorView.display(this.getClass().getName(),
+                    "Could not create the player. "
                     + "Enter a different name.");
             return false;
         } else {

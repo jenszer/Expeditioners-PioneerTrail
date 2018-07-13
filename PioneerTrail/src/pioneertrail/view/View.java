@@ -60,14 +60,16 @@ public abstract class View implements ViewInterface {
                 inputs = this.keyboard.readLine();
                 
                 if (inputs.trim().equals("") == true) {
-                    System.out.println("You must enter a non-blank value");
+                    ErrorView.display(this.getClass().getName(),
+                            "You must enter a non-blank value");
                     continue;
                 }
                 
                 valid = true;
             }
             } catch (IOException ex) {
-                System.out.println("Error Reading Input: " 
+                ErrorView.display(this.getClass().getName(),
+                        "Error Reading Input: " 
                         + ex.getMessage()); 
             }
         
