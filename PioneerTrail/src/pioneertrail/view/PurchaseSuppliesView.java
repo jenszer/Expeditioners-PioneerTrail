@@ -46,7 +46,7 @@ public class PurchaseSuppliesView extends View {
               try {
                   this.purchaseFood();
                 } catch (WagonControlException ie) {
-                   System.out.println(ie.getMessage());
+                   this.console.println(ie.getMessage());
                    return true;
             }
         }
@@ -57,7 +57,7 @@ public class PurchaseSuppliesView extends View {
             try {
                 this.purchaseHammer();
             } catch (WagonControlException ie) {
-               System.out.println(ie.getMessage());
+               this.console.println(ie.getMessage());
                return true;
             }
         }
@@ -68,7 +68,7 @@ public class PurchaseSuppliesView extends View {
             try {
                 this.purchaseSpareWheels();
             } catch (WagonControlException ie) {
-               System.out.println(ie.getMessage());
+               this.console.println(ie.getMessage());
                return true;
             }
        }
@@ -79,7 +79,7 @@ public class PurchaseSuppliesView extends View {
             try {
                 this.purchaseBullets();
             } catch (WagonControlException ie) {
-               System.out.println(ie.getMessage());
+               this.console.println(ie.getMessage());
                return true;
             }
         }
@@ -90,7 +90,7 @@ public class PurchaseSuppliesView extends View {
             try {
                 this.purchaseDrinkingWater();
             } catch (WagonControlException ie) {
-               System.out.println(ie.getMessage());
+               this.console.println(ie.getMessage());
                return true;
             }
         }
@@ -109,7 +109,7 @@ public class PurchaseSuppliesView extends View {
         throws WagonControlException{
         Resource resource = new Resource();
         resource.setAmount(1);
-        System.out.println("You've purchased " 
+        this.console.println("You've purchased " 
                 + resource.getAmount() + "Food");
         return 0;
     }
@@ -118,7 +118,7 @@ public class PurchaseSuppliesView extends View {
         throws WagonControlException{
         Resource resource = new Resource();
         resource.setAmount(1);
-        System.out.println("You've purchased " 
+        this.console.println("You've purchased " 
                 + resource.getAmount() + "Axe");
     return 0;
     }
@@ -126,7 +126,7 @@ public class PurchaseSuppliesView extends View {
         throws WagonControlException{
         Resource resource = new Resource();
         resource.setAmount(1);
-        System.out.println("You've purchased " 
+        this.console.println("You've purchased " 
                 + resource.getAmount() + "Hammer");
         return 0;
     }
@@ -135,7 +135,7 @@ public class PurchaseSuppliesView extends View {
         throws WagonControlException{
         Resource resource = new Resource();
         resource.setAmount(1);
-        System.out.println("You've purchased " 
+        this.console.println("You've purchased " 
                 + resource.getAmount() + "Wheel");
         return 0;
     }
@@ -144,7 +144,7 @@ public class PurchaseSuppliesView extends View {
         throws WagonControlException{
         Resource resource = new Resource();
         resource.setAmount(1);
-        System.out.println("You've purchased " 
+        this.console.println("You've purchased " 
                 + resource.getAmount() + "Bullet");
         return 0;
     }
@@ -153,7 +153,7 @@ public class PurchaseSuppliesView extends View {
         throws WagonControlException{
         Resource resource = new Resource();
         resource.setAmount(1);
-        System.out.println("You've purchased " 
+        this.console.println("You've purchased " 
                 + resource.getAmount() + "Wood");
         return 0;
     }
@@ -162,13 +162,13 @@ public class PurchaseSuppliesView extends View {
         throws WagonControlException{
         Resource resource = new Resource();
         resource.setAmount(1);
-        System.out.println("You've purchased " 
+        this.console.println("You've purchased " 
                 + resource.getAmount() + "Water");
         return 0;
     }
 
     public void viewInventory() {
-        System.out.println(inventory.toString());
+        this.console.println(inventory.toString());
     }
 
 }

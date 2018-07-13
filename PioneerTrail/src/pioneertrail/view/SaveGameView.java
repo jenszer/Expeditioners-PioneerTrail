@@ -18,7 +18,7 @@ public class SaveGameView extends View {
     @Override
     public void display(){
         
-        System.out.println("Would You Like to Save Your Game?");
+        this.console.println("Would You Like to Save Your Game?");
     }
 
     @Override
@@ -27,10 +27,10 @@ public class SaveGameView extends View {
      
         switch (location){
             case "Y": 
-                System.out.println("Game Saved");    
+                this.console.println("Game Saved");    
                 break;
             case "N":
-                System.out.println("Game not Saved");
+                this.console.println("Game not Saved");
     }
                              
         return true;

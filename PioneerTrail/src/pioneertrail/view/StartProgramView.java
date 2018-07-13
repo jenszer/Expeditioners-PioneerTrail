@@ -39,7 +39,7 @@ public class StartProgramView extends View {
             return false;
         } else {
             Player player = GameControl.savePlayer(inputs);
-            System.out.println("\n======================================"
+            this.console.println("\n======================================"
                     + "\nWelcome to the game " + player.getName()
                     + "\nWe hope you have a lot of fun!"
                     + "\n======================================");

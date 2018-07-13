@@ -82,7 +82,7 @@ public class GameMenuView extends View {
     public void viewInventory() {
     Resource resource = new Resource();
     Inventory inventory = resource.getInventory();
-    System.out.println(resource);
+    this.console.println(resource);
         }
 
     public void purchaseSupplies() {
@@ -91,7 +91,7 @@ public class GameMenuView extends View {
     }
 
     public void move() {
-        System.out.println("Move Stub");
+        this.console.println("Move Stub");
     }
 
     public void obstacleResolution() {
@@ -110,7 +110,7 @@ public class GameMenuView extends View {
     }
 
     public void saveGame() {
-        System.out.println("Save Game Stub");
+        this.console.println("Save Game Stub");
     }
 
     public void getHelp() {

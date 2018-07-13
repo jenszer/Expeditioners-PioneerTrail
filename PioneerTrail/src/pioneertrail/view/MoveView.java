@@ -21,9 +21,9 @@ public class MoveView extends View {
         String[] inputs = null;
         
         do {
-        System.out.println("Which Way Would You Like to Move?");
+        this.console.println("Which Way Would You Like to Move?");
         
-        System.out.println("\n V - View Map"
+        this.console.println("\n V - View Map"
                     + "\n A - Nauvoo"
                     + "\n B - Sugar Creek"
                     + "\n C - Richardson’s Point"
@@ -64,79 +64,79 @@ public class MoveView extends View {
         String location = inputs[0].toUpperCase().trim();
         switch (location){
             case "A": 
-                System.out.println("Nauvoo picked");    
+                this.console.println("Nauvoo picked");    
                 break;
             case "B": 
-                System.out.println("Sugar Creek picked");    
+                this.console.println("Sugar Creek picked");    
                 break;            
             case "C": 
-                System.out.println("Richardson’s Point picked");    
+                this.console.println("Richardson’s Point picked");    
                 break;
             case "D": 
-                System.out.println("Chariton River Crossing picked");    
+                this.console.println("Chariton River Crossing picked");    
                 break;
             case "E": 
-                System.out.println("Locust Creek picked");    
+                this.console.println("Locust Creek picked");    
                 break;
             case "F": 
-                System.out.println("Garden Grove picked");    
+                this.console.println("Garden Grove picked");    
                 break;            
             case "G": 
-                System.out.println("Nishnabotna River picked");    
+                this.console.println("Nishnabotna River picked");    
                 break;
             case "H": 
-                System.out.println("Grand Encampment picked");    
+                this.console.println("Grand Encampment picked");    
                 break;
             case "Y": 
-                System.out.println("Council Bluffs picked");    
+                this.console.println("Council Bluffs picked");    
                 break;
             case "J": 
-                System.out.println("Winter Quarters picked");    
+                this.console.println("Winter Quarters picked");    
                 break;            
             case "K": 
-                System.out.println("Elkhorn River Crossing picked");    
+                this.console.println("Elkhorn River Crossing picked");    
                 break;
             case "L": 
-                System.out.println("Platte River picked");    
+                this.console.println("Platte River picked");    
                 break;
             case "M": 
-                System.out.println("Fort Kearny picked");    
+                this.console.println("Fort Kearny picked");    
                 break;
             case "N": 
-                System.out.println("Confluence Point picked");    
+                this.console.println("Confluence Point picked");    
                 break;            
             case "O": 
-                System.out.println("Ash Hollow picked");    
+                this.console.println("Ash Hollow picked");    
                 break;
             case "P": 
-                System.out.println("Chimney Rock picked");    
+                this.console.println("Chimney Rock picked");    
                 break;
             case "Q": 
-                System.out.println("Scotts Bluff picked");    
+                this.console.println("Scotts Bluff picked");    
                 break;            
             case "R": 
-                System.out.println("Fort Laramie picked");    
+                this.console.println("Fort Laramie picked");    
                 break;
             case "S": 
-                System.out.println("Sweetwater River picked");    
+                this.console.println("Sweetwater River picked");    
                 break;
             case "T": 
-                System.out.println("Independence Rock picked");    
+                this.console.println("Independence Rock picked");    
                 break;
             case "U": 
-                System.out.println("Fort Bridger picked");    
+                this.console.println("Fort Bridger picked");    
                 break;            
             case "V": 
-                System.out.println("Echo Canyon picked");    
+                this.console.println("Echo Canyon picked");    
                 break;
             case "W": 
-                System.out.println("Golden Pass Road picked");    
+                this.console.println("Golden Pass Road picked");    
                 break;              
             case "X": 
-                System.out.println("Emigration Canyon picked");    
+                this.console.println("Emigration Canyon picked");    
                 break;            
             case "Z": 
-                System.out.println("Zion picked");    
+                this.console.println("Zion picked");    
                 break;        
         }       
         return true;

@@ -26,11 +26,11 @@ public class RepairWagonView extends View {
     @Override
     public void display(){
         
-        System.out.println("Your Wagon Has Been Wrecked. :(");
+        this.console.println("Your Wagon Has Been Wrecked. :(");
         
-        System.out.println("You lost a wheel :(");
+        this.console.println("You lost a wheel :(");
         
-        System.out.println("Resources needed to repair: ");
+        this.console.println("Resources needed to repair: ");
         PioneerTrail pt = new PioneerTrail();
         this.listItems(pt.getPlayer().getActors().get(0).getStuff().getResources());
     }
@@ -38,7 +38,7 @@ public class RepairWagonView extends View {
     public void listItems(ArrayList<Resource>  items) {
         for (int i = 0; i < items.size(); i++){
             
-            System.out.println(items.get(i).getName() + '\n');
+            this.console.println(items.get(i).getName() + '\n');
         }
         
     }

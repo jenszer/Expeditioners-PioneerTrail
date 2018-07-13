@@ -33,13 +33,13 @@ public class MapView extends View{
         Location[][] locations = map.getLocations();
         
         
-        System.out.println(" |");
+        this.console.println(" |");
         for(int column = 0; column < locations[0].length; column ++){
-            System.out.println(" " + column + " |");
+            this.console.println(" " + column + " |");
         }
-        System.out.println();
+        this.console.println();
         for (int row = 0; row < locations.length; row++){
-            System.out.println(row + "");
+            this.console.println(row + "");
         
             for (int column = 0; column < locations[column].length; column++){
             leftIndicator = " ";
@@ -53,17 +53,17 @@ public class MapView extends View{
             leftIndicator = "<";
             rightIndicator = ">";
             }
-            System.out.println("|");
+            this.console.println("|");
             if(locations[row][column].getScene() == null){
-                System.out.println(leftIndicator + "??" + rightIndicator);
+                this.console.println(leftIndicator + "??" + rightIndicator);
             }
             else{
-                System.out.println(leftIndicator
+                this.console.println(leftIndicator
                 + locations[row][column].getScene().getSceneSymbol()
                 + rightIndicator);
             }
             }
-            System.out.println("|");
+            this.console.println("|");
     }
         }
     

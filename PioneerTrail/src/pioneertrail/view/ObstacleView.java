@@ -37,7 +37,7 @@ public class ObstacleView extends View {
             try {
                 this.fixWagon();
             } catch (ObstacleControlException ie) {
-                System.out.println(ie.getMessage());
+                this.console.println(ie.getMessage());
                 return false;
             }
         }
@@ -47,7 +47,7 @@ public class ObstacleView extends View {
             try {
                 this.cureSickness();
             } catch (ObstacleControlException ie) {
-                 System.out.println(ie.getMessage());
+                 this.console.println(ie.getMessage());
                  return false;
             }
         }
@@ -64,47 +64,47 @@ public class ObstacleView extends View {
     }
 
     public void fixWagon() throws ObstacleControlException {
-        System.out.println("\nYour wagon is broken down.");
+        this.console.println("\nYour wagon is broken down.");
         
-        System.out.println("How many wheels would you like to use?");
+        this.console.println("How many wheels would you like to use?");
             String input = this.getInputs();
             int wheels = Integer.parseInt(input);
             try{
             Integer.parseInt(input);
             } catch (NumberFormatException ie){
-                System.out.println(ie.getMessage());
+                this.console.println(ie.getMessage());
             }
             ObstacleControl.fixWagon(wheels);
              }
 
     public int cureSickness() throws ObstacleControlException {
             int mortRate = (int) (Math.random() * 6);
-        System.out.println("\nOne of your party" 
+        this.console.println("\nOne of your party" 
                 + " is sick. Their likelihood of survival is: "
                 + mortRate);        
-        System.out.println("How much water would you like to use?");
+        this.console.println("How much water would you like to use?");
             String input = this.getInputs();    
             int water = Integer.parseInt(input);
             try{
                 Integer.parseInt(input);
             } catch (NumberFormatException ie){
-                System.out.println(ie.getMessage());
+                this.console.println(ie.getMessage());
             }
-        System.out.println("How much food would you like to use?");
+        this.console.println("How much food would you like to use?");
             String input1 = this.getInputs();
             int food = Integer.parseInt(input1);
              try{
                 Integer.parseInt(input1);
             } catch (NumberFormatException ie){
-                System.out.println(ie.getMessage());
+                this.console.println(ie.getMessage());
             }
-        System.out.println("How long would you like to rest?");
+        this.console.println("How long would you like to rest?");
             String input2 = this.getInputs();
             int rest = Integer.parseInt(input2); 
              try{
                 Integer.parseInt(input2);
             } catch (NumberFormatException ie){
-                System.out.println(ie.getMessage());
+                this.console.println(ie.getMessage());
             }
            
         int death = ObstacleControl.calcMortality(mortRate, food, water, rest);

@@ -48,15 +48,16 @@ public abstract class View implements ViewInterface {
         return getInput(this.promptMessage);
     }
 
+    @Override
     public String getInput(String menuPrompt) {
 
         String inputs = "";
-        System.out.println(menuPrompt);
+        this.console.println(menuPrompt);
 
         boolean valid = false;
         try {
             while (valid == false) {
-                System.out.println("Input:");
+                this.console.println("Input:");
                 inputs = this.keyboard.readLine();
                 
                 if (inputs.trim().equals("") == true) {

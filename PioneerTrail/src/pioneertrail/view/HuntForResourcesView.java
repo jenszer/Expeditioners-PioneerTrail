@@ -38,7 +38,7 @@ public class HuntForResourcesView extends View {
             try {
                 this.huntResources();
             } catch (HarvestHuntControlException ie) {
-               System.out.println(ie.getMessage());
+               this.console.println(ie.getMessage());
                return true;
             }
         }
@@ -62,19 +62,19 @@ public class HuntForResourcesView extends View {
         try{
          Integer.parseInt(inputs);
        } catch (NumberFormatException ie){
-        System.out.println(ie.getMessage());
+        this.console.println(ie.getMessage());
      }
                
         int weight = HarvestHuntControl.calcHuntForResources(resources, noBullets);
         
-        System.out.println("You gathered " + weight + "lbs of resources");
+        this.console.println("You gathered " + weight + "lbs of resources");
         return weight;
 
     }
 
     public void viewInventory() {
         Inventory inventory = new Inventory();
-        System.out.println(inventory.toString());
+        this.console.println(inventory.toString());
     }
 
 }

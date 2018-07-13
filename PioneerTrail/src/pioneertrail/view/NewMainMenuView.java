@@ -52,7 +52,7 @@ class NewMainMenuView extends View {
         try {
             GameControl.createNewGame(PioneerTrail.getPlayer());
         } catch (GameControlException ie){
-            System.out.println(ie.getMessage());
+            this.console.println(ie.getMessage());
             return false;
         }
                
@@ -72,6 +72,6 @@ class NewMainMenuView extends View {
     }
 
     public void test() {
-        System.out.println("Test Stub");
+        this.console.println("Test Stub");
     }
 }

@@ -48,7 +48,7 @@ public class HelpMenuView extends View {
     }
 
     public void aboutGame() {
-        System.out.println("The Pioneer Trail game is a text based role \n"
+        this.console.println("The Pioneer Trail game is a text based role \n"
                 + "playing game. In this game, you will be a pioneer family \n"
                 + "who leads a wagon train preparing to go west. You have \n"
                 + "suffered constant religious persecution and wish to find \n"
@@ -58,7 +58,7 @@ public class HelpMenuView extends View {
     }
 
     public void gameControls() {
-        System.out.println("Problems may arise during the trip, such as \n"
+        this.console.println("Problems may arise during the trip, such as \n"
                 + "illness or death of family members, snake bites, broken \n"
                 + "wagons, adverse weather conditions, etc. You will have the\n"
                 + "opportunity to hunt if you have weapons and ammunition\n"
@@ -71,13 +71,13 @@ public class HelpMenuView extends View {
     }
 
     public void objectOfGame() {
-        System.out.println("The goal of the game is to reach Zion and survive\n"
+        this.console.println("The goal of the game is to reach Zion and survive\n"
                 + "with as many family members as you can. The game will be\n"
                 + "over when at least two family members have reached Zion.");
     }
 
     public void items() {
-        System.out.println("Before starting the long journey, you must buy a \n"
+        this.console.println("Before starting the long journey, you must buy a \n"
                 + "series of items necessary for the trip, such as: food, \n"
                 + "water, tools, spare parts for the wagon, weapons, \n"
                 + "ammunition, etc. You must plan carefully so that you will \n"
