@@ -5,11 +5,17 @@
  */
 package pioneertrail.control;
 
+import static java.io.FileDescriptor.out;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import static java.lang.System.out;
 import java.util.ArrayList;
 import java.util.Arrays;
 import pioneertrail.PioneerTrail;
 import pioneertrail.exceptions.GameControlException;
 import pioneertrail.model.*;
+import static sun.misc.MessageUtils.out;
 
 /**
  *
@@ -39,7 +45,7 @@ public class GameControl {
     }
 
     public static void saveGame(Game game, String filePath)
-            throws GameControlException {
+            throws GameControlException, IOException {
         if ((game == null) || (filePath == null)) {
             throw new GameControlException("Invalid File Output");
         }
@@ -51,6 +57,13 @@ public class GameControl {
         } catch (IOException ie) {
                 System.out.println("I/O Error: " + ie.getMessage());
                 }
+        }
+        
+       finally {
+            Object outFile = null;
+            if (outFile != null){
+                outFile.close();
+            }
         }
 
         //      Resource[] items = createItems();
