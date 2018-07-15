@@ -5,6 +5,11 @@
  */
 package pioneertrail.view;
 
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import pioneertrail.model.SceneType;
+
 /**
  *
  * @author Jacob Enszer
@@ -18,6 +23,7 @@ public class HelpMenuView extends View {
                 + "\n A - About Game"
                 + "\n C - Game Controls"
                 + "\n O - Object of the game"
+                + "\n M - Print Map Locations(to File)"                
                 + "\n I - Items"
                 + "\n Q - Exit to Previous Menu");
     }
@@ -32,6 +38,9 @@ public class HelpMenuView extends View {
                 break;
             case "C":
                 this.gameControls();
+                break;
+            case "M":
+                this.printMapLocations();
                 break;
             case "O":
                 this.objectOfGame();
@@ -82,6 +91,44 @@ public class HelpMenuView extends View {
                 + "water, tools, spare parts for the wagon, weapons, \n"
                 + "ammunition, etc. You must plan carefully so that you will \n"
                 + "have the items you need before you begin your journey.");
+    }
+    public void printMapLocations() {
+        this.console.println("What file would you like to print the map locations to?");
+        String outputFile = this.getInputs();
+        try (PrintWriter out = new PrintWriter(outputFile)) {
+            out.println("\n\n        Map Locations           ");
+            out.printf("%n%-30s%10s", "City", "Location");
+            out.printf("%n%-30s%10s", "----", "--------");
+            out.printf("%n%-30s%10s", "Nauvoo", "[0,0]");
+            out.printf("%n%-30s%10s", "Sugar Creek", "[0,1]");
+            out.printf("%n%-30s%10s", "Richardson's Point", "[0,2]");
+            out.printf("%n%-30s%10s", "Chariton River Crossing", "[0,3]");
+            out.printf("%n%-30s%10s", "Locust Creek", "[0,4]");
+            out.printf("%n%-30s%10s", "Garden Grove", "[1,0]");
+            out.printf("%n%-30s%10s", "Nishnabotna River", "[1,1]");
+            out.printf("%n%-30s%10s", "Grand Encampment", "[1,2]");
+            out.printf("%n%-30s%10s", "Council Bluffs", "[1,3]");
+            out.printf("%n%-30s%10s", "Winter Quarters", "[1,4]");
+            out.printf("%n%-30s%10s", "Elkhorn River Crossing", "[2,0]");
+            out.printf("%n%-30s%10s", "Platte River", "[2,1]");
+            out.printf("%n%-30s%10s", "Fort Kearny", "[2,2]");
+            out.printf("%n%-30s%10s", "Confluence Point", "[2,3]");
+            out.printf("%n%-30s%10s", "Ash Hollow", "[2,4]");
+            out.printf("%n%-30s%10s", "Chimney Rock", "[3,0]");
+            out.printf("%n%-30s%10s", "Scott's Bluff", "[3,1]");
+            out.printf("%n%-30s%10s", "Fort Laramie", "[3,2]");
+            out.printf("%n%-30s%10s", "Golden Pass Road", "[3,3]");
+            out.printf("%n%-30s%10s", "Zion", "[3,4]"); 
+        }
+        catch (IOException ie) {
+            ErrorView.display(this.getClass().getName(), "I/O Error: " +
+                    ie.getMessage());
+                }  
+        this.console.println("Your file printed successfully to " + outputFile);
+        
+                
+            
+            
     }
 
 }

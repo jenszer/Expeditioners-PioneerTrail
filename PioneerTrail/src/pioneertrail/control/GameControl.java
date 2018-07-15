@@ -44,7 +44,7 @@ public class GameControl {
         PioneerTrail.setGame(game);
     }
 
-    public static void saveGame(Game game, String filePath)
+    /*public static void saveGame(Game game, String filePath)
             throws GameControlException, IOException {
         if ((game == null) || (filePath == null)) {
             throw new GameControlException("Invalid File Output");
@@ -64,7 +64,7 @@ public class GameControl {
             if (outFile != null){
                 outFile.close();
             }
-        }
+        }*/
 
         //      Resource[] items = createItems();
         /*           if (map == null){
