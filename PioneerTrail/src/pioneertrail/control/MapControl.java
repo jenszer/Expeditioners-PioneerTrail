@@ -27,15 +27,14 @@ public class MapControl {
             return null;
         }
         Location[][] locations = new Location[rows][columns];
-        for (int row = 0; row < locations[row].length; row++) {
-            for (int column = 0; column < locations[column].length; column++) {
+        for (int row = 0; row < rows; row++) {
+            for (int column = 0; column < columns; column++) {
                 Location location = new Location();
                 location.setRow(row);
                 location.setColumn(column);
                 location.setVisited(false);
-                return locations;
+                locations[row][column] = location;
             }
-            return locations;
         }
         return locations;
     }
@@ -121,9 +120,9 @@ public class MapControl {
         locations[0][1].setScene(scenes[SceneType.SugarCreek.ordinal()]);
         locations[0][2].setScene(scenes[SceneType.Richardsons.ordinal()]);
         locations[0][3].setScene(scenes[SceneType.CharitonRiver.ordinal()]);
-        locations[0][4].setScene(scenes[SceneType.LocustCreek.ordinal()]);
-        locations[1][0].setScene(scenes[SceneType.GardenGrove.ordinal()]);
-        locations[1][1].setScene(scenes[SceneType.NishnabotnaRiver.ordinal()]);
+        locations[1][0].setScene(scenes[SceneType.LocustCreek.ordinal()]);
+        locations[1][1].setScene(scenes[SceneType.GardenGrove.ordinal()]);
+        locations[1][2].setScene(scenes[SceneType.NishnabotnaRiver.ordinal()]);
 
     }
 

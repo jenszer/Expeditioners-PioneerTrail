@@ -33,13 +33,15 @@ public class GameControl {
 
     public static void createNewGame(Player player)
             throws GameControlException {
-        //     Map map = createMap(4,4);  
+            Map map = createMap(4,4);  
 
         if (player == null) {
             throw new GameControlException("Must enter a name.");
         }
 
         Game game = new Game();
+        
+        game.setMap(map);
         game.setPlayer(player);
         PioneerTrail.setGame(game);
     }
@@ -97,7 +99,7 @@ public class GameControl {
         
         System.out.println("\n" + Arrays.toString(items));
         return items;     
-    }
+    }*/
     
     public static Map createMap(int noOfRows, int noOfColumns){
         if (noOfRows < 0 || noOfColumns < 0){
@@ -109,13 +111,15 @@ public class GameControl {
         map.setColumnCount(noOfColumns);
         
         Location[][] locations = MapControl.createLocations(noOfRows, noOfColumns);
-        
+        map.setLocations(locations);
+                
         Scene[] scenes = MapControl.createScenes();
-        Question[] questions = MapControl.createQuestions();
+        
+        //Question[] questions = MapControl.createQuestions();
      
        // MapControl.assignQuestionsToScenes(questions, scenes);
-       // MapControl.assignScenesToLocation(scenes, locations);
+        MapControl.assignScenesToLocation(map, scenes);
         
         return map;
-    }*/
+    }
     }

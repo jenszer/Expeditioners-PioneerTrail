@@ -32,31 +32,33 @@ public class MapView extends View {
         Map map = game.getMap();
         Location[][] locations = map.getLocations();
 
-        this.console.println(" |");
+        this.console.print("  |");
         for (int column = 0; column < locations[0].length; column++) {
-            this.console.println(" " + column + " |");
+            this.console.print(" " + (column + 1) + "  |");
         }
         this.console.println();
         for (int row = 0; row < locations.length; row++) {
-            this.console.println(row + "");
+            Location[] locationRow = locations[row];
+            this.console.print((row + 1) + " ");
 
-            for (int column = 0; column < locations[column].length; column++) {
+            for (int column = 0; column < locationRow.length; column++) {
+                Location location = locationRow[column];
                 leftIndicator = " ";
                 rightIndicator = " ";
 
-                if (locations[row][column] == locations[map.getCurrentRow()][map.getCurrentColumn()]) {
+                if (row == map.getCurrentRow() && column == map.getCurrentColumn()) {
                     leftIndicator = "*";
                     rightIndicator = "*";
-                } else if (locations[row][column].isVisited()) {
+                } else if (location.isVisited()) {
                     leftIndicator = "<";
                     rightIndicator = ">";
                 }
-                this.console.println("|");
-                if (locations[row][column].getScene() == null) {
-                    this.console.println(leftIndicator + "??" + rightIndicator);
+                this.console.print("|");
+                if (location.getScene() == null) {
+                    this.console.print(leftIndicator + "??" + rightIndicator);
                 } else {
-                    this.console.println(leftIndicator
-                            + locations[row][column].getScene().getSceneSymbol()
+                    this.console.print(leftIndicator
+                            + location.getScene().getSceneSymbol()
                             + rightIndicator);
                 }
             }
