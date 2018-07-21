@@ -11,9 +11,7 @@ import java.awt.Point;
 /**
  *
  * <<<<<<< HEAD
- * @a
- *
- * uthor Ariel George, Hector Mendoza, Jacob Enzer
+ * @author Ariel George, Hector Mendoza, Jacob Enzer
  */
 public enum Actor {
     Father("Micheal", "Greatest Dad in the World.", new Point(1, 1)),

@@ -103,7 +103,7 @@ public class MapControl {
     public static Question[] createQuestions() {
         System.out.println("Create Questions Stub");
 
-// DO WE EVEN HAVE QUESTIONS???
+// add QUESTIONS
         return null;
     }
 

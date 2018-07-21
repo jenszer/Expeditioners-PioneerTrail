@@ -27,4 +27,9 @@ public class ErrorView {
         log.printf("%n%n%s", className + " - " + errorMessage);
     }
 
+    static void display(String error_saving_Invenotry_items_list_to_file) {
+        throw new UnsupportedOperationException(); 
+    }
+
+    
 }
