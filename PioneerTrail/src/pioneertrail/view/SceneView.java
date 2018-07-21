@@ -54,7 +54,7 @@ public class SceneView extends View{
        switch(inputs){
            case "P":
                if (scene.getResource() != null){
-                   PioneerTrail.getGame().getResources().add(scene.getResource());
+                   PioneerTrail.getGame().getResources();
                    scene.setResource(null);
                }
                

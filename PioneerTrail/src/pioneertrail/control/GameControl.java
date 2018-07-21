@@ -121,6 +121,7 @@ public class GameControl {
      
        // MapControl.assignQuestionsToScenes(questions, scenes);
         MapControl.assignScenesToLocation(map, scenes);
+        MapControl.movePlayerToStartingLocation(map);
         
         return map;
     }

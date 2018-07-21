@@ -91,7 +91,8 @@ public class GameMenuView extends View {
     }
 
     public void move() {
-        this.console.println("Move Stub");
+        MoveView move = new MoveView();
+        move.display();
     }
 
     public void obstacleResolution() {

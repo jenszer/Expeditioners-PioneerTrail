@@ -34,7 +34,7 @@ public class MapControl {
                 location.setColumn(column);
                 location.setVisited(false);
                 locations[row][column] = location;
-            }
+                }
         }
         return locations;
     }

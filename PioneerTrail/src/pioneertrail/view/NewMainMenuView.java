@@ -17,7 +17,6 @@ class NewMainMenuView extends View {
                 + "\n N - Create New Game"
                 + "\n R - Restart Game"
                 + "\n H - Get Help"
-                + "\n E - Test Program"
                 + "\n Q - Quit");
     }
 
@@ -35,9 +34,6 @@ class NewMainMenuView extends View {
                 break;
             case "H":
                 this.getHelp();
-                break;
-            case "E":
-                this.test();
                 break;
             default:
                 ErrorView.display(this.getClass().getName(),
@@ -58,6 +54,7 @@ class NewMainMenuView extends View {
 
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.display();
+
         return true;
     }
 
@@ -71,7 +68,4 @@ class NewMainMenuView extends View {
         helpMenuView.display();
     }
 
-    public void test() {
-        this.console.println("Test Stub");
-    }
 }
