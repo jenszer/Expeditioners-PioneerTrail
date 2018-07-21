@@ -24,13 +24,13 @@ public class Game implements Serializable {
     public Game() {
     }
 
-    public ArrayList<Inventory> getItems() {
+    /*public ArrayList<Inventory> getItems() {
         return items;
     }
 
     public void setItems(ArrayList<Inventory> items) {
         this.items = items;
-    }
+    }*/
 
     public Player getPlayer() {
         return Player;

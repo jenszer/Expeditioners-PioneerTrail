@@ -44,6 +44,8 @@ public class GameControl {
         game.setMap(map);
         game.setPlayer(player);
         PioneerTrail.setGame(game);
+        Inventory inventory = new Inventory();
+        PioneerTrail.setInventory(inventory);
     }
 
     /*public static void saveGame(Game game, String filePath)

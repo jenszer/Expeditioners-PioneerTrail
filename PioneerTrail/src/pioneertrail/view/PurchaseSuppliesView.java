@@ -5,10 +5,9 @@
  */
 package pioneertrail.view;
 
-import java.util.ArrayList;
+import pioneertrail.PioneerTrail;
+import pioneertrail.control.InventoryControl;
 import pioneertrail.exceptions.WagonControlException;
-import pioneertrail.control.WagonControl;
-import pioneertrail.model.Game;
 import pioneertrail.model.Inventory;
 import pioneertrail.model.Resource;
 
@@ -28,11 +27,11 @@ public class PurchaseSuppliesView extends View {
                 + "\n B - Bullets"
                 + "\n D - Drinking Water"
                 + "\n Q - Quit");
+        this.shop = new ShopView();
     }
-
-    Game game = new Game();
-
-    ArrayList<Inventory> inventory = game.getItems();
+    
+    ShopView shop;
+    Inventory inventory = PioneerTrail.getInventory();
 
     @Override
     public boolean doAction(String inputs) {
@@ -98,68 +97,54 @@ public class PurchaseSuppliesView extends View {
         }
         return false;
     }
+    
+    private int makePurchase(String itemName, int purchaseAmount)
+            throws WagonControlException {
+        Resource shopItem = InventoryControl.findItem(shop.getItems(), itemName);
+        
+        InventoryControl.useItem(shop.getItems(), itemName, purchaseAmount);
+        
+        Resource item = shopItem.getClone();
+        item.setAmount(purchaseAmount);
+        InventoryControl.addItem(inventory, item);
+        this.console.println("You've purchased "
+                + item.getAmount() + " " + item.getName());
+        return InventoryControl.getItemCount(inventory, item.getName());
+    }
 
     public int purchaseFood()
             throws WagonControlException {
-        Resource resource = new Resource();
-        resource.setAmount(1);
-        this.console.println("You've purchased "
-                + resource.getAmount() + "Food");
-        return 0;
+        return makePurchase("Food", 1);
     }
 
     public int purchaseAxe()
             throws WagonControlException {
-        Resource resource = new Resource();
-        resource.setAmount(1);
-        this.console.println("You've purchased "
-                + resource.getAmount() + "Axe");
-        return 0;
+        return makePurchase("Axe", 1);
     }
 
     public int purchaseHammer()
             throws WagonControlException {
-        Resource resource = new Resource();
-        resource.setAmount(1);
-        this.console.println("You've purchased "
-                + resource.getAmount() + "Hammer");
-        return 0;
+        return makePurchase("Hammer", 1);
     }
 
     public int purchaseSpareWheels()
             throws WagonControlException {
-        Resource resource = new Resource();
-        resource.setAmount(1);
-        this.console.println("You've purchased "
-                + resource.getAmount() + "Wheel");
-        return 0;
+        return makePurchase("Wheel", 1);
     }
 
     public int purchaseBullets()
             throws WagonControlException {
-        Resource resource = new Resource();
-        resource.setAmount(1);
-        this.console.println("You've purchased "
-                + resource.getAmount() + "Bullet");
-        return 0;
+        return makePurchase("Bullet", 1);
     }
 
     public int purchaseWood()
             throws WagonControlException {
-        Resource resource = new Resource();
-        resource.setAmount(1);
-        this.console.println("You've purchased "
-                + resource.getAmount() + "Wood");
-        return 0;
+        return makePurchase("Wood", 1);
     }
 
     public int purchaseDrinkingWater()
             throws WagonControlException {
-        Resource resource = new Resource();
-        resource.setAmount(1);
-        this.console.println("You've purchased "
-                + resource.getAmount() + "Water");
-        return 0;
+        return makePurchase("Water", 1);
     }
 
     public void viewInventory() {

@@ -6,6 +6,7 @@
 package pioneertrail.view;
 
 import java.util.ArrayList;
+import pioneertrail.PioneerTrail;
 import pioneertrail.model.Game;
 import pioneertrail.model.Inventory;
 import pioneertrail.model.Resource;
@@ -80,9 +81,8 @@ public class GameMenuView extends View {
     }
 
     public void viewInventory() {
-        Resource resource = new Resource();
-        Inventory inventory = resource.getInventory();
-        this.console.println(resource);
+        Inventory inventory = PioneerTrail.getInventory();
+        this.console.println(inventory);
     }
 
     public void purchaseSupplies() {

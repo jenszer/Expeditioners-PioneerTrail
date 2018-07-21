@@ -31,7 +31,7 @@ public class Inventory implements Serializable {
 
     public Inventory() {
     }
-
+    
     public Game getGame() {
         return Game;
     }
@@ -100,8 +100,10 @@ public class Inventory implements Serializable {
     }
 
     @Override
-    public String toString() {
-        return "Inventory{" + "name=" + name + ", type=" + type + ", amount=" + amount + ", weight=" + weight + ", description=" + description + '}';
+    public String toString() { 
+        String output = "Inventory{" + "name=" + name + ", type=" + type + ", amount=" + amount + ", weight=" + weight + ", description=" + description + '}';
+        output = resources.stream().map((item) -> "\n" + item.toString()).reduce(output, String::concat);
+        return output;
     }
 
     @Override

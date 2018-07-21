@@ -7,6 +7,8 @@ package pioneertrail.model;
 
 import java.io.Serializable;
 import java.util.Objects;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -22,10 +24,10 @@ public class Resource implements Serializable {
     public boolean use_able;
     private String description;
 
-    private Inventory Inventory;
+//    private Inventory Inventory;
 
-    public Resource() {
-    }
+    //public Resource() {
+    //}
 
     public Resource(String name, String description, int price, boolean use_able) {
         this.name = name;
@@ -49,14 +51,6 @@ public class Resource implements Serializable {
 
     public void setUse_able(boolean use_able) {
         this.use_able = use_able;
-    }
-
-    public Inventory getInventory() {
-        return Inventory;
-    }
-
-    public void setInventory(Inventory Inventory) {
-        this.Inventory = Inventory;
     }
 
     public String getName() {
@@ -147,6 +141,12 @@ public class Resource implements Serializable {
 
     public int getPrice(int i) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    public Resource getClone(){
+        Resource clone = new Resource(this.name, this.description, this.price, this.use_able);
+        clone.setAmount(0);
+        return clone;
     }
 
 }
