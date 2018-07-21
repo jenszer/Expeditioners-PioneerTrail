@@ -18,11 +18,7 @@ import pioneertrail.model.SceneType;
  */
 public class MapControl {
 
-    /*      public static void movePlayer(Map map, int row, int column) {
-            map.setLocations(map.getLocations()[row][column]);
-            map.getLocations().setVisited(true);
-            } */
-    public static Location[][] createLocations(int rows, int columns) {
+     public static Location[][] createLocations(int rows, int columns) {
         if (rows < 1 || columns < 1) {
             return null;
         }
@@ -32,7 +28,7 @@ public class MapControl {
                 Location location = new Location();
                 location.setRow(row);
                 location.setColumn(column);
-                location.setVisited(false);
+                location.setVisited(true);
                 locations[row][column] = location;
                 }
         }
