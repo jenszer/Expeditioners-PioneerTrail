@@ -101,5 +101,27 @@ public class Game implements Serializable {
     public Object getResources() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
+    private boolean gameOver;  
+
+    public Game(boolean gameOver) {
+        this.gameOver = gameOver;
+    }
+
+    public ArrayList<Inventory> getItems() {
+        return items;
+    }
+
+    public void setItems(ArrayList<Inventory> items) {
+        this.items = items;
+    }
+
+    public boolean isGameOver() {
+        return gameOver;
+    }
+
+    public void setGameOver(boolean gameOver) {
+        this.gameOver = gameOver;
+    }
 
 }

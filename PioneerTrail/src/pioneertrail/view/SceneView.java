@@ -80,5 +80,4 @@ public class SceneView extends View{
        promptMessage = getSceneMenu();
         return false;
     }
-}
-      
+}     
