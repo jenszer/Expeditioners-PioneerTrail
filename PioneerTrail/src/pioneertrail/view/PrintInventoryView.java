@@ -40,7 +40,7 @@ public class PrintInventoryView {
         outFile.flush();
             
         } catch (IOException ex){
-            System.out.println("Hello World");
+            System.out.println("List of inventory items");
         }
     }
     
@@ -48,32 +48,7 @@ public class PrintInventoryView {
     
             
 
-           
-//    } catch (IOException ex) {
-//    ErrorView.display("Error saving Invenotry items list to file");
-//}   finally {
-//    if (outFile != null) {
-//        try {
-//            outFile.close();
-//        } catch (IOException ex2) {
-//            ErrorView.display("Error closing file");
-//        }
-//    }
-//  }
-//}
-
-
-//try (PrintWriter out = new PrintWriter(filePath)) {
-//
-//   out.println("Your report text goes here");
-//
-//// you should have several lines and a for each statement to print the list of items
-//
-//}
-//
-//} catch (IOException ex) {
-//ErrorView.display(this.getClass().getName(), "I/0 Error: " + ex.getMessage());
-//}
+        
 
 
 
